@@ -537,28 +537,62 @@ window.addEventListener("DOMContentLoaded", () => {
 </div>
 </section>
 <!-- Para quem é -->
-<section class="py-section-gap bg-surface-container-high">
-<div class="max-w-[1200px] mx-auto px-6">
-<h2 class="font-h2 text-h2 text-on-surface text-center mb-16">Este treinamento é para você?</h2>
-<div class="grid md:grid-cols-2 gap-12">
+<section class="py-24 bg-[#284A78] relative overflow-hidden">
+  
+  <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#D57241]/10 blur-[120px] rounded-full pointer-events-none"></div>
 
-  <!-- Card 1 -->
-  <div class="group flex gap-6 p-8 bg-white rounded-2xl shadow-ambient transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border hover:border-[#D57241]/30">
+  <div class="max-w-[1200px] mx-auto px-6 relative z-10">
+    <h2 class="font-display text-[32px] md:text-4xl lg:text-5xl font-extrabold text-white text-center mb-16">
+      Este treinamento é <span class="text-[#D57241]">para você?</span>
+    </h2>
 
-    <div class="flex-shrink-0 w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[#D57241]">
-      <span class="material-symbols-outlined text-secondary text-3xl transition-colors duration-300 group-hover:text-white">
-        rocket_launch
-      </span>
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <div class="group relative p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2">
+        
+        <div class="absolute inset-0 bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/10 group-hover:border-[#D57241]/50 group-hover:bg-white/[0.07] transition-all duration-500"></div>
+
+        <div class="relative flex flex-col sm:flex-row gap-6 items-start">
+          
+          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#D57241] to-[#b35a2d] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(213,114,65,0.3)] group-hover:shadow-[0_0_30px_rgba(213,114,65,0.6)] transition-all duration-500 group-hover:rotate-6">
+            <span class="material-symbols-outlined text-white text-3xl">
+              rocket_launch
+            </span>
+          </div>
+
+          <div>
+            <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#D57241] transition-colors">
+              Iniciantes e Aspirantes
+            </h3>
+            <p class="text-slate-300 leading-relaxed text-[15px] md:text-base">
+              Para quem quer começar um negócio digital do zero, mas não sabe por onde começar e quer evitar os erros comuns que custam caro.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2">
+        <div class="absolute inset-0 bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/10 group-hover:border-[#D57241]/50 group-hover:bg-white/[0.07] transition-all duration-500"></div>
+        <div class="relative flex flex-col sm:flex-row gap-6 items-start">
+          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#D57241] to-[#b35a2d] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(213,114,65,0.3)] group-hover:shadow-[0_0_30px_rgba(213,114,65,0.6)] transition-all duration-500 group-hover:rotate-6">
+            <span class="material-symbols-outlined text-white text-3xl">
+              trending_up
+            </span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#D57241] transition-colors">
+              Donos de E-commerce
+            </h3>
+            <p class="text-slate-300 leading-relaxed text-[15px] md:text-base">
+              Para quem já vende online, mas estagnou no faturamento e precisa de processos validados para escalar a operação com lucro real.
+            </p>
+          </div>
+        </div>
+      </div>
+
     </div>
-
-    <div>
-      <h3 class="font-h3 text-h3 mb-2">Iniciantes e Aspirantes</h3>
-      <p class="text-on-surface-variant">
-        Para quem quer começar um negócio digital do zero, mas não sabe por onde começar e quer evitar os erros comuns que custam caro.
-      </p>
-    </div>
-
   </div>
+</section>
 
   <!-- Card 2 -->
   <div class="group flex gap-6 p-8 bg-white rounded-2xl shadow-ambient transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border hover:border-[#D57241]/30">
