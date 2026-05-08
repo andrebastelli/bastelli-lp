@@ -885,44 +885,83 @@ text-white px-6 py-4 sm:px-10 sm:py-6 rounded-xl font-bold text-sm sm:text-lg">
   </div>
 </section>
 <!-- CTA Final -->
-<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden">
+<section class="relative overflow-hidden bg-primary text-on-primary">
 
-  <div class="max-w-[1000px] mx-auto px-6">
-    
-    <h2 class="font-h2 text-[40px] leading-tight mb-6">
-      O mercado de E-commerce não espera.<br>
-      Sua transformação começa agora.
-    </h2>
+  <!-- DESKTOP -->
+  <div class="hidden md:block py-24 text-center">
+    <div class="max-w-[1000px] mx-auto px-6">
 
-    <p class="text-body-lg mb-10 max-w-2xl mx-auto opacity-90">
-      Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
-    </p>
+      <h2 class="font-h2 text-[44px] leading-tight mb-6">
+        O mercado de E-commerce não espera.<br>
+        Sua transformação começa agora.
+      </h2>
+
+      <p class="text-body-lg mb-10 max-w-2xl mx-auto opacity-90">
+        Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
+      </p>
+
+      <!-- CTA -->
+      <a href="#oferta"
+         class="group relative inline-flex items-center justify-center gap-3 
+         bg-gradient-to-r from-[#D57241] to-[#c46032] 
+         text-white px-12 py-6 rounded-xl font-bold text-lg 
+         shadow-[0_15px_35px_rgba(213,114,65,0.4)] 
+         hover:scale-105 hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]
+         transition-all duration-300 overflow-hidden">
+
+        <span class="relative z-10 flex items-center gap-2">
+          Começar agora
+          <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
+            arrow_forward
+          </span>
+        </span>
+
+      </a>
+
+      <p class="mt-12 text-sm text-white/80">
+        ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
+      </p>
 
     </div>
-
-    <!-- CTA -->
-    <a href="#oferta" 
-       class="cta-button group relative inline-flex items-center justify-center gap-3 
-       bg-gradient-to-r from-[#D57241] to-[#c46032] 
-       text-white px-10 py-6 rounded-xl font-bold text-lg 
-       shadow-[0_15px_35px_rgba(213,114,65,0.4)] 
-       hover:scale-105 hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]
-       transition-all duration-300 overflow-hidden">
-
-      <span class="relative z-10 flex items-center gap-2">
-        Começar agora
-        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
-          arrow_forward
-        </span>
-      </span>
-
-    </a>
-
-    <p class="mt-12 text-sm text-white/80">
-      ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
-    </p>
-
   </div>
+
+  <!-- MOBILE -->
+  <div class="block md:hidden py-16 text-center">
+    <div class="px-6">
+
+      <h2 class="font-h2 text-[28px] leading-snug mb-5">
+        O mercado de E-commerce não espera.<br>
+        Sua transformação começa agora.
+      </h2>
+
+      <p class="text-body-md mb-8 opacity-90">
+        Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
+      </p>
+
+      <!-- CTA MOBILE -->
+      <a href="#oferta"
+         class="group relative w-full inline-flex items-center justify-center gap-3 
+         bg-gradient-to-r from-[#D57241] to-[#c46032] 
+         text-white px-6 py-5 rounded-xl font-bold text-base 
+         shadow-[0_12px_30px_rgba(213,114,65,0.35)] 
+         active:scale-95 transition-all duration-300">
+
+        <span class="flex items-center gap-2">
+          Começar agora
+          <span class="material-symbols-outlined">
+            arrow_forward
+          </span>
+        </span>
+
+      </a>
+
+      <p class="mt-10 text-xs text-white/80">
+        ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
+      </p>
+
+    </div>
+  </div>
+
 </section>
 <!-- FAQ Section -->
 <section class="py-section-gap" id="faq">
