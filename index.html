@@ -546,45 +546,48 @@ window.addEventListener("DOMContentLoaded", () => {
       Este treinamento é <span class="text-[#D57241]">para você?</span>
     </h2>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <div class="group relative p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2">
-        
-        <div class="absolute inset-0 bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/10 group-hover:border-[#D57241]/50 group-hover:bg-white/[0.07] transition-all duration-500"></div>
-
-        <div class="relative flex flex-col sm:flex-row gap-6 items-start">
-          
-          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#D57241] to-[#b35a2d] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(213,114,65,0.3)] group-hover:shadow-[0_0_30px_rgba(213,114,65,0.6)] transition-all duration-500 group-hover:rotate-6">
-            <span class="material-symbols-outlined text-white text-3xl">
-              rocket_launch
-            </span>
+      <div class="group relative p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2 opacity-0 animate-fade-up [animation-delay:100ms]">
+        <div class="absolute inset-0 bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/10 group-hover:border-[#D57241]/50 group-hover:bg-white/[0.07] transition-all duration-500 shadow-2xl"></div>
+        <div class="relative flex flex-col gap-6">
+          <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#D57241] to-[#b35a2d] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(213,114,65,0.3)] group-hover:rotate-6 transition-all duration-500">
+            <span class="material-symbols-outlined text-white text-3xl">rocket_launch</span>
           </div>
-
           <div>
-            <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#D57241] transition-colors">
-              Iniciantes e Aspirantes
-            </h3>
-            <p class="text-slate-300 leading-relaxed text-[15px] md:text-base">
-              Para quem quer começar um negócio digital do zero, mas não sabe por onde começar e quer evitar os erros comuns que custam caro.
+            <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-[#D57241] transition-colors">Iniciantes e Aspirantes</h3>
+            <p class="text-slate-300 leading-relaxed text-sm">
+              Para quem quer começar um negócio digital do zero, mas não sabe por onde começar e quer evitar os erros comuns.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="group relative p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2">
-        <div class="absolute inset-0 bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/10 group-hover:border-[#D57241]/50 group-hover:bg-white/[0.07] transition-all duration-500"></div>
-        <div class="relative flex flex-col sm:flex-row gap-6 items-start">
-          <div class="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-[#D57241] to-[#b35a2d] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(213,114,65,0.3)] group-hover:shadow-[0_0_30px_rgba(213,114,65,0.6)] transition-all duration-500 group-hover:rotate-6">
-            <span class="material-symbols-outlined text-white text-3xl">
-              trending_up
-            </span>
+      <div class="group relative p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2 opacity-0 animate-fade-up [animation-delay:200ms]">
+        <div class="absolute inset-0 bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/10 group-hover:border-[#D57241]/50 group-hover:bg-white/[0.07] transition-all duration-500 shadow-2xl"></div>
+        <div class="relative flex flex-col gap-6">
+          <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#D57241] to-[#b35a2d] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(213,114,65,0.3)] group-hover:rotate-6 transition-all duration-500">
+            <span class="material-symbols-outlined text-white text-3xl">storefront</span>
           </div>
           <div>
-            <h3 class="font-display text-xl md:text-2xl font-bold text-white mb-3 group-hover:text-[#D57241] transition-colors">
-              Donos de E-commerce
-            </h3>
-            <p class="text-slate-300 leading-relaxed text-[15px] md:text-base">
-              Para quem já vende online, mas estagnou no faturamento e precisa de processos validados para escalar a operação com lucro real.
+            <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-[#D57241] transition-colors">Lojistas Físicos</h3>
+            <p class="text-slate-300 leading-relaxed text-sm">
+              Para quem já tem uma loja física e quer levar sua operação para o digital com profissionalismo e escala nacional.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative p-8 rounded-3xl transition-all duration-500 hover:-translate-y-2 opacity-0 animate-fade-up [animation-delay:300ms]">
+        <div class="absolute inset-0 bg-white/[0.03] backdrop-blur-sm rounded-3xl border border-white/10 group-hover:border-[#D57241]/50 group-hover:bg-white/[0.07] transition-all duration-500 shadow-2xl"></div>
+        <div class="relative flex flex-col gap-6">
+          <div class="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-[#D57241] to-[#b35a2d] rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(213,114,65,0.3)] group-hover:rotate-6 transition-all duration-500">
+            <span class="material-symbols-outlined text-white text-3xl">trending_up</span>
+          </div>
+          <div>
+            <h3 class="font-display text-xl font-bold text-white mb-3 group-hover:text-[#D57241] transition-colors">Donos de E-commerce</h3>
+            <p class="text-slate-300 leading-relaxed text-sm">
+              Para quem já vende online, mas estagnou no faturamento e precisa de processos validados para escalar com lucro real.
             </p>
           </div>
         </div>
@@ -592,28 +595,6 @@ window.addEventListener("DOMContentLoaded", () => {
 
     </div>
   </div>
-</section>
-
-  <!-- Card 2 -->
-  <div class="group flex gap-6 p-8 bg-white rounded-2xl shadow-ambient transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.08)] hover:border hover:border-[#D57241]/30">
-
-    <div class="flex-shrink-0 w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center transition-all duration-300 group-hover:bg-[#D57241]">
-      <span class="material-symbols-outlined text-primary text-3xl transition-colors duration-300 group-hover:text-white">
-        storefront
-      </span>
-    </div>
-
-    <div>
-      <h3 class="font-h3 text-h3 mb-2">Lojistas e Empreendedores</h3>
-      <p class="text-on-surface-variant">
-        Para quem já tem uma loja física ou um e-commerce estagnado e precisa profissionalizar a gestão para escalar faturamento.
-      </p>
-    </div>
-
-  </div>
-
-</div>
-</div>
 </section>
 <!-- Diferenciais -->
 <section class="py-section-gap">
