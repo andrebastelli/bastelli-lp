@@ -282,187 +282,116 @@ window.addEventListener("DOMContentLoaded", () => {
     </script>
 </head>
 <body class="bg-background text-on-background font-body-md">
-<!-- TopAppBar -->
-<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-lg border-b border-slate-100">
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-100">
   <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1200px] mx-auto">
     <div class="flex items-center gap-4">
-      <img src="https://i.ibb.co/nswJd1Bx/logo-a.png" alt="Bruno Bastelli" class="hidden md:block h-10 w-auto object-contain hover:scale-105 transition-transform">
-      <img src="https://i.ibb.co/xKcfH1Qb/selo-1.png" alt="Bruno Bastelli" class="md:hidden h-12 w-auto object-contain">
+      <img src="https://i.ibb.co/nswJd1Bx/logo-a.png" alt="Bruno Bastelli" class="hidden md:block h-10 w-auto">
+      <img src="https://i.ibb.co/xKcfH1Qb/selo-1.png" alt="Selo" class="md:hidden h-10 w-auto">
     </div>
-
-    <nav class="hidden md:flex items-center gap-10">
-      <a class="text-sm font-bold uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors relative group" href="#metodo">
-        Método
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#D57241] transition-all group-hover:w-full"></span>
-      </a>
-      <a class="text-sm font-bold uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors relative group" href="#sobre">
-        Sobre
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#D57241] transition-all group-hover:w-full"></span>
-      </a>
-      <a class="text-sm font-bold uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors relative group" href="#depoimentos">
-        Resultados
-        <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#D57241] transition-all group-hover:w-full"></span>
-      </a>
+    <nav class="hidden md:flex items-center gap-8">
+      <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#metodo">Método</a>
+      <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#sobre">Sobre</a>
     </nav>
-
-    <a href="#oferta" class="bg-gradient-to-r from-[#D57241] to-[#c46032] text-white px-6 py-2.5 rounded-full text-xs md:text-sm font-black uppercase tracking-tight shadow-[0_10px_20px_rgba(213,114,65,0.2)] hover:shadow-[0_10px_25px_rgba(213,114,65,0.4)] hover:scale-105 transition-all active:scale-95">
-      Garantir Minha Vaga
+    <a href="#oferta" class="bg-[#D57241] text-white px-5 py-2.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest shadow-lg hover:bg-[#284A78] transition-all">
+      Garantir Vaga
     </a>
   </div>
 </header>
 
-<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-white">
-  
-  <div class="absolute top-0 right-0 w-1/3 h-full bg-[#284A78]/5 -skew-x-12 translate-x-20 pointer-events-none hidden md:block"></div>
-  <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#D57241]/5 rounded-full blur-[120px] pointer-events-none"></div>
-
-  <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
-    
+<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
+  <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
     <div class="opacity-0 animate-fade-up">
-      <div class="inline-flex items-center gap-2 bg-[#284A78]/10 text-[#284A78] px-4 py-2 rounded-full mb-6">
-        <span class="w-2 h-2 bg-[#284A78] rounded-full animate-pulse"></span>
-        <span class="text-[10px] md:text-xs font-bold uppercase tracking-[0.2em]">Transforme seu Negócio</span>
+      <div class="inline-block bg-[#D57241]/10 text-[#D57241] px-4 py-1.5 rounded-full mb-6 font-bold text-[10px] md:text-xs uppercase tracking-[0.2em]">
+        Método Validado
       </div>
-
-      <h1 class="font-display text-[38px] md:text-[56px] lg:text-[68px] leading-[1.05] font-black text-[#284A78] mb-6 tracking-tighter">
-        Aprenda a construir um <span class="text-[#D57241] block sm:inline">E-commerce do zero.</span>
+      <h1 class="font-display text-[34px] md:text-[56px] lg:text-[64px] leading-[1.1] font-black text-[#284A78] mb-6 tracking-tighter">
+        Aprenda a construir um <span class="text-[#D57241]">E-commerce do zero.</span>
       </h1>
-      
-      <p class="text-slate-600 text-lg md:text-xl mb-10 max-w-lg leading-relaxed">
-        Saia do amadorismo e construa uma operação profissional, escalável e lucrativa com um <strong>método validado</strong> por quem vive o campo de batalha.
+      <p class="text-slate-600 text-base md:text-lg mb-10 max-w-lg leading-relaxed">
+        Saia do amadorismo e construa uma operação profissional guiada por quem já faturou milhões no mercado digital.
       </p>
-      
-      <div class="flex flex-col sm:flex-row items-center gap-4">
-        <a class="w-full sm:w-auto bg-[#284A78] text-white px-8 py-5 rounded-2xl text-base font-bold text-center shadow-2xl hover:bg-[#D57241] transition-all duration-300" href="#oferta">
-          Começar meu E-commerce
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a class="bg-[#284A78] text-white px-8 py-5 rounded-2xl font-bold text-center shadow-xl hover:bg-[#D57241] transition-all" href="#oferta">
+          Começar Agora
         </a>
-        
-        <div class="flex items-center gap-3 px-5 py-4 border border-slate-200 rounded-2xl bg-white/50 backdrop-blur-sm">
-          <span class="material-symbols-outlined text-[#D57241] fill-1">verified</span>
-          <span class="text-sm font-bold text-[#284A78] uppercase tracking-tight">Método 100% Validado</span>
-        </div>
       </div>
     </div>
 
-    <div class="relative flex justify-center items-center">
-      <div class="relative w-full max-w-[480px] opacity-0 animate-fade-up [animation-delay:200ms]">
-        
-        <div class="absolute inset-0 border-2 border-[#D57241] rounded-3xl translate-x-4 translate-y-4 -z-10 opacity-20"></div>
-
-        <img 
-          alt="Bruno Bastelli"
-          class="w-full object-cover aspect-[4/5] rounded-3xl shadow-[0_50px_100px_rgba(40,74,120,0.15)] relative z-10"
-          src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg"
-        />
-
-        <div class="absolute -bottom-8 -left-4 md:-left-12 z-20
-                    bg-white p-6 rounded-2xl shadow-2xl
-                    border border-slate-100 max-w-[220px]
-                    opacity-0 animate-fade-right [animation-delay:600ms]">
-          <div class="bg-[#D57241]/10 text-[#D57241] w-12 h-12 rounded-xl flex items-center justify-center mb-4">
-            <span class="material-symbols-outlined text-3xl">workspace_premium</span>
-          </div>
-          <p class="text-[#284A78] font-black text-2xl mb-1">14+ ANOS</p>
-          <p class="text-[11px] leading-snug text-slate-500 font-bold uppercase tracking-tight">
-            De experiência real no mercado de E-commerce.
-          </p>
+    <div class="relative flex justify-center opacity-0 animate-fade-up [animation-delay:200ms]">
+      <div class="relative w-full max-w-[420px]">
+        <div class="absolute inset-0 bg-[#284A78] rounded-[2rem] rotate-3 translate-x-3 translate-y-3 -z-10 opacity-10"></div>
+        <img src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg" alt="Bruno" class="rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5]">
+        <div class="absolute -bottom-6 -right-4 bg-white p-5 rounded-2xl shadow-2xl border border-slate-100 max-w-[180px]">
+          <p class="text-[#D57241] font-black text-2xl">14+ Anos</p>
+          <p class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">De experiência real no mercado.</p>
         </div>
-
       </div>
     </div>
-
   </div>
 </section>
-<!-- Roda do E-commerce -->
-<section class="py-24 bg-white overflow-hidden relative" id="metodo">
-  
-  <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-[#284A78]/5 blur-[100px] rounded-full pointer-events-none"></div>
 
+<section class="py-24 bg-slate-50 relative border-t border-slate-100" id="metodo">
   <div class="max-w-[1200px] mx-auto px-6 relative z-10">
-    <div class="grid md:grid-cols-2 gap-16 items-center">
-      
-      <div class="opacity-0 animate-fade-up">
-        <h2 class="font-display text-[32px] md:text-4xl lg:text-5xl font-extrabold text-[#284A78] mb-6 leading-tight">
-          A Roda do E-commerce:<br>
-          <span class="text-[#D57241]">O Método Definitivo</span>
-        </h2>
-        <p class="text-slate-600 text-lg mb-10 leading-relaxed">
-          Não existe bala de prata. O sucesso no e-commerce é o equilíbrio perfeito entre **5 pilares fundamentais** que sustentam qualquer operação de escala.
-        </p>
+    <div class="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-up">
+      <h2 class="font-display text-[32px] md:text-5xl font-black text-[#284A78] mb-6">
+        A Roda do E-commerce: <span class="text-[#D57241]">O Método</span>
+      </h2>
+      <p class="text-slate-600 text-base md:text-lg">
+        O sucesso no e-commerce é o equilíbrio perfeito entre 5 pilares fundamentais que sustentam qualquer operação de escala.
+      </p>
+    </div>
 
-        <div class="space-y-4">
-          
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#D57241] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              1
-            </div>
+    <div class="grid lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-7 space-y-4 opacity-0 animate-fade-up [animation-delay:200ms]">
+        
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+          <div class="flex gap-5">
+            <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">1</div>
             <div>
               <h4 class="font-bold text-[#284A78] text-lg mb-1">Planejamento Estratégico</h4>
-              <p class="text-slate-500 text-sm">Definição de nicho, personas e diferenciação competitiva no mercado.</p>
+              <p class="text-slate-500 text-sm leading-relaxed">Definição de nicho, personas e diferenciação competitiva no mercado atual.</p>
             </div>
           </div>
+        </div>
 
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#284A78] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              2
-            </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+          <div class="flex gap-5">
+            <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">2</div>
             <div>
               <h4 class="font-bold text-[#284A78] text-lg mb-1">Equipes e Talentos</h4>
-              <p class="text-slate-500 text-sm">Como contratar e gerir os braços direitos que vão fazer a roda girar.</p>
+              <p class="text-slate-500 text-sm leading-relaxed">Como contratar e gerir os braços direitos que vão fazer a sua operação escalar.</p>
             </div>
           </div>
+        </div>
 
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#284A78] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              3
-            </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+          <div class="flex gap-5">
+            <div class="w-12 h-12 flex-shrink-0 bg-[#D57241] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#284A78] transition-colors">3</div>
             <div>
               <h4 class="font-bold text-[#284A78] text-lg mb-1">Loja de Alta Conversão</h4>
-              <p class="text-slate-500 text-sm">Tecnologia e UX focadas em transformar cada visita em uma venda concluída.</p>
+              <p class="text-slate-500 text-sm leading-relaxed">Tecnologia e UX focadas em transformar cada visita em uma venda concluída.</p>
             </div>
           </div>
+        </div>
 
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#284A78] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              4
-            </div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Operação e Logística</h4>
-              <p class="text-slate-500 text-sm">Do estoque ao unboxing: a engenharia por trás da jornada da entrega perfeita.</p>
-            </div>
-          </div>
-
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#D57241] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              5
-            </div>
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
+          <div class="flex gap-5">
+            <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">4</div>
             <div>
               <h4 class="font-bold text-[#284A78] text-lg mb-1">Marketing e Escala</h4>
-              <p class="text-slate-500 text-sm">Aquisição de novos clientes com ROI positivo e previsibilidade financeira.</p>
+              <p class="text-slate-500 text-sm leading-relaxed">Aquisição de novos clientes com ROI positivo e previsibilidade financeira.</p>
             </div>
           </div>
-
         </div>
+
       </div>
 
-      <div class="relative flex justify-center items-center opacity-0 animate-fade-up [animation-delay:400ms]">
-        
-        <div class="absolute w-[80%] h-[80%] border border-[#284A78]/10 rounded-full animate-ping"></div>
-        <div class="absolute w-[100%] h-[100%] border border-[#D57241]/5 rounded-full"></div>
-
-        <div class="relative p-8">
-          <img 
-            alt="A Roda do E-commerce" 
-            class="w-full max-w-lg mx-auto h-auto object-contain drop-shadow-[0_35px_35px_rgba(40,74,120,0.2)] hover:rotate-12 transition-transform duration-1000"
-            src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png"
-          >
-          
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur px-4 py-2 rounded-lg border border-slate-200 shadow-xl">
-             <p class="text-[#284A78] font-black text-xs uppercase tracking-tighter">Foco em Resultado</p>
-          </div>
+      <div class="lg:col-span-5 flex justify-center opacity-0 animate-fade-up [animation-delay:400ms]">
+        <div class="relative w-full max-w-[400px]">
+          <div class="absolute inset-0 bg-[#D57241]/5 rounded-full blur-3xl animate-pulse"></div>
+          <img src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png" alt="Método" class="w-full relative z-10 drop-shadow-2xl">
         </div>
       </div>
-
     </div>
   </div>
 </section>
