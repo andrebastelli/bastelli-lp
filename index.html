@@ -82,17 +82,33 @@
   animation-play-state: paused;
 }
 
-#floatingVideo {
+.floating-video {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 300px;
-  height: 170px;
+  width: 320px;
+  height: 180px;
   z-index: 999;
-  border-radius: 12px;
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  transform: translateY(20px) scale(0.95);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.floating-video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.floating-video.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.hidden {
   display: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
     </style>
@@ -174,15 +190,26 @@
             },
         }
 
-const videoSection = document.querySelector("#mainVideo");
+const mainVideo = document.querySelector("#mainVideo");
+const floating = document.getElementById("floatingVideo");
 
 window.addEventListener("scroll", () => {
-  const rect = videoSection.getBoundingClientRect();
+  const rect = mainVideo.getBoundingClientRect();
 
+  // Quando o vídeo principal sair da tela
   if (rect.bottom < 0) {
-    document.getElementById("floatingVideo").style.display = "block";
+    floating.classList.remove("hidden");
+
+    setTimeout(() => {
+      floating.classList.add("show");
+    }, 50);
+
   } else {
-    document.getElementById("floatingVideo").style.display = "none";
+    floating.classList.remove("show");
+
+    setTimeout(() => {
+      floating.classList.add("hidden");
+    }, 300);
   }
 });
 
@@ -878,5 +905,13 @@ window.addEventListener("scroll", () => {
   </div>
 </footer>
 
+<div id="floatingVideo" class="floating-video hidden">
+  <iframe 
+    src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=1&rel=0"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
 
 </body></html>
