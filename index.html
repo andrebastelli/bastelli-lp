@@ -418,19 +418,34 @@ window.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <div class="lg:col-span-5 flex justify-center opacity-0 animate-fade-up [animation-delay:400ms]">
-  <div class="relative w-full max-w-[400px] group"> <div class="absolute inset-0 bg-[#D57241]/10 rounded-full blur-3xl animate-pulse"></div>
+  <div class="relative w-full max-w-[400px] group">
+    
+    <div class="absolute inset-0 bg-[#D57241]/10 rounded-full blur-3xl animate-pulse"></div>
     
     <img 
       src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png" 
       alt="Método" 
-      class="w-full relative z-10 drop-shadow-2xl animate-spin-slow group-hover:pause-spin cursor-pointer"
+      class="w-full relative z-10 drop-shadow-2xl cursor-pointer"
+      style="
+        animation: spin-slow 20s linear infinite;
+        animation-play-state: running;
+      "
+      onmouseover="this.style.animationPlayState='paused'"
+      onmouseout="this.style.animationPlayState='running'"
     >
     
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur px-4 py-2 rounded-lg border border-slate-200 shadow-xl z-20 pointer-events-none">
-       <p class="text-[#284A78] font-black text-xs uppercase tracking-tighter">Foco em Resultado</p>
+       <p class="text-[#284A78] font-black text-[10px] uppercase tracking-tighter">Foco em Resultado</p>
     </div>
   </div>
 </div>
+
+<style>
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+</style>
     </div>
   </div>
 </section>
