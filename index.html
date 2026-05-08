@@ -64,6 +64,24 @@
 .cta-button {
   animation: pulseCTA 2.5s infinite;
 }
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
+
+.spin-slow:hover {
+  animation-play-state: paused;
+}
+
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -304,7 +322,11 @@
 </li>
 </ul>
 </div>
-<div class="relative flex justify-center"><img alt="A Roda do E-commerce" class="w-full max-w-lg mx-auto h-auto object-contain" src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png"></div>
+<div class="relative flex justify-center"><img 
+  alt="A Roda do E-commerce" 
+  class="w-full max-w-lg mx-auto h-auto object-contain spin-slow"
+  src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png"
+></div>
 </div>
 </div>
 </section>
