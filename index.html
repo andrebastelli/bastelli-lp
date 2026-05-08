@@ -54,6 +54,16 @@
   transform: scale(0.97);
   box-shadow: 0 5px 15px rgba(213, 114, 65, 0.2);
 }
+
+@keyframes pulseCTA {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.cta-button {
+  animation: pulseCTA 2.5s infinite;
+}
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -593,9 +603,9 @@
   </span>
 
 </a>
-<div><p class="mt-4 text-sm text-white/80">
+<p class="mt-4 text-sm text-white/80">
 ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
-</p></div>
+</p>
 
 </div>
 </section>
