@@ -313,21 +313,46 @@ window.addEventListener("DOMContentLoaded", () => {
 </div>
 </div>
 </div>
-<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden animate-fade-up">
+<style>
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.animate-image {
+  animation: fadeUp 0.9s ease-out both;
+}
+
+.animate-badge {
+  animation: fadeUp 0.9s ease-out both;
+  animation-delay: 0.4s;
+}
+</style>
+
+<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden">
 
   <div class="relative inline-block">
 
-    <!-- imagem -->
+    <!-- IMAGEM -->
     <img 
       alt="Bruno Bastelli"
-      class="w-full object-cover aspect-[3/4] md:aspect-[4/5] rounded-2xl"
+      class="w-full object-cover aspect-[3/4] md:aspect-[4/5] rounded-2xl animate-image"
       src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg"
     />
 
     <!-- BADGE -->
     <div class="absolute bottom-[-20px] left-[20%]
                 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg
-                border border-outline-variant max-w-[220px]">
+                border border-outline-variant max-w-[220px]
+                animate-badge">
 
       <p class="text-primary font-bold text-h3 mb-1">14+ Anos</p>
       <p class="text-body-sm text-on-surface-variant">
