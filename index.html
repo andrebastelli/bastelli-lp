@@ -313,28 +313,31 @@ window.addEventListener("DOMContentLoaded", () => {
 </div>
 </div>
 </div>
-<div class="relative group">
-  <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
-  <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
-
-  <!-- IMAGE WRAPPER -->
 <section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden animate-fade-up">
-  <img 
-    alt="Bruno Bastelli"
-    class="w-full object-cover aspect-[3/4] md:aspect-[4/5]"
-    data-alt="A professional portrait of a male business expert..."
-    src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg"
-  />
-</div>
 
-<!-- BADGE -->
-<div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg border border-outline-variant max-w-[200px] animate-fade-up">
-  <p class="text-primary font-bold text-h3 mb-1">14+ Anos</p>
-  <p class="text-body-sm text-on-surface-variant">
-    De experiência real no mercado de E-commerce.
-  </p>
-</div>
-</div>
+  <div class="relative inline-block">
+
+    <!-- imagem -->
+    <img 
+      alt="Bruno Bastelli"
+      class="w-full object-cover aspect-[3/4] md:aspect-[4/5] rounded-2xl"
+      src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg"
+    />
+
+    <!-- BADGE -->
+    <div class="absolute bottom-[-20px] left-[20%]
+                bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg
+                border border-outline-variant max-w-[220px]">
+
+      <p class="text-primary font-bold text-h3 mb-1">14+ Anos</p>
+      <p class="text-body-sm text-on-surface-variant">
+        De experiência real no mercado de E-commerce.
+      </p>
+
+    </div>
+
+  </div>
+
 </section>
 <!-- Problema Section -->
 <section class="py-section-gap bg-surface-container-low">
@@ -904,7 +907,14 @@ text-white px-6 py-4 sm:px-10 sm:py-6 rounded-xl font-bold text-sm sm:text-lg">
    bg-gradient-to-r from-[#D57241] to-[#c46032]
    text-white px-6 py-5 md:px-12 md:py-6
    rounded-xl font-bold text-base md:text-lg
-   shadow-[0_15px_35px_rgba(213,114,65,0.4)] hover:scale-105 hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)] transition-all duration-300 overflow-hidden animate-fade-up">
+   shadow-[0_15px_35px_rgba(213,114,65,0.4)]
+   transition-all duration-300 overflow-hidden animate-fade-up
+
+   /* DESKTOP */
+   md:hover:scale-105 md:hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]
+
+   /* MOBILE TOUCH FEEDBACK */
+   active:scale-95 active:brightness-110">
 
   <!-- TEXTO MOBILE -->
   <span class="block md:hidden">
@@ -916,7 +926,8 @@ text-white px-6 py-4 sm:px-10 sm:py-6 rounded-xl font-bold text-sm sm:text-lg">
     Sim! Quero Garantir Minha Vaga com 50% OFF
   </span>
 
-  <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
+  <!-- ÍCONE (funciona no desktop hover e mobile touch) -->
+  <span class="material-symbols-outlined transition-transform md:group-hover:translate-x-1">
     arrow_forward
   </span>
 
