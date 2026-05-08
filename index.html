@@ -203,10 +203,6 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-function closeVideo(){
-  document.getElementById("floatingVideo").style.display = "none";
-}
-
     </script>
 </head>
 <body class="bg-background text-on-background font-body-md">
@@ -659,20 +655,6 @@ function closeVideo(){
           allow="autoplay; encrypted-media"
           allowfullscreen>
         </iframe>
-
-        <div id="floatingVideo" class="floating-video hidden">
-  <button onclick="closeVideo()" style="
-    position:absolute;
-    top:6px;
-    right:6px;
-    background:black;
-    color:white;
-    border:none;
-    border-radius:50%;
-    width:24px;
-    height:24px;
-    cursor:pointer;
-  ">×</button>
 
       </div>
 
