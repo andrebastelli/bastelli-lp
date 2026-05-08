@@ -84,17 +84,24 @@
 
 .floating-video {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 320px;
-  height: 180px;
+  bottom: 16px;
+  right: 16px;
+  width: 260px;
+  height: 146px;
   z-index: 999;
-  border-radius: 14px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
   transform: translateY(20px) scale(0.95);
   opacity: 0;
   transition: all 0.4s ease;
+}
+
+/* ESCONDE NO DESKTOP */
+@media (min-width: 768px) {
+  .floating-video {
+    display: none;
+  }
 }
 
 .floating-video iframe {
@@ -202,6 +209,22 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+ const closeBtn = document.getElementById("closeFloatingVideo");
+  const floating = document.getElementById("floatingVideo");
+
+  if (closeBtn && floating) {
+
+    // Verifica se já foi fechado
+    if (localStorage.getItem("videoClosed") === "true") {
+      floating.style.display = "none";
+    }
+
+    closeBtn.addEventListener("click", () => {
+      floating.style.display = "none";
+      localStorage.setItem("videoClosed", "true");
+    });
+  }
 
     </script>
 </head>
@@ -931,6 +954,13 @@ text-white px-6 py-4 sm:px-10 sm:py-6 rounded-xl font-bold text-sm sm:text-lg">
 </footer>
 
 <div id="floatingVideo" class="floating-video">
+
+  <!-- BOTÃO FECHAR -->
+  <button 
+    id="closeFloatingVideo"
+    class="absolute top-2 right-2 z-50 bg-black/70 text-white text-xs w-7 h-7 rounded-full flex items-center justify-center hover:bg-black transition">
+    ✕
+  </button>
   <iframe 
     src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=1"
     frameborder="0"
