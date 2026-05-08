@@ -961,20 +961,30 @@ text-white px-6 py-4 sm:px-10 sm:py-6 rounded-xl font-bold text-sm sm:text-lg">
   </div>
 </footer>
 
-<div id="floatingVideo" class="floating-video">
+<div id="floatingVideo" class="floating-video flex flex-col items-end gap-2">
 
-  <!-- BOTÃO FECHAR -->
+  <!-- BOTÃO FORA DO VÍDEO -->
   <button 
     id="closeFloatingVideo"
-    class="absolute top-2 right-2 z-50 bg-black/70 text-white text-xs w-7 h-7 rounded-full flex items-center justify-center hover:bg-black transition">
+    class="bg-black/80 text-white text-xs w-7 h-7 rounded-full flex items-center justify-center hover:bg-black transition shadow-md">
     ✕
   </button>
-  <iframe 
-    src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=1"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
+
+  <!-- VÍDEO -->
+  <div class="relative w-full h-full rounded-xl overflow-hidden">
+    
+    <div class="absolute inset-0 z-20"></div>
+
+    <iframe 
+      class="w-full h-full"
+      src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&playsinline=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+
+  </div>
+
 </div>
 
 </body></html>
