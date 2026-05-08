@@ -283,96 +283,93 @@ window.addEventListener("DOMContentLoaded", () => {
 </head>
 <body class="bg-background text-on-background font-body-md">
 <!-- TopAppBar -->
-<section class="py-24 bg-white overflow-hidden relative" id="metodo">
-  
-  <div class="absolute top-1/2 left-0 -translate-y-1/2 w-64 h-64 bg-[#284A78]/5 blur-[100px] rounded-full pointer-events-none"></div>
+<header class="bg-surface/95 backdrop-blur-md border-b border-outline-variant shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center w-full px-4 sm:px-6 py-3 md:py-4 max-w-[1200px] mx-auto">
+<div class="flex items-center gap-3">
+  <!-- LOGO DESKTOP -->
+    <img 
+      src="https://i.ibb.co/nswJd1Bx/logo-a.png" 
+      alt="Bruno Bastelli"
+      class="hidden md:block h-10 w-auto object-contain"
+    >
 
-  <div class="max-w-[1200px] mx-auto px-6 relative z-10">
-    <div class="grid md:grid-cols-2 gap-16 items-center">
+    <!-- LOGO MOBILE -->
+    <img 
+      src="https://i.ibb.co/xKcfH1Qb/selo-1.png" 
+      alt="Bruno Bastelli"
+      class="md:hidden h-12 w-auto object-contain"
+    >
+  ></div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="relative font-medium text-on-surface-variant transition-all hover:text-[#D57241] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#D57241] after:transition-all hover:after:w-full" href="#metodo">Método</a>
+
+  <a class="relative font-medium text-on-surface-variant transition-all hover:text-[#D57241] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#D57241] after:transition-all hover:after:w-full" href="#sobre">Sobre</a>
+
+  <a class="relative font-medium text-on-surface-variant transition-all hover:text-[#D57241] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#D57241] after:transition-all hover:after:w-full" href="#depoimentos">Depoimentos</a>
+
+  <a class="relative font-medium text-on-surface-variant transition-all hover:text-[#D57241] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#D57241] after:transition-all hover:after:w-full" href="#faq">FAQ</a>
+</nav>
+<!-- BOTÃO DESKTOP -->
+<a 
+  class="hidden md:inline-flex cta-button bg-gradient-to-r from-[#D57241] to-[#c46032] text-white px-4 py-2.5 rounded-md text-sm font-semibold shadow-md hover:scale-105 transition" 
+  href="#oferta">
+  Garantir Minha Vaga
+</a>
+
+<!-- BOTÃO MOBILE -->
+<a 
+  class="md:hidden inline-flex cta-button bg-gradient-to-r from-[#D57241] to-[#c46032] text-white px-3 py-2 rounded-md text-xs font-semibold shadow-sm" 
+  href="#oferta">
+  Garantir Vaga
+</a>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-32 overflow-hidden bg-white">
+  <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+    
+    <div class="z-10 py-4">
+      <span class="text-secondary font-label-caps text-label-caps mb-4 block">TRANSFORME SEU NEGÓCIO ONLINE</span>
+      <h1 class="font-display text-[26px] sm:text-[32px] md:text-[48px] lg:text-[56px] leading-[1.25] md:leading-[1.1] font-extrabold text-on-surface mb-4 tracking-tight">
+        Aprenda a construir um <span class="text-primary">E-commerce do zero</span> com um método validado.
+      </h1>
+      <p class="font-body-lg text-[15px] md:text-body-lg text-on-surface-variant mb-8 max-w-lg">
+        Saia do amadorismo e construa uma operação profissional, escalável e lucrativa guiada por quem já faturou milhões no mercado digital.
+      </p>
       
-      <div class="opacity-0 animate-fade-up">
-        <h2 class="font-display text-[32px] md:text-4xl lg:text-5xl font-extrabold text-[#284A78] mb-6 leading-tight">
-          A Roda do E-commerce:<br>
-          <span class="text-[#D57241]">O Método Definitivo</span>
-        </h2>
-        <p class="text-slate-600 text-lg mb-10 leading-relaxed">
-          Não existe bala de prata. O sucesso no e-commerce é o equilíbrio perfeito entre **5 pilares fundamentais** que sustentam qualquer operação de escala.
-        </p>
-
-        <div class="space-y-4">
-          
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#D57241] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              1
-            </div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Planejamento Estratégico</h4>
-              <p class="text-slate-500 text-sm">Definição de nicho, personas e diferenciação competitiva no mercado.</p>
-            </div>
-          </div>
-
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#284A78] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              2
-            </div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Equipes e Talentos</h4>
-              <p class="text-slate-500 text-sm">Como contratar e gerir os braços direitos que vão fazer a roda girar.</p>
-            </div>
-          </div>
-
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#284A78] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              3
-            </div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Loja de Alta Conversão</h4>
-              <p class="text-slate-500 text-sm">Tecnologia e UX focadas em transformar cada visita em uma venda concluída.</p>
-            </div>
-          </div>
-
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#284A78] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              4
-            </div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Operação e Logística</h4>
-              <p class="text-slate-500 text-sm">Do estoque ao unboxing: a engenharia por trás da jornada da entrega perfeita.</p>
-            </div>
-          </div>
-
-          <div class="group flex gap-5 p-4 rounded-2xl border border-transparent hover:border-slate-100 hover:bg-slate-50 transition-all duration-300">
-            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-[#D57241] text-white flex items-center justify-center font-black text-lg shadow-lg group-hover:scale-110 transition-transform">
-              5
-            </div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Marketing e Escala</h4>
-              <p class="text-slate-500 text-sm">Aquisição de novos clientes com ROI positivo e previsibilidade financeira.</p>
-            </div>
-          </div>
-
+      <div class="flex flex-col gap-3 sm:flex-row sm:gap-4">
+        <a class="cta-button w-full sm:w-auto bg-gradient-to-r from-[#D57241] to-[#c46032] text-white px-6 py-4 sm:px-8 sm:py-5 rounded-lg text-sm sm:text-base font-semibold text-center shadow-lg" href="#oferta">
+          Começar meu E-commerce
+        </a>
+        <div class="flex items-center gap-3 px-4 py-2 border border-outline-variant rounded-lg bg-white">
+          <span class="material-symbols-outlined text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">verified</span>
+          <span class="text-body-sm font-medium">Método 100% Validado</span>
         </div>
       </div>
-
-      <div class="relative flex justify-center items-center opacity-0 animate-fade-up [animation-delay:400ms]">
-        
-        <div class="absolute w-[80%] h-[80%] border border-[#284A78]/10 rounded-full animate-ping"></div>
-        <div class="absolute w-[100%] h-[100%] border border-[#D57241]/5 rounded-full"></div>
-
-        <div class="relative p-8">
-          <img 
-            alt="A Roda do E-commerce" 
-            class="w-full max-w-lg mx-auto h-auto object-contain drop-shadow-[0_35px_35px_rgba(40,74,120,0.2)] hover:rotate-12 transition-transform duration-1000"
-            src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png"
-          >
-          
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white/90 backdrop-blur px-4 py-2 rounded-lg border border-slate-200 shadow-xl">
-             <p class="text-[#284A78] font-black text-xs uppercase tracking-tighter">Foco em Resultado</p>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <div class="relative flex justify-center items-center h-full">
+  <div class="relative inline-block w-full max-w-[450px] opacity-0 animate-fade-up">
+    
+    <img 
+      alt="Bruno Bastelli"
+      class="w-full object-cover aspect-[4/5] rounded-2xl shadow-2xl"
+      src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg"
+    />
+
+    <div class="absolute bottom-6 -right-4 md:-right-8
+                bg-white/95 backdrop-blur p-4 rounded-xl shadow-xl
+                border border-outline-variant max-w-[200px]
+                opacity-0 animate-fade-right [animation-delay:400ms]">
+      <p class="text-[#D57241] font-bold text-xl mb-1">14+ Anos</p>
+      <p class="text-[12px] leading-tight text-on-surface-variant">
+        De experiência real no mercado de E-commerce.
+      </p>
+    </div>
+
+  </div>
+</div>
+
   </div>
 </section>
 <!-- Roda do E-commerce -->
