@@ -87,11 +87,12 @@
   bottom: 16px;
   right: 16px;
   width: 260px;
-  height: 146px;
+  height: auto;
   z-index: 999;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  background: transparent;
+  box-shadow: none;
   transform: translateY(20px) scale(0.95);
   opacity: 0;
   transition: all 0.4s ease;
@@ -210,21 +211,26 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
- const closeBtn = document.getElementById("closeFloatingVideo");
+ document.addEventListener("DOMContentLoaded", () => {
+
+  const closeBtn = document.getElementById("closeFloatingVideo");
   const floating = document.getElementById("floatingVideo");
 
-  if (closeBtn && floating) {
+  if (!closeBtn || !floating) return;
 
-    // Verifica se já foi fechado
-    if (localStorage.getItem("videoClosed") === "true") {
-      floating.style.display = "none";
-    }
-
-    closeBtn.addEventListener("click", () => {
-      floating.style.display = "none";
-      localStorage.setItem("videoClosed", "true");
-    });
+  // Se já foi fechado antes
+  if (localStorage.getItem("videoClosed") === "true") {
+    floating.style.display = "none";
+    return;
   }
+
+  closeBtn.addEventListener("click", () => {
+    floating.classList.remove("show"); // remove animação
+    floating.style.display = "none";   // esconde
+    localStorage.setItem("videoClosed", "true");
+  });
+
+});
 
     </script>
 </head>
