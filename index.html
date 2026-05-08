@@ -118,8 +118,8 @@
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
-    filter: blur(8px);
+    transform: translateY(25px);
+    filter: blur(10px);
   }
   to {
     opacity: 1;
@@ -130,6 +130,13 @@
 
 .animate-fade-up {
   animation: fadeUp 0.9s ease-out both;
+}
+
+/* Desktop mais suave */
+@media (min-width: 768px) {
+  .animate-fade-up {
+    animation-duration: 1.1s;
+  }
 }
 
     </style>
@@ -320,7 +327,7 @@ window.addEventListener("DOMContentLoaded", () => {
   <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
 
   <!-- IMAGE WRAPPER -->
-<div class="overflow-hidden rounded-2xl shadow-xl border-4 md:border-8 border-white animate-fade-up">
+<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden animate-fade-up">
   <img 
     alt="Bruno Bastelli"
     class="w-full object-cover aspect-[3/4] md:aspect-[4/5]"
@@ -459,7 +466,7 @@ window.addEventListener("DOMContentLoaded", () => {
 </div>
 </section>
 <!-- Sobre Bruno Bastelli -->
-<section class="py-section-gap bg-primary text-on-primary overflow-hidden relative" id="sobre">
+<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden animate-fade-up" id="sobre">
 <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
 <svg fill="currentColor" viewBox="0 0 400 400"><path d="M0,400 Q200,300 400,400 L400,0 L0,0 Z"></path></svg>
 </div>
@@ -900,23 +907,42 @@ text-white px-6 py-4 sm:px-10 sm:py-6 rounded-xl font-bold text-sm sm:text-lg">
         Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
       </p>
 
-      <!-- CTA -->
-      <a href="#oferta"
-         class="group relative inline-flex items-center justify-center gap-3 
-         bg-gradient-to-r from-[#D57241] to-[#c46032] 
-         text-white px-12 py-6 rounded-xl font-bold text-lg 
-         shadow-[0_15px_35px_rgba(213,114,65,0.4)] 
-         hover:scale-105 hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]
-         transition-all duration-300 overflow-hidden">
+      <!-- CTA DESKTOP -->
+<a href="#oferta"
+   class="group relative inline-flex items-center justify-center gap-3
+   bg-gradient-to-r from-[#D57241] to-[#c46032]
+   text-white px-12 py-6 rounded-xl font-bold text-lg
+   shadow-[0_15px_35px_rgba(213,114,65,0.4)]
+   hover:scale-105 hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]
+   transition-all duration-300 overflow-hidden
+   animate-fade-up">
 
-        <span class="relative z-10 flex items-center gap-2">
-          Começar agora
-          <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
-            arrow_forward
-          </span>
-        </span>
+  <span class="relative z-10 flex items-center gap-2">
+    Começar agora
+    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
+      arrow_forward
+    </span>
+  </span>
 
-      </a>
+</a>
+
+<!-- CTA MOBILE -->
+<a href="#oferta"
+   class="group relative w-full inline-flex items-center justify-center gap-3
+   bg-gradient-to-r from-[#D57241] to-[#c46032]
+   text-white px-6 py-5 rounded-xl font-bold text-base
+   shadow-[0_12px_30px_rgba(213,114,65,0.35)]
+   active:scale-95 transition-all duration-300
+   animate-fade-up">
+
+  <span class="flex items-center gap-2">
+    Começar agora
+    <span class="material-symbols-outlined">
+      arrow_forward
+    </span>
+  </span>
+
+</a>
 
       <p class="mt-12 text-sm text-white/80">
         ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
