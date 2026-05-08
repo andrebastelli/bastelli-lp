@@ -428,47 +428,49 @@ window.addEventListener("DOMContentLoaded", () => {
 </div>
 </section>
 <!-- Sobre Bruno Bastelli -->
-<section class="py-24 bg-slate-50 text-slate-900 relative overflow-hidden opacity-0 animate-fade-up" id="sobre">
+<section class="py-24 bg-[#284A78] text-white relative overflow-hidden opacity-0 animate-fade-up" id="sobre">
   
-  <div class="absolute top-0 right-0 w-1/3 h-full opacity-[0.05] text-primary pointer-events-none">
-    <svg fill="currentColor" viewBox="0 0 400 400">
-      <path d="M0,400 Q200,300 400,400 L400,0 L0,0 Z"></path>
-    </svg>
-  </div>
+  <div class="absolute inset-0 bg-gradient-to-br from-[#284A78] via-[#1e3a5f] to-[#152942] opacity-100"></div>
 
-  <div class="max-w-[1000px] mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
+
+  <div class="max-w-[1100px] mx-auto px-6 flex flex-col md:flex-row gap-16 items-center relative z-10">
     
     <div class="md:w-1/2 opacity-0 animate-fade-up [animation-delay:400ms]">
-      <img 
-        alt="Bruno Bastelli Palestra" 
-        class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 ease-in-out border-4 border-white"
-        src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg"
-      >
+      <div class="relative">
+        <div class="absolute -inset-4 border border-white/10 rounded-xl pointer-events-none"></div>
+        
+        <img 
+          alt="Bruno Bastelli Palestra" 
+          class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 ease-in-out border-2 border-white/20 relative z-10"
+          src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg"
+        >
+      </div>
     </div>
 
     <div class="md:w-1/2 opacity-0 animate-fade-up [animation-delay:200ms]">
-      <span class="text-secondary font-label-caps text-label-caps mb-3 block">QUEM É O ESPECIALISTA</span>
+      <span class="text-secondary font-label-caps text-label-caps mb-3 block tracking-widest">O ESPECIALISTA</span>
       <h2 class="font-h2 text-[32px] md:text-h2 font-extrabold mb-6 leading-tight">Expertise que gera Resultados</h2>
       
-      <div class="border-l-4 border-primary/20 pl-6 mb-8 bg-white/50 p-6 rounded-r-lg shadow-inner">
-        <p class="font-body-lg text-body-lg italic text-primary opacity-95">
+      <div class="border-l-4 border-secondary pl-6 mb-8 bg-white/5 py-6 px-4 rounded-r-lg">
+        <p class="font-body-lg text-body-lg italic text-white/90">
           "Minha missão é democratizar o acesso ao conhecimento técnico de alto nível, permitindo que qualquer empreendedor possa construir um império no e-commerce."
         </p>
       </div>
       
-      <div class="space-y-4 text-slate-700">
+      <div class="space-y-4 text-white/80 leading-relaxed">
         <p>Com mais de 14 anos de atuação direta no mercado, Bruno Bastelli já coordenou projetos que somam múltiplos milhões em faturamento.</p>
-        <p>Especialista em consultoria estratégica, ele traz para este curso não apenas a teoria, mas o que realmente funciona no "campo de batalha" do varejo digital brasileiro.</p>
+        <p>Especialista em consultoria estratégica, ele traz para este curso o que realmente funciona no "campo de batalha" do varejo digital brasileiro.</p>
       </div>
       
       <div class="mt-10 grid grid-cols-2 gap-6 opacity-0 animate-fade-up [animation-delay:600ms]">
-        <div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col items-center">
-          <p class="text-h3 font-bold text-secondary text-4xl mb-1">14+</p>
-          <p class="text-label-caps font-label-caps text-slate-600 text-center">Anos de Mercado</p>
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/10 shadow-lg hover:bg-white/15 transition-colors">
+          <p class="text-secondary font-bold text-4xl mb-1">14+</p>
+          <p class="text-[10px] uppercase tracking-widest font-bold text-white/60">Anos de Mercado</p>
         </div>
-        <div class="bg-white p-6 rounded-lg border border-outline-variant shadow-sm flex flex-col items-center">
-          <p class="text-h3 font-bold text-secondary text-4xl mb-1">200+</p>
-          <p class="text-label-caps font-label-caps text-slate-600 text-center">Projetos Lançados</p>
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-xl border border-white/10 shadow-lg hover:bg-white/15 transition-colors">
+          <p class="text-secondary font-bold text-4xl mb-1">200+</p>
+          <p class="text-[10px] uppercase tracking-widest font-bold text-white/60">Projetos Lançados</p>
         </div>
       </div>
       
