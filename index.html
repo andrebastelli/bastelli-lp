@@ -298,14 +298,31 @@ window.addEventListener("DOMContentLoaded", () => {
 </div>
 </div>
 </div>
-<div class="relative">
-<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
-<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
-<img alt="Bruno Bastelli" class="rounded-2xl shadow-xl w-full object-cover aspect-[3/4] md:aspect-[4/5] border-4 md:border-8 border-white" data-alt="A professional portrait of a male business expert, Bruno Bastelli, wearing a sharp navy blue suit in a high-end corporate office setting. The lighting is sophisticated and directional, highlighting his confident expression. The background features a blurred minimalist executive lounge with soft, clean tones. The overall aesthetic is authoritative, professional, and corporate modern." src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg">
-<div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg border border-outline-variant max-w-[200px]">
-<p class="text-primary font-bold text-h3 mb-1">14+ Anos</p>
-<p class="text-body-sm text-on-surface-variant">De experiência real no mercado de E-commerce.</p>
-</div>
+<div class="relative group">
+  <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+  <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+
+  <!-- IMAGE WRAPPER -->
+  <div class="overflow-hidden rounded-2xl shadow-xl border-4 md:border-8 border-white">
+    <img 
+      alt="Bruno Bastelli"
+      class="w-full object-cover aspect-[3/4] md:aspect-[4/5]
+             transition-all duration-700 ease-out
+             group-hover:scale-105 group-hover:brightness-105"
+      data-alt="A professional portrait of a male business expert..."
+      src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg"
+    />
+  </div>
+
+  <!-- BADGE -->
+  <div class="absolute bottom-6 left-6 bg-white/90 backdrop-blur p-4 rounded-xl shadow-lg border border-outline-variant max-w-[200px]
+              transition-all duration-500 ease-out
+              group-hover:translate-y-[-4px] group-hover:shadow-2xl">
+    <p class="text-primary font-bold text-h3 mb-1">14+ Anos</p>
+    <p class="text-body-sm text-on-surface-variant">
+      De experiência real no mercado de E-commerce.
+    </p>
+  </div>
 </div>
 </div>
 </section>
