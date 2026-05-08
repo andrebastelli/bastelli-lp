@@ -130,6 +130,38 @@
   animation: fadeUp 0.8s ease-out both;
 }
 
+@layer utilities {
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-up {
+    animation: fade-up 0.8s ease-out forwards;
+  }
+
+  .animate-fade-right {
+    animation: fade-right 0.6s ease-out forwards;
+  }
+}
+
     </style>
 <script id="tailwind-config">
         tailwind.config = {
