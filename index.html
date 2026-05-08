@@ -641,48 +641,88 @@ window.addEventListener("DOMContentLoaded", () => {
   </div>
 </section>
 <!-- Diferenciais -->
-<section class="py-section-gap">
-<div class="max-w-[1200px] mx-auto px-6">
-<div class="bg-primary-container text-on-primary rounded-3xl p-12 overflow-hidden relative">
-<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
-<div class="grid md:grid-cols-2 gap-12 items-center relative z-10">
-<div>
-<h2 class="font-h2 text-h2 mb-6">Por que escolher o Bruno Bastelli?</h2>
-<div class="space-y-6">
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-tertiary-fixed-dim">check_circle</span>
-<p class="font-medium">Método Prático: Sem "enrolação" teórica. É direto ao ponto.</p>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-tertiary-fixed-dim">check_circle</span>
-<p class="font-medium">Atualização Constante: Estratégias que funcionam hoje no Brasil.</p>
-</div>
-<div class="flex gap-4">
-<span class="material-symbols-outlined text-tertiary-fixed-dim">check_circle</span>
-<p class="font-medium">Foco em Margem: Ensinamos a lucrar, não apenas a faturar.</p> 
-</div>
-</div>
-</div>
-<div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
-<h4 class="font-bold text-xl mb-4">O que você recebe ao entrar:</h4>
-<ul class="space-y-3 text-body-sm opacity-90">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-xs">arrow_forward</span> Acesso vitalício a todas as aulas
-                            </li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-xs">arrow_forward</span> Planilhas exclusivas de gestão e precificação
-                            </li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-xs">arrow_forward</span> Suporte técnico para dúvidas na plataforma
-                            </li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-xs">arrow_forward</span> Certificado de conclusão Bruno Bastelli
-                            </li>
-</ul>
-</div>
-</div>
-</div>
-</div>
+<section class="py-24 bg-white">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <div class="relative bg-[#284A78] rounded-[2.5rem] p-8 md:p-16 overflow-hidden shadow-2xl">
+      
+      <div class="absolute top-0 right-0 w-96 h-96 bg-[#D57241] opacity-10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
+      <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
+
+      <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        
+        <div class="opacity-0 animate-fade-up">
+          <h2 class="font-display text-3xl md:text-5xl font-black text-white mb-8 leading-tight">
+            Por que escolher o <span class="text-[#D57241]">Bruno Bastelli?</span>
+          </h2>
+          
+          <div class="space-y-8">
+            <div class="flex gap-5 group">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#D57241]/20 flex items-center justify-center group-hover:bg-[#D57241] transition-colors duration-300">
+                <span class="material-symbols-outlined text-[#D57241] group-hover:text-white">bolt</span>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg mb-1">Método Prático</h4>
+                <p class="text-slate-300 text-sm leading-relaxed">Sem "enrolação" teórica. É direto ao ponto, focado em execução real.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 group">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#D57241]/20 flex items-center justify-center group-hover:bg-[#D57241] transition-colors duration-300">
+                <span class="material-symbols-outlined text-[#D57241] group-hover:text-white">update</span>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg mb-1">Atualização Constante</h4>
+                <p class="text-slate-300 text-sm leading-relaxed">Estratégias que funcionam hoje no ecossistema de e-commerce do Brasil.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-5 group">
+              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#D57241]/20 flex items-center justify-center group-hover:bg-[#D57241] transition-colors duration-300">
+                <span class="material-symbols-outlined text-[#D57241] group-hover:text-white">trending_up</span>
+              </div>
+              <div>
+                <h4 class="text-white font-bold text-lg mb-1">Foco em Margem</h4>
+                <p class="text-slate-300 text-sm leading-relaxed">Ensinamos a lucrar de verdade, não apenas a mostrar faturamento bruto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white/5 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] border border-white/10 shadow-inner opacity-0 animate-fade-up [animation-delay:300ms]">
+          <h4 class="text-white font-black text-xl mb-6 flex items-center gap-2">
+            <span class="w-8 h-1 bg-[#D57241] rounded-full"></span>
+            O que você recebe ao entrar:
+          </h4>
+          
+          <ul class="space-y-5">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#D57241] text-xl">check_circle</span>
+              <span class="text-slate-100 font-medium">Acesso vitalício a todas as aulas</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#D57241] text-xl">check_circle</span>
+              <span class="text-slate-100 font-medium">Planilhas exclusivas de gestão e precificação</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#D57241] text-xl">check_circle</span>
+              <span class="text-slate-100 font-medium">Suporte técnico para dúvidas na plataforma</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-[#D57241] text-xl">check_circle</span>
+              <span class="text-slate-100 font-medium">Certificado de conclusão assinado</span>
+            </li>
+          </ul>
+
+          <div class="mt-10 pt-8 border-t border-white/10">
+            <a href="#oferta" class="block w-full bg-white text-[#284A78] text-center py-4 rounded-xl font-black uppercase tracking-widest hover:bg-[#D57241] hover:text-white transition-all shadow-lg">
+              Quero Garatira Minha Vaga
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Prova Social -->
 <section class="py-section-gap bg-surface" id="depoimentos">
