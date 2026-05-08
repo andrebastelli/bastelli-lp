@@ -195,8 +195,7 @@ window.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     const rect = mainVideo.getBoundingClientRect();
 
-    // ativa quando metade do vídeo já saiu da tela
-    if (rect.top < -200) {
+    if (rect.bottom < 0) {
       floating.classList.add("show");
     } else {
       floating.classList.remove("show");
@@ -628,6 +627,49 @@ window.addEventListener("DOMContentLoaded", () => {
 </div>
 </div>
 </section>
+
+<!-- VSL / VIDEO DE VENDAS -->
+<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden">
+
+  <div class="max-w-[900px] mx-auto px-6">
+
+    <h2 class="font-h2 text-[36px] leading-tight mb-6">
+      Assista isso antes de tomar qualquer decisão
+    </h2>
+
+    <p class="text-body-lg mb-10 opacity-90">
+      Entenda como sair do zero e construir um e-commerce lucrativo com método validado.
+    </p>
+
+    <div class="relative mb-12 group">
+
+      <div class="absolute -inset-2 bg-gradient-to-r from-[#D57241]/40 to-[#c46032]/40 blur-xl opacity-60 group-hover:opacity-100 transition"></div>
+
+      <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10">
+
+        <iframe 
+          id="mainVideo"
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=1&rel=0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+    </div>
+
+    <a href="#oferta" 
+       class="cta-button inline-flex items-center justify-center gap-2 
+       bg-gradient-to-r from-[#D57241] to-[#c46032] 
+       text-white px-8 py-4 rounded-lg font-bold shadow-lg">
+       Quero aplicar isso agora
+    </a>
+
+  </div>
+</section>
+
 <!-- Oferta -->
 <section class="py-section-gap bg-surface-container-high" id="oferta">
 <div class="max-w-[800px] mx-auto px-6 text-center">
@@ -724,32 +766,6 @@ window.addEventListener("DOMContentLoaded", () => {
     <p class="text-body-lg mb-10 max-w-2xl mx-auto opacity-90">
       Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
     </p>
-
-    <!-- VIDEO HIGH CONVERSION -->
-    <div class="relative mb-12 group">
-
-      <!-- glow -->
-      <div class="absolute -inset-2 bg-gradient-to-r from-[#D57241]/40 to-[#c46032]/40 blur-xl opacity-60 group-hover:opacity-100 transition"></div>
-
-      <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10">
-
-        <div id="floatingVideo" class="floating-video">
-  <button onclick="this.parentElement.style.display='none'" 
-    style="position:absolute;top:6px;right:6px;background:black;color:white;border:none;border-radius:50%;width:24px;height:24px;cursor:pointer;">
-    ×
-  </button>
-
-        <iframe 
-          id="mainVideo"
-          class="w-full aspect-video"
-          src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=1&rel=0&showinfo=0"
-          title="Vídeo de apresentação"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen>
-        </iframe>
-
-      </div>
 
     </div>
 
