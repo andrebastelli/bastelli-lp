@@ -82,24 +82,17 @@
   animation-play-state: paused;
 }
 
-.video-floating {
+#floatingVideo {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  width: 280px;
+  width: 300px;
+  height: 170px;
   z-index: 999;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-}
-
-.video-floating video {
-  border-radius: 12px;
-}
-
-/* mostrar CTA quando hover */
-#video-box:hover #video-overlay {
-  opacity: 1;
+  display: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
     </style>
@@ -181,36 +174,16 @@
             },
         }
 
-const video = document.getElementById("video");
-const wrapper = document.getElementById("video-box");
-const section = document.getElementById("video-wrapper");
+const videoSection = document.querySelector("#mainVideo");
 
-// autoplay quando entra na tela
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      video.play().catch(() => {});
-    }
-  });
-}, { threshold: 0.6 });
-
-observer.observe(section);
-
-// virar mini player
 window.addEventListener("scroll", () => {
-  const rect = section.getBoundingClientRect();
+  const rect = videoSection.getBoundingClientRect();
 
   if (rect.bottom < 0) {
-    wrapper.classList.add("video-floating");
+    document.getElementById("floatingVideo").style.display = "block";
   } else {
-    wrapper.classList.remove("video-floating");
+    document.getElementById("floatingVideo").style.display = "none";
   }
-});
-
-// loop manual suave
-video.addEventListener("ended", () => {
-  video.currentTime = 0;
-  video.play();
 });
 
     </script>
@@ -721,49 +694,64 @@ video.addEventListener("ended", () => {
 </div>
 </section>
 <!-- CTA Final -->
-<section class="py-24 bg-primary text-on-primary text-center">
-<div class="max-w-[1200px] mx-auto px-12"></div>
-<h2 class="font-h2 text-[40px] leading-tight mb-8">O mercado de E-commerce não espera.<br>Sua transformação começa agora.</h2>
-<p class="text-body-lg mb-12 max-w-2xl mx-auto opacity-90">Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje. Entre para o time de profissionais treinados por Bruno Bastelli.</p>
+<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden">
 
-<!-- VIDEO HIGH-CONVERSION -->
-<div id="video-wrapper" class="mt-12 flex justify-center">
-  
-  <div id="video-box" class="relative w-full max-w-3xl transition-all duration-500">
+  <div class="max-w-[1000px] mx-auto px-6">
+    
+    <h2 class="font-h2 text-[40px] leading-tight mb-6">
+      O mercado de E-commerce não espera.<br>
+      Sua transformação começa agora.
+    </h2>
 
-    <!-- Vídeo -->
-    <video 
-      id="video"
-      class="w-full rounded-2xl shadow-2xl"
-      src="/video.mp4"
-      muted
-      playsinline
-      preload="metadata"
-    ></video>
+    <p class="text-body-lg mb-10 max-w-2xl mx-auto opacity-90">
+      Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
+    </p>
+
+    <!-- VIDEO HIGH CONVERSION -->
+    <div class="relative mb-12 group">
+
+      <!-- glow -->
+      <div class="absolute -inset-2 bg-gradient-to-r from-[#D57241]/40 to-[#c46032]/40 blur-xl opacity-60 group-hover:opacity-100 transition"></div>
+
+      <div class="relative rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.4)] border border-white/10">
+
+        <iframe 
+          id="mainVideo"
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=1&rel=0&showinfo=0"
+          title="Vídeo de apresentação"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <a href="#oferta" 
+       class="cta-button group relative inline-flex items-center justify-center gap-3 
+       bg-gradient-to-r from-[#D57241] to-[#c46032] 
+       text-white px-10 py-6 rounded-xl font-bold text-lg 
+       shadow-[0_15px_35px_rgba(213,114,65,0.4)] 
+       hover:scale-105 hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]
+       transition-all duration-300 overflow-hidden">
+
+      <span class="relative z-10 flex items-center gap-2">
+        Começar agora
+        <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
+          arrow_forward
+        </span>
+      </span>
+
+    </a>
+
+    <p class="mt-6 text-sm text-white/80">
+      ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
+    </p>
 
   </div>
-</div>
-<a href="#oferta" 
-   class="cta-button group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-[#D57241] to-[#c46032] text-white px-10 py-6 rounded-xl font-bold text-lg shadow-[0_15px_35px_rgba(213,114,65,0.4)] overflow-hidden">
-
-  <span class="relative z-10 flex items-center gap-2">
-    Começar agora
-    <span class="material-symbols-outlined transition-transform group-hover:translate-x-1">
-      arrow_forward
-    </span>
-  </span>
-
-  <!-- brilho -->
-  <span class="absolute inset-0 overflow-hidden rounded-xl">
-    <span class="absolute left-[-75%] top-0 h-full w-1/2 bg-white/40 blur-sm skew-x-[-20deg] transition-all duration-700 group-hover:left-[130%]"></span>
-  </span>
-
-</a>
-<p class="mt-12 text-sm text-white/80">
-✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
-</p>
-
-</div>
 </section>
 <!-- FAQ Section -->
 <section class="py-section-gap" id="faq">
