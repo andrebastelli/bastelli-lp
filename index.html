@@ -453,7 +453,20 @@ window.addEventListener("DOMContentLoaded", () => {
 </div>
 <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row gap-16 items-center">
 <div class="md:w-1/2">
-<img alt="Bruno Bastelli Palesta" class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500" data-alt="A high-energy photograph of Bruno Bastelli speaking at a major digital commerce conference. He is standing on a modern stage with professional blue stage lighting, gesturing towards a large presentation screen. The atmosphere is professional, inspiring, and expertise-driven. The photo captures a moment of leadership and authority in the business world." src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg">
+<div class="overflow-hidden rounded-xl shadow-2xl group">
+  <img 
+    alt="Bruno Bastelli Palesta"
+    class="w-full object-cover
+           grayscale group-hover:grayscale-0
+           transition-all duration-700 ease-out
+           group-hover:scale-105 group-hover:brightness-110"
+    data-alt="A high-energy photograph of Bruno Bastelli speaking at a major digital commerce conference..."
+    src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg"
+  />
+
+  <!-- overlay de luz sutil -->
+  <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+</div><img alt="Bruno Bastelli Palesta" class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500" data-alt="A high-energy photograph of Bruno Bastelli speaking at a major digital commerce conference. He is standing on a modern stage with professional blue stage lighting, gesturing towards a large presentation screen. The atmosphere is professional, inspiring, and expertise-driven. The photo captures a moment of leadership and authority in the business world." src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg">
 </div>
 <div class="md:w-1/2">
 <h2 class="font-h2 text-h2 mb-6">Expertise que gera Resultados</h2>
