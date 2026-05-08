@@ -82,6 +82,21 @@
   animation-play-state: paused;
 }
 
+.video-floating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 260px;
+  z-index: 999;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.video-floating video {
+  border-radius: 12px;
+}
+
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -160,6 +175,33 @@
                 },
             },
         }
+
+const video = document.getElementById("video");
+const wrapper = document.getElementById("video-box");
+const section = document.getElementById("video-wrapper");
+
+// autoplay quando entrar na tela
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      video.play();
+    }
+  });
+}, { threshold: 0.6 });
+
+observer.observe(section);
+
+// virar vídeo flutuante quando sair da área
+window.addEventListener("scroll", () => {
+  const rect = section.getBoundingClientRect();
+
+  if (rect.bottom < 0) {
+    wrapper.classList.add("video-floating");
+  } else {
+    wrapper.classList.remove("video-floating");
+  }
+});
+
     </script>
 </head>
 <body class="bg-background text-on-background font-body-md">
@@ -670,6 +712,25 @@
 <!-- CTA Final -->
 <section class="py-24 bg-primary text-on-primary text-center">
 <div class="max-w-[1200px] mx-auto px-6">
+
+<!-- Vídeo -->
+<div id="video-wrapper" class="mt-12 flex justify-center">
+  
+  <div id="video-box" class="relative w-full max-w-3xl transition-all duration-500">
+    
+    <video 
+  id="video"
+  class="w-full rounded-2xl shadow-2xl"
+  src="SEU_VIDEO.mp4"
+  muted
+  playsinline
+  controls
+  loop
+></video>
+
+  </div>
+</div>
+
 <h2 class="font-h2 text-[40px] leading-tight mb-8">O mercado de E-commerce não espera.<br>Sua transformação começa agora.</h2>
 <p class="text-body-lg mb-12 max-w-2xl mx-auto opacity-90">Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje. Entre para o time de profissionais treinados por Bruno Bastelli.</p>
 <a href="#oferta" 
