@@ -195,8 +195,8 @@ window.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("scroll", () => {
     const rect = mainVideo.getBoundingClientRect();
 
-    // quando o vídeo sair da tela
-    if (rect.bottom < 0) {
+    // ativa quando metade do vídeo já saiu da tela
+    if (rect.top < -200) {
       floating.classList.add("show");
     } else {
       floating.classList.remove("show");
