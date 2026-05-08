@@ -17,6 +17,43 @@
         .shadow-ambient {
             box-shadow: 0px 10px 30px rgba(30, 58, 138, 0.05);
         }
+
+        .cta-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+.cta-button:hover::after {
+  left: 130%;
+  transition: all 0.6s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 35px rgba(213, 114, 65, 0.35);
+}
+
+.cta-button:active {
+  transform: scale(0.97);
+  box-shadow: 0 5px 15px rgba(213, 114, 65, 0.2);
+}
     </style>
 <script id="tailwind-config">
         tailwind.config = {
@@ -125,7 +162,7 @@
                     Saia do amadorismo e construa uma operação profissional, escalável e lucrativa guiada por quem já faturou milhões no mercado digital.
                 </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-secondary-container text-on-primary px-8 py-5 rounded-lg font-button text-button text-center shadow-lg hover:shadow-xl transition-all active:scale-95" href="#oferta">
+<a class="cta-button bg-secondary-container text-on-primary px-8 py-5 rounded-lg font-button text-button text-center shadow-lg" href="#oferta">
                         Começar meu E-commerce
                     </a>
 <div class="flex items-center gap-3 px-4 py-2 border border-outline-variant rounded-lg">
