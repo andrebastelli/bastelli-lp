@@ -782,10 +782,35 @@ window.addEventListener("DOMContentLoaded", () => {
           </ul>
 
           <div class="mt-10 pt-8 border-t border-white/10">
-            <a href="#oferta" class="block w-full bg-white text-[#284A78] text-center py-4 rounded-xl font-black uppercase tracking-widest hover:bg-[#D57241] hover:text-white transition-all shadow-lg">
-              Quero Garatira Minha Vaga
-            </a>
-          </div>
+
+  <!-- MOBILE -->
+  <a href="#oferta" 
+     class="block md:hidden w-full 
+     bg-white text-[#284A78] text-center 
+     py-3 rounded-lg 
+     font-bold text-sm 
+     uppercase tracking-wider 
+     shadow-md
+     active:scale-95 transition-all">
+    
+    Garantir vaga
+  </a>
+
+  <!-- DESKTOP -->
+  <a href="#oferta" 
+     class="hidden md:block w-full 
+     bg-white text-[#284A78] text-center 
+     py-4 rounded-xl 
+     font-black text-base 
+     uppercase tracking-widest 
+     hover:bg-[#D57241] hover:text-white 
+     transition-all duration-300 
+     hover:scale-[1.02] hover:shadow-xl">
+    
+    Quero Garantir Minha Vaga
+  </a>
+
+</div>
         </div>
 
       </div>
