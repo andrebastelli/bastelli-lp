@@ -989,36 +989,134 @@ window.addEventListener("DOMContentLoaded", () => {
   </div>
 </section>
 
-<a 
-  class="
-  cta-button w-full block 
-  bg-gradient-to-r from-[#D57241] to-[#c46032] 
-  text-white 
+<!-- OFERTA -->
+<section class="py-28 bg-gradient-to-b from-[#fff7f2] via-white to-white relative overflow-hidden" id="oferta">
 
-  /* MOBILE */
-  px-5 py-3 text-sm rounded-lg
+  <!-- glow -->
+  <div class="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#D57241]/10 blur-[140px] rounded-full"></div>
 
-  /* DESKTOP */
-  md:px-10 md:py-5 md:text-lg md:rounded-xl
+  <div class="max-w-[900px] mx-auto px-6 text-center relative z-10">
 
-  font-bold text-center 
-  shadow-md md:shadow-xl
-  transition-all duration-300
-  hover:scale-[1.02]
-  "
-  href="#">
+    <!-- BADGE URGÊNCIA -->
+    <div class="inline-block bg-[#D57241] text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-6 shadow-lg animate-pulse">
+      50% OFF HOJE
+    </div>
 
-  <!-- TEXTO MOBILE -->
-  <span class="block md:hidden leading-tight">
-    Garantir minha vaga
-  </span>
+    <!-- CARD -->
+    <div class="relative bg-white rounded-[2.5rem] shadow-[0_40px_120px_rgba(0,0,0,0.15)] border border-white/50 overflow-hidden">
 
-  <!-- TEXTO DESKTOP -->
-  <span class="hidden md:block">
-    Sim! Quero Garantir Minha Vaga com 50% OFF
-  </span>
+      <!-- faixa destaque -->
+      <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#D57241] via-[#ff8a50] to-[#D57241]"></div>
 
-</a>
+      <!-- HEADER -->
+      <div class="p-10 pb-6">
+
+        <h2 class="text-3xl md:text-5xl font-black text-[#284A78] mb-3">
+          Introdução ao E-commerce
+        </h2>
+
+        <p class="text-xs tracking-[0.3em] text-[#D57241] font-bold uppercase">
+          Método validado Bruno Bastelli
+        </p>
+
+      </div>
+
+      <!-- PREÇO -->
+      <div class="px-10 pb-6">
+
+        <p class="text-slate-400 line-through text-lg mb-2">
+          De R$ 997,00
+        </p>
+
+        <div class="flex justify-center items-end gap-2 mb-2">
+
+          <span class="text-[#D57241] font-bold text-xl md:text-2xl">
+            12x
+          </span>
+
+          <span class="text-[#D57241] font-black text-[48px] md:text-[72px] leading-none">
+            R$ 49,70
+          </span>
+
+        </div>
+
+        <p class="text-sm text-slate-500">
+          ou <strong class="text-[#D57241]">R$ 497 à vista</strong>
+        </p>
+
+      </div>
+
+      <!-- BENEFÍCIOS -->
+      <div class="px-10 py-8 border-t border-slate-100">
+
+        <div class="grid gap-4 max-w-md mx-auto text-left">
+
+          <div class="flex items-center gap-3">
+            <span class="text-[#D57241] text-xl">✔</span>
+            <span>Acesso imediato à plataforma</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-[#D57241] text-xl">✔</span>
+            <span>Bônus: Masterclass Tráfego Pago</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-[#D57241] text-xl">✔</span>
+            <span>7 dias de garantia incondicional</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="px-10 pb-10">
+
+        <a href="#"
+          class="group w-full inline-flex items-center justify-center gap-3 
+          bg-gradient-to-r from-[#D57241] to-[#ff8a50] 
+          text-white py-5 rounded-xl font-bold text-lg 
+          shadow-[0_20px_50px_rgba(213,114,65,0.4)] 
+          hover:scale-105 transition-all duration-300">
+
+          Sim! Quero Garantir Minha Vaga
+
+          <span class="group-hover:translate-x-1 transition">→</span>
+        </a>
+
+        <p class="text-xs text-slate-500 mt-4">
+          Acesso liberado imediatamente após pagamento
+        </p>
+
+      </div>
+
+      <!-- PAGAMENTO -->
+      <div class="bg-[#f9fafb] py-6 border-t border-slate-100">
+
+        <p class="text-sm text-slate-500 mb-3">
+          Cartão, Pix e Boleto
+        </p>
+
+        <div class="flex items-center justify-center gap-5 opacity-70">
+
+          <img class="h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Visa_Inc._logo_%282021%E2%80%93present%29.svg/3840px-Visa_Inc._logo_%282021%E2%80%93present%29.svg.png">
+          <img class="h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/330px-Mastercard-logo.svg.png">
+          <img class="h-4" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg">
+          <img class="h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pix_%28Brazil%29_logo.svg/3840px-Pix_%28Brazil%29_logo.svg.png">
+
+        </div>
+
+        <p class="text-green-600 text-xs mt-3">
+          ✔ Pagamento 100% seguro
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 <!-- CTA Final -->
 <section class="relative overflow-hidden bg-primary text-on-primary">
