@@ -1119,106 +1119,95 @@ window.addEventListener("DOMContentLoaded", () => {
 </section>
 
 <!-- CTA Final -->
-<section class="relative overflow-hidden bg-primary text-on-primary">
+<section class="relative overflow-hidden bg-primary text-on-primary py-16 md:py-24">
 
-  <!-- DESKTOP -->
-  <div class="hidden md:block py-24 text-center">
-    <div class="max-w-[1000px] mx-auto px-6">
-
-      <h2 class="font-h2 text-[44px] leading-tight mb-6">
-        O mercado de E-commerce não espera.<br>
-        Sua transformação começa agora.
-      </h2>
-
-      <p class="text-body-lg mb-10 max-w-2xl mx-auto opacity-90">
-        Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
-      </p>
-
-      <!-- CTA ÚNICO RESPONSIVO -->
-<a href="#oferta"
-   class="cta-button group w-full md:w-auto inline-flex items-center justify-center gap-3
-   bg-gradient-to-r from-[#D57241] to-[#c46032]
-   text-white px-6 py-5 md:px-12 md:py-6
-   rounded-xl font-bold text-base md:text-lg
-   shadow-[0_15px_35px_rgba(213,114,65,0.4)]
-   transition-all duration-300 overflow-hidden animate-fade-up
-
-   /* DESKTOP */
-   md:hover:scale-105 md:hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]
-
-   /* MOBILE TOUCH FEEDBACK */
-   active:scale-95 active:brightness-110">
-
-  <!-- TEXTO MOBILE -->
-  <span class="block md:hidden">
-    Garantir vaga com desconto
-  </span>
-
-  <!-- TEXTO DESKTOP -->
-  <span class="hidden md:block">
-    Sim! Quero Garantir Minha Vaga com 50% OFF
-  </span>
-
-  <!-- ÍCONE (funciona no desktop hover e mobile touch) -->
-  <span class="material-symbols-outlined transition-transform md:group-hover:translate-x-1">
-    arrow_forward
-  </span>
-
-</a>
-
-      <!-- DESKTOP -->
-<p class="mt-12 text-sm text-white/80 hidden md:block">
-  ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
-</p>
-
-<!-- MOBILE -->
-<p class="mt-8 text-xs text-white/80 block md:hidden leading-relaxed">
-  ✔ Acesso imediato<br>
-  ✔ 7 dias de garantia<br>
-  ✔ Pagamento seguro
-</p>
-
-    </div>
+  <!-- glow sutil -->
+  <div class="absolute inset-0 opacity-20">
+    <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#D57241] blur-[140px] rounded-full"></div>
   </div>
 
-  <!-- MOBILE -->
-  <div class="block md:hidden py-16 text-center">
-    <div class="px-6">
+  <div class="relative max-w-[900px] mx-auto px-6 text-center">
 
-      <h2 class="font-h2 text-[28px] leading-snug mb-5">
-        O mercado de E-commerce não espera.<br>
-        Sua transformação começa agora.
-      </h2>
+    <!-- HEADLINE -->
+    <h2 class="font-h2 
+      text-[26px] leading-snug 
+      md:text-[44px] md:leading-tight 
+      mb-5 md:mb-6">
 
-      <p class="text-body-md mb-8 opacity-90">
-        Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
-      </p>
+      O mercado de E-commerce não espera.<br class="hidden md:block">
+      Sua transformação começa agora.
+    </h2>
 
-      <!-- CTA MOBILE -->
-      <a href="#oferta"
-         class="group relative w-full inline-flex items-center justify-center gap-3 
-         bg-gradient-to-r from-[#D57241] to-[#c46032] 
-         text-white px-6 py-5 rounded-xl font-bold text-base 
-         shadow-[0_12px_30px_rgba(213,114,65,0.35)] 
-         active:scale-95 transition-all duration-300">
+    <!-- SUB -->
+    <p class="
+      text-sm md:text-lg 
+      opacity-90 
+      mb-8 md:mb-10 
+      max-w-2xl mx-auto">
 
-        <span class="flex items-center gap-2">
-          Começar agora
-          <span class="material-symbols-outlined">
-            arrow_forward
-          </span>
+      Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
+    </p>
+
+    <!-- CTA -->
+    <a href="#oferta"
+      class="cta-button group w-full md:w-auto inline-flex items-center justify-center gap-3
+      
+      bg-gradient-to-r from-[#D57241] to-[#c46032]
+      text-white font-bold text-center
+      
+      /* MOBILE */
+      px-5 py-3 text-sm rounded-lg
+      
+      /* DESKTOP */
+      md:px-12 md:py-6 md:text-lg md:rounded-xl
+      
+      shadow-[0_12px_30px_rgba(213,114,65,0.35)]
+      md:shadow-[0_20px_50px_rgba(213,114,65,0.5)]
+      
+      transition-all duration-300
+      hover:scale-[1.02] md:hover:scale-105
+      active:scale-95
+    ">
+
+      <!-- TEXTO -->
+      <span class="leading-tight">
+        <span class="block md:hidden">
+          Garantir minha vaga
         </span>
+        <span class="hidden md:block">
+          Sim! Quero Garantir Minha Vaga com 50% OFF
+        </span>
+      </span>
 
-      </a>
+      <!-- ÍCONE -->
+      <span class="material-symbols-outlined transition-transform md:group-hover:translate-x-1">
+        arrow_forward
+      </span>
 
-      <p class="mt-10 text-xs text-white/80">
+    </a>
+
+    <!-- PROVA / SEGURANÇA -->
+    <div class="
+      mt-8 md:mt-12 
+      text-white/80 
+      text-xs md:text-sm 
+      leading-relaxed">
+
+      <span class="block md:hidden">
+        ✔ Acesso imediato<br>
+        ✔ 7 dias de garantia<br>
+        ✔ Pagamento seguro
+      </span>
+
+      <span class="hidden md:block">
         ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
-      </p>
+      </span>
 
     </div>
-  </div>
 
+  </div>
 </section>
+
 <!-- FAQ Section -->
 <section class="py-section-gap" id="faq">
 <div class="max-w-[800px] mx-auto px-6">
