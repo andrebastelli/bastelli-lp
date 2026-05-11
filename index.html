@@ -942,125 +942,145 @@ window.addEventListener("DOMContentLoaded", () => {
 </section>
 
 <!-- Diferenciais -->
-<section class="py-24 bg-white">
+<section class="py-28 relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-[#eef2f7]">
+
+  <!-- textura / glow -->
+  <div class="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#D57241]/10 blur-[140px] rounded-full"></div>
+  <div class="absolute bottom-[-150px] right-[-100px] w-[500px] h-[500px] bg-[#284A78]/10 blur-[140px] rounded-full"></div>
+
   <div class="max-w-[1200px] mx-auto px-6">
-    <div class="relative bg-[#284A78] rounded-[2.5rem] p-8 md:p-16 overflow-hidden shadow-2xl">
-      
+    
+    <!-- CARD PRINCIPAL -->
+    <div class="relative bg-[#284A78] rounded-[2.5rem] p-8 md:p-16 overflow-hidden shadow-[0_40px_120px_rgba(0,0,0,0.25)]">
+
+      <!-- glow interno -->
       <div class="absolute top-0 right-0 w-96 h-96 bg-[#D57241] opacity-10 rounded-full blur-[100px] -mr-48 -mt-48"></div>
       <div class="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -ml-32 -mb-32"></div>
 
-      <div class="grid lg:grid-cols-2 gap-12 items-center relative z-10">
+      <div class="grid lg:grid-cols-2 gap-14 items-center relative z-10">
         
+        <!-- TEXTO -->
         <div class="opacity-0 animate-fade-up">
-          <h2 class="font-display text-3xl md:text-5xl font-black text-white mb-8 leading-tight">
-            Por que escolher o <span class="text-[#D57241]">Bruno Bastelli?</span>
+
+          <span class="inline-block bg-[#D57241]/10 text-[#D57241] px-4 py-2 rounded-full text-[11px] uppercase tracking-widest font-bold mb-6">
+            Diferenciais
+          </span>
+
+          <h2 class="font-display text-3xl md:text-5xl font-black text-white mb-10 leading-tight">
+            Por que escolher o <br>
+            <span class="text-[#D57241]">Bruno Bastelli?</span>
           </h2>
           
           <div class="space-y-8">
+
+            <!-- ITEM -->
             <div class="flex gap-5 group">
-              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#D57241]/20 flex items-center justify-center group-hover:bg-[#D57241] transition-colors duration-300">
+              <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#D57241]/20 flex items-center justify-center 
+              group-hover:bg-[#D57241] transition-all duration-300 shadow-lg">
                 <span class="material-symbols-outlined text-[#D57241] group-hover:text-white">bolt</span>
               </div>
               <div>
                 <h4 class="text-white font-bold text-lg mb-1">Método Prático</h4>
-                <p class="text-slate-300 text-sm leading-relaxed">Sem "enrolação" teórica. É direto ao ponto, focado em execução real.</p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Sem teoria inútil. Você aprende exatamente o que funciona no mercado real.
+                </p>
               </div>
             </div>
 
+            <!-- ITEM -->
             <div class="flex gap-5 group">
-              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#D57241]/20 flex items-center justify-center group-hover:bg-[#D57241] transition-colors duration-300">
+              <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#D57241]/20 flex items-center justify-center 
+              group-hover:bg-[#D57241] transition-all duration-300 shadow-lg">
                 <span class="material-symbols-outlined text-[#D57241] group-hover:text-white">update</span>
               </div>
               <div>
                 <h4 class="text-white font-bold text-lg mb-1">Atualização Constante</h4>
-                <p class="text-slate-300 text-sm leading-relaxed">Estratégias que funcionam hoje no ecossistema de e-commerce do Brasil.</p>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Estratégias atualizadas com o cenário real do e-commerce brasileiro.
+                </p>
               </div>
             </div>
 
+            <!-- ITEM -->
             <div class="flex gap-5 group">
-              <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-[#D57241]/20 flex items-center justify-center group-hover:bg-[#D57241] transition-colors duration-300">
+              <div class="flex-shrink-0 w-11 h-11 rounded-xl bg-[#D57241]/20 flex items-center justify-center 
+              group-hover:bg-[#D57241] transition-all duration-300 shadow-lg">
                 <span class="material-symbols-outlined text-[#D57241] group-hover:text-white">trending_up</span>
               </div>
               <div>
-                <h4 class="text-white font-bold text-lg mb-1">Foco em Margem</h4>
-                <p class="text-slate-300 text-sm leading-relaxed">Ensinamos a lucrar de verdade, não apenas a mostrar faturamento bruto.</p>
+                <h4 class="text-white font-bold text-lg mb-1">Foco em Lucro Real</h4>
+                <p class="text-slate-300 text-sm leading-relaxed">
+                  Não é sobre faturar bonito — é sobre ter margem e caixa no final do mês.
+                </p>
               </div>
             </div>
+
           </div>
         </div>
 
-        <div class="bg-white/5 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] border border-white/10 shadow-inner opacity-0 animate-fade-up [animation-delay:300ms]">
-          <h4 class="text-white font-black text-xl mb-6 flex items-center gap-2">
-            <span class="w-8 h-1 bg-[#D57241] rounded-full"></span>
-            O que você recebe ao entrar:
+        <!-- BOX DIREITO -->
+        <div class="relative bg-white/5 backdrop-blur-xl p-8 md:p-10 rounded-[2rem] border border-white/10 
+        shadow-[inset_0_0_40px_rgba(255,255,255,0.05)] opacity-0 animate-fade-up [animation-delay:300ms]">
+
+          <!-- leve glow interno -->
+          <div class="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-[2rem] pointer-events-none"></div>
+
+          <h4 class="text-white font-black text-xl mb-6 flex items-center gap-3">
+            <span class="w-10 h-[3px] bg-[#D57241] rounded-full"></span>
+            O que você recebe:
           </h4>
           
           <ul class="space-y-5">
+
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-[#D57241] text-xl">check_circle</span>
-              <span class="text-slate-100 font-medium">Acesso vitalício a todas as aulas</span>
+              <span class="text-slate-100 font-medium">Acesso vitalício</span>
             </li>
+
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-[#D57241] text-xl">check_circle</span>
-              <span class="text-slate-100 font-medium">Planilhas exclusivas de gestão e precificação</span>
+              <span class="text-slate-100 font-medium">Planilhas e materiais exclusivos</span>
             </li>
+
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-[#D57241] text-xl">check_circle</span>
-              <span class="text-slate-100 font-medium">Suporte técnico para dúvidas na plataforma</span>
+              <span class="text-slate-100 font-medium">Suporte técnico especializado</span>
             </li>
+
             <li class="flex items-start gap-3">
               <span class="material-symbols-outlined text-[#D57241] text-xl">check_circle</span>
-              <span class="text-slate-100 font-medium">Certificado de conclusão assinado</span>
+              <span class="text-slate-100 font-medium">Certificado de conclusão</span>
             </li>
+
           </ul>
 
+          <!-- CTA -->
           <div class="mt-10 pt-8 border-t border-white/10">
 
-  <!-- MOBILE -->
-<a href="#oferta" 
-  class="group relative block md:hidden w-full text-center 
-  px-5 py-3 rounded-lg font-bold text-sm text-white 
-  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
-  
-  shadow-[0_12px_30px_rgba(213,114,65,0.35)]
-  active:scale-95 transition-all duration-300 overflow-hidden">
+            <a href="#oferta" 
+              class="group relative w-full inline-flex items-center justify-center gap-3 
+              px-8 py-5 rounded-xl font-bold text-base text-white
+              
+              bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+              
+              shadow-[0_20px_50px_rgba(213,114,65,0.45)]
+              transition-all duration-300 overflow-hidden
+              hover:scale-[1.03] hover:shadow-[0_25px_60px_rgba(213,114,65,0.6)]">
 
-  <!-- glow -->
-  <span class="absolute inset-0 bg-white/20 opacity-0 group-active:opacity-100 blur-xl transition"></span>
+              <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
 
-  <span class="relative z-10 flex items-center justify-center gap-2">
-    Garantir vaga
-    <span class="transition-transform group-active:translate-x-1">→</span>
-  </span>
+              <span class="relative z-10">
+                Quero Garantir Minha Vaga
+              </span>
 
-</a>
+              <span class="relative z-10 transition-transform group-hover:translate-x-1">
+                →
+              </span>
 
-<!-- DESKTOP -->
-<a href="#oferta" 
-  class="group relative hidden md:inline-flex w-full items-center justify-center gap-3 
-  px-10 py-5 rounded-xl font-medium text-base text-white
-  
-  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
-  
-  shadow-[0_20px_50px_rgba(213,114,65,0.45)]
-  
-  transition-all duration-300 overflow-hidden
-  hover:scale-[1.03] hover:shadow-[0_25px_60px_rgba(213,114,65,0.6)]">
+            </a>
 
-  <!-- brilho animado -->
-  <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
+          </div>
 
-  <span class="relative z-10">
-    Quero Garantir Minha Vaga
-  </span>
-
-  <span class="relative z-10 transition-transform group-hover:translate-x-1">
-    →
-  </span>
-
-</a>
-
-</div>
         </div>
 
       </div>
