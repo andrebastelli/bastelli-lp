@@ -1230,73 +1230,162 @@ window.addEventListener("DOMContentLoaded", () => {
 </section>
 
 <!-- FAQ Section -->
-<section class="py-section-gap" id="faq">
-<div class="max-w-[800px] mx-auto px-6">
-<h2 class="font-h2 text-h2 text-on-surface text-center mb-16">Dúvidas Frequentes</h2>
-<div class="space-y-4">
-<!-- FAQ Item 1 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">Preciso de experiência prévia para começar?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Não. O curso foi desenhado para levar você desde os conceitos mais básicos até as estratégias avançadas de escala.</p>
-</div>
-</div>
-<!-- FAQ Item 2 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">Como recebo o acesso ao curso?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Imediatamente após a confirmação do pagamento, você receberá um e-mail com seus dados de acesso à plataforma exclusiva.</p>
-</div>
-</div>
-<!-- FAQ Item 3 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">O curso serve para qualquer nicho?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Sim. O método da Roda do E-commerce baseia-se em pilares universais que funcionam para moda, eletrônicos, casa, beleza e qualquer outro segmento de produtos físicos.</p>
-</div>
-</div>
-<!-- FAQ Item 4 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">Tenho suporte para tirar dúvidas?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Sim, temos uma área de membros onde você pode deixar suas perguntas abaixo de cada aula e nossa equipe técnica responde em até 24h úteis.</p>
-</div>
-</div>
-<!-- FAQ Item 5 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">Quanto tempo de acesso eu terei?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">O acesso é vitalício. Você pode assistir às aulas no seu ritmo e voltar para consultar o material sempre que precisar.</p>
-</div>
-</div>
-<!-- FAQ Item 6 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">E se eu não gostar do curso?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Você tem uma garantia de 7 dias. Se por qualquer motivo sentir que o curso não é para você, devolvemos 100% do seu dinheiro, sem perguntas.</p>
-</div>
-</div>
-</div>
-</div>
+<section class="relative py-20 md:py-28 bg-gradient-to-b from-white to-[#f8fafc]" id="faq">
+
+  <!-- glow -->
+  <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#D57241]/10 blur-[140px] rounded-full"></div>
+
+  <div class="relative max-w-[800px] mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="text-center mb-14 md:mb-16">
+      <div class="inline-block mb-4 px-4 py-2 rounded-full bg-[#D57241]/10 text-[#D57241] text-[10px] tracking-[0.25em] uppercase font-bold">
+        FAQ
+      </div>
+
+      <h2 class="font-h2 text-[28px] md:text-[42px] text-[#284A78] font-extrabold mb-4">
+        Dúvidas Frequentes
+      </h2>
+
+      <p class="text-slate-500 text-sm md:text-base max-w-xl mx-auto">
+        Tudo que você precisa saber antes de começar sua jornada no e-commerce.
+      </p>
+    </div>
+
+    <!-- LISTA -->
+    <div class="space-y-4">
+
+      <!-- ITEM -->
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        
+        <button onclick="toggleFaq(this)"
+          class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            Preciso de experiência prévia para começar?
+          </span>
+
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+
+        </button>
+
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base leading-relaxed">
+            Não. O curso foi desenhado para levar você desde os conceitos mais básicos até as estratégias avançadas de escala.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- DUPLICAR ITENS -->
+      
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            Como recebo o acesso ao curso?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Imediatamente após a confirmação do pagamento, você receberá um e-mail com seus dados de acesso.
+          </p>
+        </div>
+      </div>
+
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            O curso serve para qualquer nicho?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Sim. O método funciona para qualquer segmento de produtos físicos.
+          </p>
+        </div>
+      </div>
+
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            Tenho suporte para tirar dúvidas?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Sim. Nossa equipe responde em até 24h úteis dentro da área de membros.
+          </p>
+        </div>
+      </div>
+
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            Quanto tempo de acesso eu terei?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Acesso vitalício. Você pode assistir quando quiser.
+          </p>
+        </div>
+      </div>
+
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            E se eu não gostar do curso?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Você tem 7 dias de garantia total. Se não gostar, devolvemos 100%.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
 </section>
+
+<!-- SCRIPT -->
+<script>
+function toggleFaq(button) {
+  const item = button.parentElement;
+  const content = item.querySelector(".faq-content");
+
+  const isOpen = item.classList.contains("active");
+
+  document.querySelectorAll("#faq .group").forEach(el => {
+    el.classList.remove("active");
+    el.querySelector(".faq-content").style.maxHeight = null;
+  });
+
+  if (!isOpen) {
+    item.classList.add("active");
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+</script>
+
 <!-- Footer -->
 <footer class="bg-primary py-12 px-6 w-full border-t border-white/10">
   <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
