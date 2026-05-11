@@ -1099,26 +1099,50 @@ window.addEventListener("DOMContentLoaded", () => {
 
       </div>
 
-      <!-- CTA -->
-      <div class="px-10 pb-10">
+      <div class="px-6 md:px-10 pb-8 md:pb-10">
 
-        <a href="#"
-          class="group w-full inline-flex items-center justify-center gap-3 
-          bg-gradient-to-r from-[#D57241] to-[#ff8a50] 
-          text-white py-5 rounded-xl font-bold text-lg 
-          shadow-[0_20px_50px_rgba(213,114,65,0.4)] 
-          hover:scale-105 transition-all duration-300">
+  <!-- MOBILE -->
+  <a href="#"
+    class="group block md:hidden w-full 
+    bg-gradient-to-r from-[#D57241] to-[#ff8a50] 
+    text-white text-center 
+    
+    py-4 rounded-lg 
+    text-sm font-bold 
+    
+    shadow-[0_12px_30px_rgba(213,114,65,0.35)]
+    
+    active:scale-95 transition-all">
 
-          Sim! Quero Garantir Minha Vaga
+    Garantir vaga agora →
+  </a>
 
-          <span class="group-hover:translate-x-1 transition">→</span>
-        </a>
+  <!-- DESKTOP -->
+  <a href="#"
+    class="group hidden md:inline-flex w-full items-center justify-center gap-3 
+    
+    bg-gradient-to-r from-[#D57241] to-[#ff8a50] 
+    text-white 
+    
+    py-5 rounded-xl 
+    text-lg font-bold 
+    
+    shadow-[0_20px_50px_rgba(213,114,65,0.4)] 
+    
+    hover:scale-105 hover:shadow-[0_25px_60px_rgba(213,114,65,0.6)]
+    transition-all duration-300">
 
-        <p class="text-xs text-slate-500 mt-4">
-          Acesso liberado imediatamente após pagamento
-        </p>
+    Sim! Quero Garantir Minha Vaga
 
-      </div>
+    <span class="transition-transform group-hover:translate-x-1">→</span>
+  </a>
+
+  <!-- TEXTO (mais baixo e mais leve) -->
+  <p class="text-[11px] md:text-xs text-slate-400 mt-6 md:mt-5">
+    Acesso liberado imediatamente após pagamento
+  </p>
+
+</div>
 
       <!-- PAGAMENTO -->
       <div class="bg-[#f9fafb] py-6 border-t border-slate-100">
