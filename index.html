@@ -917,51 +917,74 @@ window.addEventListener("DOMContentLoaded", () => {
 </section>
 
 <!-- VSL / VIDEO DE VENDAS -->
-<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden">
+<section class="py-28 bg-[#0f172a] text-white text-center relative overflow-hidden">
 
-  <div class="max-w-[900px] mx-auto px-4 sm:px-6">
+  <!-- glow fundo -->
+  <div class="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#D57241]/20 blur-[180px] rounded-full"></div>
 
-    <h2 class="font-h2 text-[26px] md:text-[36px] leading-tight mb-4 md:mb-6">
+  <div class="max-w-[1000px] mx-auto px-6 relative z-10">
+
+    <!-- HEADLINE -->
+    <h2 class="text-3xl md:text-5xl font-black leading-tight mb-6">
       Assista isso antes de tomar qualquer decisão
     </h2>
 
-    <p class="text-body-lg mb-10 opacity-90">
-      Entenda como sair do zero e construir um e-commerce lucrativo com método validado.
+    <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto mb-12">
+      Em poucos minutos você vai entender como construir um e-commerce lucrativo, 
+      mesmo começando do zero.
     </p>
 
-    <div class="relative mb-12 group">
+    <!-- VIDEO -->
+    <div class="relative group mb-14">
 
-      <div class="absolute -inset-2 bg-gradient-to-r from-[#D57241]/40 to-[#c46032]/40 blur-xl opacity-60 group-hover:opacity-100 transition"></div>
+      <!-- glow animado -->
+      <div class="absolute -inset-3 bg-gradient-to-r from-[#D57241] via-[#ff8a50] to-[#D57241] 
+      opacity-40 blur-2xl group-hover:opacity-80 transition duration-500"></div>
 
-      <div class="relative rounded-xl md:rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.3)] md:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
+      <div class="relative rounded-2xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] border border-white/10">
 
-        <div class="relative rounded-xl md:rounded-2xl overflow-hidden">
+        <!-- overlay leve (efeito cinematico) -->
+        <div class="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
 
-  <!-- OVERLAY QUE BLOQUEIA TUDO -->
-  <div class="absolute inset-0 z-20 bg-transparent"></div>
-
-  <!-- IFRAME -->
-  <iframe 
-    id="mainVideo"
-    class="w-full aspect-video"
-    src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&playsinline=1"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-
-</div>
+        <iframe 
+          id="mainVideo"
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&playsinline=1"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
 
       </div>
-
     </div>
 
+    <!-- PROVA RÁPIDA -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 text-sm text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="text-[#ffb347]">★★★★★</span>
+        <span>+3.200 alunos</span>
+      </div>
+      <div class="hidden sm:block w-1 h-1 bg-slate-500 rounded-full"></div>
+      <span>Método validado no Brasil</span>
+    </div>
+
+    <!-- CTA -->
     <a href="#oferta" 
-class="cta-button w-full sm:w-auto inline-flex items-center justify-center gap-3 
-bg-gradient-to-r from-[#D57241] to-[#c46032] 
-text-white px-6 py-4 sm:px-10 sm:py-6 rounded-xl font-bold text-sm sm:text-lg">
-       Quero aplicar isso agora
+      class="group inline-flex items-center justify-center gap-3 
+      bg-gradient-to-r from-[#D57241] to-[#ff8a50] 
+      px-8 py-5 rounded-xl font-bold text-base md:text-lg 
+      shadow-[0_15px_40px_rgba(213,114,65,0.4)] 
+      hover:scale-105 transition-all duration-300">
+
+      Quero aplicar isso agora
+
+      <span class="group-hover:translate-x-1 transition">→</span>
     </a>
+
+    <!-- URGÊNCIA -->
+    <p class="text-xs text-slate-500 mt-6">
+      Acesso imediato após a inscrição
+    </p>
 
   </div>
 </section>
