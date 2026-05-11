@@ -317,13 +317,46 @@ window.addEventListener("DOMContentLoaded", () => {
 </nav>
 
     <a href="#oferta" 
-      class="relative bg-[#D57241] text-white px-6 py-3 rounded-full text-[10px] md:text-xs font-bold uppercase tracking-widest shadow-xl 
-      transition-all duration-300 ease-in-out hover:scale-105 
-      hover:shadow-[0_20px_60px_rgba(213,114,65,0.6)] overflow-hidden">
+  class="group relative inline-flex items-center justify-center
+  
+  /* FUNDO */
+  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+  
+  text-white font-bold uppercase tracking-widest text-[10px] md:text-xs
+  
+  /* MOBILE */
+  px-5 py-2.5 rounded-full
+  
+  /* DESKTOP */
+  md:px-6 md:py-3
+  
+  /* SOMBRA */
+  shadow-[0_10px_25px_rgba(213,114,65,0.35)]
+  md:shadow-[0_15px_40px_rgba(213,114,65,0.5)]
+  
+  /* ANIMAÇÃO */
+  transition-all duration-300 overflow-hidden
+  hover:scale-105
+  active:scale-95">
 
-      <span class="relative z-10">Garantir Vaga</span>
-      <span class="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition"></span>
-    </a>
+  <!-- glow -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 
+    md:group-hover:opacity-100 
+    group-active:opacity-100 
+    blur-xl transition">
+  </span>
+
+  <!-- TEXTO -->
+  <span class="relative z-10 flex items-center gap-2">
+    Garantir Vaga
+    
+    <!-- seta -->
+    <span class="transition-transform md:group-hover:translate-x-1">
+      →
+    </span>
+  </span>
+
+</a>
 
   </div>
 </header>
@@ -358,10 +391,43 @@ window.addEventListener("DOMContentLoaded", () => {
 
       <div class="flex flex-col sm:flex-row items-center gap-6">
 
-        <a class="w-full sm:w-auto bg-[#284A78] text-white px-10 py-5 rounded-2xl font-bold text-center shadow-2xl 
-        hover:bg-[#D57241] hover:scale-[1.03] transition-all duration-300" href="#oferta">
-          Começar Agora
-        </a>
+        <a href="#oferta"
+  class="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3
+  
+  /* FUNDO */
+  bg-gradient-to-r from-[#284A78] via-[#35609c] to-[#1f3d66]
+  
+  text-white font-bold text-center
+  
+  /* MOBILE */
+  px-6 py-4 text-sm rounded-xl
+  
+  /* DESKTOP */
+  sm:px-10 sm:py-5 sm:text-base sm:rounded-2xl
+  
+  /* SOMBRA */
+  shadow-[0_15px_40px_rgba(40,74,120,0.45)]
+  sm:shadow-[0_25px_60px_rgba(40,74,120,0.6)]
+  
+  /* ANIMAÇÃO */
+  transition-all duration-300 overflow-hidden
+  hover:scale-[1.03] sm:hover:scale-105
+  active:scale-95">
+
+  <!-- glow -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
+
+  <!-- TEXTO -->
+  <span class="relative z-10">
+    Começar Agora
+  </span>
+
+  <!-- ÍCONE -->
+  <span class="relative z-10 transition-transform group-hover:translate-x-1">
+    →
+  </span>
+
+</a>
 
         <div class="flex items-center gap-2 text-[#284A78]">
           <span class="material-symbols-outlined text-[#D57241]" style="font-variation-settings: 'FILL' 1; font-size: 20px;">
