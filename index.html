@@ -301,57 +301,103 @@ window.addEventListener("DOMContentLoaded", () => {
     </script>
 </head>
 <body class="bg-background text-on-background font-body-md">
-<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-100">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-sm">
   <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1200px] mx-auto">
+    
     <div class="flex items-center gap-4">
       <img src="https://i.ibb.co/nswJd1Bx/logo-a.png" alt="Bruno Bastelli" class="hidden md:block h-10 w-auto">
       <img src="https://i.ibb.co/xKcfH1Qb/selo-1.png" alt="Selo" class="md:hidden h-10 w-auto">
     </div>
+
     <nav class="hidden md:flex items-center gap-8">
       <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#metodo">Método</a>
       <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#sobre">Sobre</a>
       <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#depoimentos">Resultados</a>
       <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#faq">FAQ</a>
     </nav>
+
     <a href="#oferta" 
-   class="bg-[#D57241] text-white px-5 py-2.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest shadow-lg 
-          transition-all duration-300 ease-in-out
-          hover:scale-105 
-          hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]">
-  Garantir Vaga
-</a>
+      class="relative bg-[#D57241] text-white px-6 py-3 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest shadow-xl 
+      transition-all duration-300 ease-in-out hover:scale-105 
+      hover:shadow-[0_20px_60px_rgba(213,114,65,0.6)] overflow-hidden">
+
+      <span class="relative z-10">Garantir Vaga</span>
+
+      <!-- glow -->
+      <span class="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition"></span>
+    </a>
+
   </div>
 </header>
 
-<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
-  <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+
+<!-- Hero -->
+<section class="relative pt-36 pb-24 md:pt-52 md:pb-36 bg-white overflow-hidden">
+
+  <!-- Glow Background -->
+  <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#D57241]/20 blur-[120px] rounded-full"></div>
+
+  <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+
+    <!-- TEXTO -->
     <div class="opacity-0 animate-fade-up">
-      <div class="inline-block bg-[#D57241]/10 text-[#D57241] px-4 py-1.5 rounded-full mb-6 font-bold text-[10px] md:text-xs uppercase tracking-[0.2em]">
+
+      <div class="inline-block bg-[#D57241]/10 text-[#D57241] px-4 py-2 rounded-full mb-6 font-bold text-[10px] md:text-xs uppercase tracking-[0.25em]">
         Método Validado
       </div>
-      <h1 class="font-display text-[34px] md:text-[56px] lg:text-[64px] leading-[1.1] font-black text-[#284A78] mb-6 tracking-tighter">
-        Aprenda a construir um <span class="text-[#D57241]">E-commerce do zero.</span>
+
+      <h1 class="font-display text-[36px] md:text-[60px] lg:text-[72px] leading-[1.05] font-black text-[#284A78] mb-6 tracking-tight">
+        Aprenda a construir um  
+        <span class="text-[#D57241] relative">
+          E-commerce do zero.
+          <span class="absolute left-0 bottom-1 w-full h-2 bg-[#D57241]/20 -z-10 rounded"></span>
+        </span>
       </h1>
+
       <p class="text-slate-600 text-base md:text-lg mb-10 max-w-lg leading-relaxed">
         Saia do amadorismo e construa uma operação profissional guiada por quem já faturou milhões no mercado digital.
       </p>
-      <div class="flex flex-col sm:flex-row items-center gap-6">
-  <a class="w-full sm:w-auto bg-[#284A78] text-white px-8 py-5 rounded-2xl font-bold text-center shadow-xl hover:bg-[#D57241] transition-all" href="#oferta">
-    Começar Agora
-  </a>
 
-  <div class="flex items-center gap-2 text-[#284A78]">
-    <span class="material-symbols-outlined text-[#D57241]" style="font-variation-settings: 'FILL' 1; font-size: 20px;">
-      verified
-    </span> 
-    <span class="text-sm font-bold uppercase tracking-tight whitespace-nowrap">
-      Método 100% Validado
-    </span>
-  </div>
-</div>
+      <div class="flex flex-col sm:flex-row items-center gap-6">
+
+        <a class="w-full sm:w-auto bg-[#284A78] text-white px-10 py-5 rounded-2xl font-bold text-center shadow-2xl 
+        hover:bg-[#D57241] hover:scale-[1.03] transition-all duration-300" href="#oferta">
+          Começar Agora
+        </a>
+
+        <div class="flex items-center gap-2 text-[#284A78]">
+          <span class="material-symbols-outlined text-[#D57241]" style="font-variation-settings: 'FILL' 1; font-size: 20px;">
+            verified
+          </span> 
+          <span class="text-sm font-bold uppercase tracking-tight whitespace-nowrap">
+            Método 100% Validado
+          </span>
+        </div>
+
+      </div>
 
     </div>
 
+    <!-- IMAGEM -->
+    <div class="relative opacity-0 animate-fade-up delay-200">
+
+      <!-- glow atrás da imagem -->
+      <div class="absolute inset-0 bg-[#D57241]/20 blur-3xl rounded-full scale-110"></div>
+
+      <img 
+        src="https://bastelliconsultoria.com.br/wp-content/webp-express/webp-images/uploads/2024/09/bruno.jpg.webp"
+        alt="Bruno Bastelli"
+        class="relative z-10 w-full max-w-[420px] mx-auto rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.2)]"
+      />
+
+    </div>
+
+  </div>
+</section>
+
+    
     <div class="relative flex justify-center opacity-0 animate-fade-up [animation-delay:200ms]">
       <div class="relative w-full max-w-[420px]">
         <div class="absolute inset-0 bg-[#284A78] rounded-[2rem] rotate-3 translate-x-3 translate-y-3 -z-10 opacity-10"></div>
