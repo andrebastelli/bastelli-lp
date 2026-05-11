@@ -3,10 +3,14 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Bruno Bastelli - Introdução ao E-commerce</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <style>
+
+        .body {
+          font-family: 'Onest', sans-serif;
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -14,7 +18,7 @@
             background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(12px);
         }
-        .shadow-ambient {
+        .shadow-ambient { 
             box-shadow: 0px 10px 30px rgba(30, 58, 138, 0.05);
         }
 
@@ -234,17 +238,11 @@
                         "gutter": "24px",
                         "base": "8px"
                     },
-                    "fontFamily": {
-                        "body-md": ["Inter"],
-                        "body-sm": ["Inter"],
-                        "display": ["Plus Jakarta Sans"],
-                        "h3": ["Plus Jakarta Sans"],
-                        "h1": ["Plus Jakarta Sans"],
-                        "button": ["Inter"],
-                        "h2": ["Plus Jakarta Sans"],
-                        "body-lg": ["Inter"],
-                        "label-caps": ["Inter"]
-                    },
+                    fontFamily: {
+  sans: ["Onest", "sans-serif"],
+  display: ["Onest", "sans-serif"],
+  body: ["Onest", "sans-serif"],
+},
                     "fontSize": {
                         "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
                         "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
@@ -300,151 +298,284 @@ window.addEventListener("DOMContentLoaded", () => {
 
     </script>
 </head>
-<body class="bg-background text-on-background font-body-md">
-<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md border-b border-slate-100">
+<body class="bg-background text-on-background font-sans">
+
+<!-- Header -->
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-[0_5px_30px_rgba(0,0,0,0.05)]">
   <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1200px] mx-auto">
+    
     <div class="flex items-center gap-4">
       <img src="https://i.ibb.co/nswJd1Bx/logo-a.png" alt="Bruno Bastelli" class="hidden md:block h-10 w-auto">
       <img src="https://i.ibb.co/xKcfH1Qb/selo-1.png" alt="Selo" class="md:hidden h-10 w-auto">
     </div>
+
     <nav class="hidden md:flex items-center gap-8">
-      <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#metodo">Método</a>
-      <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#sobre">Sobre</a>
-      <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#depoimentos">Resultados</a>
-      <a class="text-xs font-black uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#faq">FAQ</a>
-    </nav>
-    <a href="#oferta" class="bg-[#D57241] text-white px-5 py-2.5 rounded-full text-[10px] md:text-xs font-black uppercase tracking-widest shadow-lg hover:bg-[#284A78] transition-all">
-      Garantir Vaga
-    </a>
+  <a class="text-xs font-medium uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#metodo">Método</a>
+  <a class="text-xs font-medium uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#sobre">Sobre</a>
+  <a class="text-xs font-medium uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#depoimentos">Resultados</a>
+  <a class="text-xs font-medium uppercase tracking-widest text-[#284A78] hover:text-[#D57241] transition-colors" href="#faq">FAQ</a>
+</nav>
+
+    <a href="#oferta" 
+  class="group relative inline-flex items-center justify-center
+  
+  /* FUNDO */
+  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+  
+  text-white font-bold uppercase tracking-widest text-[10px] md:text-xs
+  
+  /* MOBILE */
+  px-5 py-2.5 rounded-full
+  
+  /* DESKTOP */
+  md:px-6 md:py-3
+  
+  /* SOMBRA */
+  shadow-[0_10px_25px_rgba(213,114,65,0.35)]
+  md:shadow-[0_15px_40px_rgba(213,114,65,0.5)]
+  
+  /* ANIMAÇÃO */
+  transition-all duration-300 overflow-hidden
+  hover:scale-105
+  active:scale-95">
+
+  <!-- glow -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 
+    md:group-hover:opacity-100 
+    group-active:opacity-100 
+    blur-xl transition">
+  </span>
+
+  <!-- TEXTO -->
+  <span class="relative z-10 flex items-center gap-2">
+    Garantir Vaga
+    
+    <!-- seta -->
+    <span class="transition-transform md:group-hover:translate-x-1">
+      →
+    </span>
+  </span>
+
+</a>
+
   </div>
 </header>
 
-<section class="relative pt-32 pb-20 md:pt-48 md:pb-32 bg-white">
-  <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+
+<!-- Hero -->
+<section class="relative pt-36 pb-24 md:pt-52 md:pb-36 bg-white overflow-hidden">
+
+  <!-- Glow de fundo -->
+  <div class="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#D57241]/10 blur-[140px] rounded-full"></div>
+
+  <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
+
+    <!-- TEXTO -->
     <div class="opacity-0 animate-fade-up">
-      <div class="inline-block bg-[#D57241]/10 text-[#D57241] px-4 py-1.5 rounded-full mb-6 font-bold text-[10px] md:text-xs uppercase tracking-[0.2em]">
+
+      <div class="inline-block bg-[#D57241]/10 text-[#D57241] px-4 py-2 rounded-full mb-6 font-bold text-[10px] md:text-xs uppercase tracking-[0.25em]">
         Método Validado
       </div>
-      <h1 class="font-display text-[34px] md:text-[56px] lg:text-[64px] leading-[1.1] font-black text-[#284A78] mb-6 tracking-tighter">
-        Aprenda a construir um <span class="text-[#D57241]">E-commerce do zero.</span>
+
+      <h1 class="font-display text-[36px] md:text-[60px] lg:text-[70px] leading-[1.05] font-black text-[#284A78] mb-6 tracking-tight">
+        Aprenda a construir um 
+        <span class="text-[#D57241] relative">
+          E-commerce do zero.
+          <span class="absolute left-0 bottom-1 w-full h-2 bg-[#D57241]/20 -z-10 rounded"></span>
+        </span>
       </h1>
+
       <p class="text-slate-600 text-base md:text-lg mb-10 max-w-lg leading-relaxed">
         Saia do amadorismo e construa uma operação profissional guiada por quem já faturou milhões no mercado digital.
       </p>
-      <div class="flex flex-col sm:flex-row items-center gap-6">
-  <a class="w-full sm:w-auto bg-[#284A78] text-white px-8 py-5 rounded-2xl font-bold text-center shadow-xl hover:bg-[#D57241] transition-all" href="#oferta">
-    Começar Agora
-  </a>
 
-  <div class="flex items-center gap-2 text-[#284A78]">
-    <span class="material-symbols-outlined text-[#D57241]" style="font-variation-settings: 'FILL' 1; font-size: 20px;">
-      verified
-    </span>
-    <span class="text-sm font-bold uppercase tracking-tight whitespace-nowrap">
-      Método 100% Validado
-    </span>
-  </div>
-</div>
+      <div class="flex flex-col sm:flex-row items-center gap-6">
+
+        <a href="#oferta"
+  class="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3
+  
+  /* FUNDO */
+  bg-gradient-to-r from-[#284A78] via-[#35609c] to-[#1f3d66]
+  
+  text-white font-bold text-center
+  
+  /* MOBILE */
+  px-6 py-4 text-sm rounded-xl
+  
+  /* DESKTOP */
+  sm:px-10 sm:py-5 sm:text-base sm:rounded-2xl
+  
+  /* SOMBRA */
+  shadow-[0_15px_40px_rgba(40,74,120,0.45)]
+  sm:shadow-[0_25px_60px_rgba(40,74,120,0.6)]
+  
+  /* ANIMAÇÃO */
+  transition-all duration-300 overflow-hidden
+  hover:scale-[1.03] sm:hover:scale-105
+  active:scale-95">
+
+  <!-- glow -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
+
+  <!-- TEXTO -->
+  <span class="relative z-10">
+    Começar Agora
+  </span>
+
+  <!-- ÍCONE -->
+  <span class="relative z-10 transition-transform group-hover:translate-x-1">
+    →
+  </span>
+
+</a>
+
+        <div class="flex items-center gap-2 text-[#284A78]">
+          <span class="material-symbols-outlined text-[#D57241]" style="font-variation-settings: 'FILL' 1; font-size: 20px;">
+            verified
+          </span> 
+          <span class="text-sm font-bold uppercase tracking-tight whitespace-nowrap">
+            Método 100% Validado
+          </span>
+        </div>
+
+      </div>
 
     </div>
-
+    
+    <!-- IMAGEM -->
     <div class="relative flex justify-center opacity-0 animate-fade-up [animation-delay:200ms]">
       <div class="relative w-full max-w-[420px]">
-        <div class="absolute inset-0 bg-[#284A78] rounded-[2rem] rotate-3 translate-x-3 translate-y-3 -z-10 opacity-10"></div>
-        <img src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg" alt="Bruno" class="rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5]">
+
+        <!-- camada de profundidade -->
+        <div class="absolute inset-0 bg-[#284A78] rounded-[2rem] rotate-3 translate-x-4 translate-y-4 -z-10 opacity-10"></div>
+
+        <!-- glow -->
+        <div class="absolute inset-0 bg-[#D57241]/20 blur-3xl rounded-[2rem] scale-110"></div>
+
+        <img src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg" alt="Bruno" class="relative z-10 rounded-[2rem] shadow-[0_30px_80px_rgba(0,0,0,0.25)] w-full object-cover aspect-[4/5]">
+
+        <!-- badge -->
         <div class="absolute -bottom-6 -right-4 bg-white p-5 rounded-2xl shadow-2xl border border-slate-100 max-w-[180px]">
           <p class="text-[#D57241] font-black text-2xl">14+ Anos</p>
           <p class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">De experiência real no mercado.</p>
         </div>
+
       </div>
     </div>
+
   </div>
 </section>
 
-<section class="py-24 bg-slate-50 relative border-t border-slate-100" id="metodo">
-  <div class="max-w-[1200px] mx-auto px-6 relative z-10">
-    <div class="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-up">
-      <h2 class="font-display text-[32px] md:text-5xl font-black text-[#284A78] mb-6">
-        A Roda do E-commerce
-      </h2>
-      <p class="text-slate-600 text-base md:text-lg">
-        O sucesso no e-commerce é o equilíbrio perfeito entre 5 pilares fundamentais que sustentam qualquer operação de escala.
-      </p>
-    </div>
+<!-- Roda do E-commerce -->
+<section class="py-28 bg-gradient-to-br from-[#D57241] via-[#c86435] to-[#b8562c] relative overflow-hidden" id="metodo">
 
-    <div class="grid lg:grid-cols-12 gap-12 items-center">
-      <div class="lg:col-span-7 space-y-4 opacity-0 animate-fade-up [animation-delay:200ms]">
-        
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
-          <div class="flex gap-5">
-            <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">1</div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Planejamento Estratégico</h4>
-              <p class="text-slate-500 text-sm leading-relaxed">Definição de nicho, personas e diferenciação competitiva no mercado atual.</p>
-            </div>
-          </div>
+  <!-- glow -->
+  <div class="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-white/10 blur-[140px] rounded-full"></div>
+
+  <div class="max-w-[1200px] mx-auto px-6">
+
+    <!-- CARD -->
+    <div class="relative bg-white border border-white/20 rounded-[2.5rem] p-10 md:p-16 shadow-[0_40px_100px_rgba(0,0,0,0.2)] overflow-hidden">
+
+      <!-- glow interno -->
+      <div class="absolute top-[-100px] right-[-100px] w-[400px] h-[400px] bg-[#D57241]/10 blur-[120px] rounded-full"></div>
+
+      <!-- TÍTULO -->
+      <div class="text-center max-w-3xl mx-auto mb-16 opacity-0 animate-fade-up">
+
+        <div class="inline-block bg-[#D57241]/10 text-[#D57241] px-4 py-2 rounded-full mb-6 font-bold text-[10px] uppercase tracking-[0.25em]">
+          O Método
         </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
-          <div class="flex gap-5">
-            <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">2</div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Equipes e Talentos</h4>
-              <p class="text-slate-500 text-sm leading-relaxed">Como contratar e gerir os braços direitos que vão fazer a sua operação escalar.</p>
+        <h2 class="font-display text-[34px] md:text-5xl font-black text-[#284A78] mb-6">
+          A Roda do E-commerce
+        </h2>
+
+        <p class="text-slate-600 text-base md:text-lg">
+          O sucesso no e-commerce não vem de uma única ação.  
+          Ele acontece quando todos os pilares trabalham juntos.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-14 items-center">
+
+        <!-- LISTA -->
+        <div class="lg:col-span-7 space-y-5 opacity-0 animate-fade-up [animation-delay:200ms]">
+          
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+            <div class="flex gap-5">
+              <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">1</div>
+              <div>
+                <h4 class="font-bold text-[#284A78] text-lg mb-1">Planejamento Estratégico</h4>
+                <p class="text-slate-500 text-sm leading-relaxed">Definição de nicho, personas e diferenciação competitiva no mercado atual.</p>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
-          <div class="flex gap-5">
-            <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">3</div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Loja de Alta Conversão</h4>
-              <p class="text-slate-500 text-sm leading-relaxed">Tecnologia e UX focadas em transformar cada visita em uma venda concluída.</p>
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+            <div class="flex gap-5">
+              <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">2</div>
+              <div>
+                <h4 class="font-bold text-[#284A78] text-lg mb-1">Equipes e Talentos</h4>
+                <p class="text-slate-500 text-sm leading-relaxed">Como contratar e gerir os braços direitos que vão fazer a sua operação escalar.</p>
+              </div>
             </div>
           </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+            <div class="flex gap-5">
+              <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">3</div>
+              <div>
+                <h4 class="font-bold text-[#284A78] text-lg mb-1">Loja de Alta Conversão</h4>
+                <p class="text-slate-500 text-sm leading-relaxed">Tecnologia e UX focadas em transformar cada visita em uma venda concluída.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all group">
+            <div class="flex gap-5">
+              <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">4</div>
+              <div>
+                <h4 class="font-bold text-[#284A78] text-lg mb-1">Marketing e Escala</h4>
+                <p class="text-slate-500 text-sm leading-relaxed">Aquisição de novos clientes com ROI positivo e previsibilidade financeira.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
-        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group">
-          <div class="flex gap-5">
-            <div class="w-12 h-12 flex-shrink-0 bg-[#284A78] text-white rounded-xl flex items-center justify-center font-black group-hover:bg-[#D57241] transition-colors">4</div>
-            <div>
-              <h4 class="font-bold text-[#284A78] text-lg mb-1">Marketing e Escala</h4>
-              <p class="text-slate-500 text-sm leading-relaxed">Aquisição de novos clientes com ROI positivo e previsibilidade financeira.</p>
-            </div>
+        <!-- RODA -->
+        <div class="lg:col-span-5 flex justify-center opacity-0 animate-fade-up [animation-delay:400ms]">
+          <div class="relative w-full max-w-[360px] group">
+            
+            <div class="absolute inset-0 bg-[#D57241]/30 rounded-full blur-3xl opacity-80"></div>
+
+            <img 
+  src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png" 
+  alt="Método" 
+  class="w-full relative z-10 cursor-pointer transition-transform duration-500 ease-out"
+  style="
+    animation: spin-slow 20s linear infinite;
+    transform-origin: center;
+  "
+  onmouseover="
+    this.style.animationPlayState='paused';
+    this.style.transform='scale(1.08)';
+  "
+  onmouseout="
+    this.style.animationPlayState='running';
+    this.style.transform='scale(1)';
+  "
+>
           </div>
         </div>
 
       </div>
-
-      <div class="lg:col-span-5 flex justify-center opacity-0 animate-fade-up [animation-delay:400ms]">
-  <div class="relative w-full max-w-[400px] group">
-    
-    <div class="absolute inset-0 bg-[#D57241]/10 rounded-full blur-3xl animate-pulse"></div>
-    
-    <img 
-      src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png" 
-      alt="Método" 
-      class="w-full relative z-10 drop-shadow-2xl cursor-pointer"
-      style="
-        animation: spin-slow 20s linear infinite;
-        animation-play-state: running;
-      "
-      onmouseover="this.style.animationPlayState='paused'"
-      onmouseout="this.style.animationPlayState='running'"
-    >
-  </div>
-</div>
-
-<style>
-  @keyframes spin-slow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-  }
-</style>
     </div>
+
   </div>
 </section>
+
 <!-- Sobre Bruno Bastelli -->
 <section class="py-24 bg-[#284A78] text-white relative overflow-hidden opacity-0 animate-fade-up" id="sobre">
   
@@ -495,6 +626,7 @@ window.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
 </section>
+
 <!-- O que aprenderá -->
 <section class="py-24 bg-slate-50 overflow-hidden">
   <div class="max-w-[1200px] mx-auto px-6">
@@ -580,6 +712,7 @@ window.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
 </section>
+
 <!-- Para quem é -->
 <section class="py-24 bg-[#284A78] relative overflow-hidden">
   
@@ -640,6 +773,7 @@ window.addEventListener("DOMContentLoaded", () => {
     </div>
   </div>
 </section>
+
 <!-- Diferenciais -->
 <section class="py-24 bg-white">
   <div class="max-w-[1200px] mx-auto px-6">
@@ -714,478 +848,822 @@ window.addEventListener("DOMContentLoaded", () => {
           </ul>
 
           <div class="mt-10 pt-8 border-t border-white/10">
-            <a href="#oferta" class="block w-full bg-white text-[#284A78] text-center py-4 rounded-xl font-black uppercase tracking-widest hover:bg-[#D57241] hover:text-white transition-all shadow-lg">
-              Quero Garatira Minha Vaga
-            </a>
-          </div>
-        </div>
 
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Prova Social -->
-<section class="py-section-gap bg-surface" id="depoimentos">
-<div class="max-w-[1200px] mx-auto px-6">
-<h2 class="font-h2 text-h2 text-on-surface text-center mb-16">O que dizem os nossos alunos</h2>
-<div class="grid md:grid-cols-3 gap-8">
-<!-- Testimonial 1 -->
-<div class="bg-white p-8 rounded-xl shadow-ambient border border-outline-variant flex flex-col">
-<div class="flex text-secondary-container mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-</div>
-<p class="text-body-md text-on-surface-variant flex-grow mb-6 italic">"O método da Roda do E-commerce mudou minha visão. Antes eu focava só em anúncios e não via lucro. Agora minha operação é organizada."</p>
-<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img alt="Aluna" class="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa81nhFlZ7SKk0K-AF8PDf4AT-HkajPwxOvZYmNXCTu1F_knpB9gwHuRbML8IFHKAtgHP4inyGL9rpZgrD7ZMF4dWDdziAHHNNAWUEuJIH0cVZxV8OXLJgxIDP5wLvZ-lBejI5d4SHWQIN1wrXoB3_KCmJWYF-UW9HoxRCx3tncFzlZTs_kH-whOHZHUZmDHR8CvRcm92zCi6XNgImnu8m2032jHGqDerUVgxB3M9YyvI-cujaUceo5YpzsnDW64K29PBBRN4WxHsy">
-</div>
-<div>
-<p class="font-bold text-on-surface">Mariana S.</p>
-<p class="text-xs text-on-surface-variant">Lojista de Moda</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="bg-white p-8 rounded-xl shadow-ambient border border-outline-variant flex flex-col">
-<div class="flex text-secondary-container mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-</div>
-<p class="text-body-md text-on-surface-variant flex-grow mb-6 italic">"Bruno tem uma didática incrível. O módulo de logística valeu cada centavo investido. Recomendo para quem quer ser profissional."</p>
-<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img alt="Aluno" class="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOttN3tHjMPTg_7v6b47mNCG6dlIkAno83D52bf6M0SFlmGKmzbS-Kv_pZT2z3cBaYfLbjBv9qGEA_3Y-h-2Bar7ZHOeSDhDPsdHIZMGFzX0FkNlZvjFkISiI8xwcWy5V8DSdpJD9oz5q-6s1Za6G6Cg8XpRZNGLWreBMsSJXNd257ZIehilaI0azRya2bfeasUH7o7kjlq9-Jeq_oKczGplk7ZfVRAwPXqL94o5IV6LUBxSoqSnIYsob_hjZTiMju3ckcG3TQn2fl">
-</div>
-<div>
-<p class="font-bold text-on-surface">Ricardo M.</p>
-<p class="text-xs text-on-surface-variant">Empreendedor Digital</p>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="bg-white p-8 rounded-xl shadow-ambient border border-outline-variant flex flex-col">
-<div class="flex text-secondary-container mb-4">
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
-</div>
-<p class="text-body-md text-on-surface-variant flex-grow mb-6 italic">"Parei de perder dinheiro com estoque parado depois que apliquei as planilhas do curso. É o melhor investimento que fiz este ano."</p>
-<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
-<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden">
-<img alt="Aluna" class="" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvnl_pd6s5dvVlm6UHFM1avy_dG674VX3USf5277QMziV8LaIxPRMfX4hKn7djmeaGYsXosKHrb661Z3M98xbQDomeSMUSNLAE5-b480lOkVxVGOC2a6u166oiPBuHJRUBOn_ssT3QQAlxi0bk4D3L-Cu50v1W7WiGOWeK_y_R8XQibpnSbt3Nk7r-02EABFh3M8AsTsuTX0Ulwhpu2wt8CsX9F_UZxqkJ7RrXwaEqFyrQvPF12sEFcHGHmyNvlkvBCGpoHP4xXN6M">
-</div>
-<div>
-<p class="font-bold text-on-surface">Carla F.</p>
-<p class="text-xs text-on-surface-variant">Dona de E-commerce</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- MOBILE -->
+<a href="#oferta" 
+  class="group relative block md:hidden w-full text-center 
+  px-5 py-3 rounded-lg font-bold text-sm text-white 
+  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+  
+  shadow-[0_12px_30px_rgba(213,114,65,0.35)]
+  active:scale-95 transition-all duration-300 overflow-hidden">
 
-<!-- VSL / VIDEO DE VENDAS -->
-<section class="py-24 bg-primary text-on-primary text-center relative overflow-hidden">
+  <!-- glow -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 group-active:opacity-100 blur-xl transition"></span>
 
-  <div class="max-w-[900px] mx-auto px-4 sm:px-6">
-
-    <h2 class="font-h2 text-[26px] md:text-[36px] leading-tight mb-4 md:mb-6">
-      Assista isso antes de tomar qualquer decisão
-    </h2>
-
-    <p class="text-body-lg mb-10 opacity-90">
-      Entenda como sair do zero e construir um e-commerce lucrativo com método validado.
-    </p>
-
-    <div class="relative mb-12 group">
-
-      <div class="absolute -inset-2 bg-gradient-to-r from-[#D57241]/40 to-[#c46032]/40 blur-xl opacity-60 group-hover:opacity-100 transition"></div>
-
-      <div class="relative rounded-xl md:rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.3)] md:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
-
-        <div class="relative rounded-xl md:rounded-2xl overflow-hidden">
-
-  <!-- OVERLAY QUE BLOQUEIA TUDO -->
-  <div class="absolute inset-0 z-20 bg-transparent"></div>
-
-  <!-- IFRAME -->
-  <iframe 
-    id="mainVideo"
-    class="w-full aspect-video"
-    src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&playsinline=1"
-    frameborder="0"
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-
-</div>
-
-      </div>
-
-    </div>
-
-    <a href="#oferta" 
-class="cta-button w-full sm:w-auto inline-flex items-center justify-center gap-3 
-bg-gradient-to-r from-[#D57241] to-[#c46032] 
-text-white px-6 py-4 sm:px-10 sm:py-6 rounded-xl font-bold text-sm sm:text-lg">
-       Quero aplicar isso agora
-    </a>
-
-  </div>
-</section>
-
-<!-- Oferta -->
-<section class="py-12 md:py-section-gap bg-surface-container-high" id="oferta">
-  <div class="max-w-[800px] mx-auto px-4 md:px-6 text-center">
-
-    <div class="bg-white rounded-2xl md:rounded-3xl shadow-xl md:shadow-2xl overflow-hidden border border-outline-variant">
-
-      <!-- HEADER -->
-      <div class="bg-primary px-6 py-6 md:p-8 text-on-primary">
-        <h2 class="text-xl md:text-h2 font-bold mb-2">
-          Introdução ao E-commerce
-        </h2>
-        <p class="text-[10px] md:text-label-caps tracking-widest text-secondary-fixed">
-          MÉTODO VALIDADO BRUNO BASTELLI
-        </p>
-      </div>
-
-      <!-- CONTEÚDO -->
-      <div class="p-6 md:p-12">
-
-        <!-- PREÇO -->
-        <div class="flex flex-col items-center mb-6 md:mb-8">
-
-          <span class="text-sm md:text-lg text-on-surface-variant line-through">
-            De R$ 997,00
-          </span>
-
-          <div class="flex items-end gap-1 md:gap-2 mt-1">
-            <span class="text-primary font-bold text-lg md:text-h3">12x</span>
-
-            <span class="text-primary font-extrabold text-[36px] md:text-[64px] leading-none">
-              R$ 49,70
-            </span>
-          </div>
-
-          <p class="text-xs md:text-sm text-on-surface-variant mt-2">
-            Ou R$ 497,00 à vista (50% OFF)
-          </p>
-
-        </div>
-
-        <!-- BENEFÍCIOS -->
-        <div class="space-y-3 text-left max-w-sm mx-auto mb-6 md:mb-10 text-sm md:text-base">
-
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
-            <span>Acesso imediato à plataforma</span>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
-            <span>Bônus: Masterclass Tráfego Pago</span>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings:'FILL' 1;">check_circle</span>
-            <span>7 dias de garantia</span>
-          </div>
-
-        </div>
-
-        <!-- CTA -->
-        <a 
-          class="cta-button w-full block bg-gradient-to-r from-[#D57241] to-[#c46032] 
-          text-white px-5 py-3 md:px-8 md:py-5 
-          rounded-lg text-sm md:text-base font-bold 
-          text-center shadow-md md:shadow-lg"
-          href="#">
-
-          <!-- TEXTO MOBILE -->
-          <span class="block md:hidden">
-            Garantir vaga com desconto
-          </span>
-
-          <!-- TEXTO DESKTOP -->
-          <span class="hidden md:block">
-            Sim! Quero Garantir Minha Vaga com 50% OFF
-          </span>
-
-        </a>
-
-        <!-- PAGAMENTO -->
-        <div class="mt-6 md:mt-8">
-
-          <p class="text-xs md:text-sm text-on-surface-variant mb-3">
-            Cartão, Pix e Boleto
-          </p>
-
-          <!-- LOGOS -->
-          <div class="flex items-center justify-center gap-3 md:gap-5 opacity-70">
-
-            <img class="h-3 md:h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Visa_Inc._logo_%282021%E2%80%93present%29.svg/3840px-Visa_Inc._logo_%282021%E2%80%93present%29.svg.png">
-
-            <img class="h-3 md:h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/330px-Mastercard-logo.svg.png">
-
-            <img class="h-3 md:h-4" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg">
-
-            <img class="h-3 md:h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pix_%28Brazil%29_logo.svg/3840px-Pix_%28Brazil%29_logo.svg.png">
-
-          </div>
-
-          <p class="text-[11px] text-green-600 mt-2">
-            ✔ Acesso imediato após pagamento
-          </p>
-
-        </div>
-
-      </div>
-
-      <!-- FOOTER -->
-      <div class="bg-surface-container p-4 md:p-6 border-t border-outline-variant flex items-center justify-center gap-3">
-        <span class="material-symbols-outlined text-primary text-xl md:text-3xl">
-          verified_user
-        </span>
-        <p class="text-[12px] md:text-body-sm text-on-surface-variant">
-          Pagamento 100% seguro via Hotmart
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- CTA Final -->
-<section class="relative overflow-hidden bg-primary text-on-primary">
-
-  <!-- DESKTOP -->
-  <div class="hidden md:block py-24 text-center">
-    <div class="max-w-[1000px] mx-auto px-6">
-
-      <h2 class="font-h2 text-[44px] leading-tight mb-6">
-        O mercado de E-commerce não espera.<br>
-        Sua transformação começa agora.
-      </h2>
-
-      <p class="text-body-lg mb-10 max-w-2xl mx-auto opacity-90">
-        Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
-      </p>
-
-      <!-- CTA ÚNICO RESPONSIVO -->
-<a href="#oferta"
-   class="cta-button group w-full md:w-auto inline-flex items-center justify-center gap-3
-   bg-gradient-to-r from-[#D57241] to-[#c46032]
-   text-white px-6 py-5 md:px-12 md:py-6
-   rounded-xl font-bold text-base md:text-lg
-   shadow-[0_15px_35px_rgba(213,114,65,0.4)]
-   transition-all duration-300 overflow-hidden animate-fade-up
-
-   /* DESKTOP */
-   md:hover:scale-105 md:hover:shadow-[0_20px_45px_rgba(213,114,65,0.6)]
-
-   /* MOBILE TOUCH FEEDBACK */
-   active:scale-95 active:brightness-110">
-
-  <!-- TEXTO MOBILE -->
-  <span class="block md:hidden">
-    Garantir vaga com desconto
-  </span>
-
-  <!-- TEXTO DESKTOP -->
-  <span class="hidden md:block">
-    Sim! Quero Garantir Minha Vaga com 50% OFF
-  </span>
-
-  <!-- ÍCONE (funciona no desktop hover e mobile touch) -->
-  <span class="material-symbols-outlined transition-transform md:group-hover:translate-x-1">
-    arrow_forward
+  <span class="relative z-10 flex items-center justify-center gap-2">
+    Garantir vaga
+    <span class="transition-transform group-active:translate-x-1">→</span>
   </span>
 
 </a>
 
-      <!-- DESKTOP -->
-<p class="mt-12 text-sm text-white/80 hidden md:block">
-  ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
-</p>
+<!-- DESKTOP -->
+<a href="#oferta" 
+  class="group relative hidden md:inline-flex w-full items-center justify-center gap-3 
+  px-10 py-5 rounded-xl font-medium text-base text-white
+  
+  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+  
+  shadow-[0_20px_50px_rgba(213,114,65,0.45)]
+  
+  transition-all duration-300 overflow-hidden
+  hover:scale-[1.03] hover:shadow-[0_25px_60px_rgba(213,114,65,0.6)]">
 
-<!-- MOBILE -->
-<p class="mt-8 text-xs text-white/80 block md:hidden leading-relaxed">
-  ✔ Acesso imediato<br>
-  ✔ 7 dias de garantia<br>
-  ✔ Pagamento seguro
-</p>
+  <!-- brilho animado -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
 
+  <span class="relative z-10">
+    Quero Garantir Minha Vaga
+  </span>
+
+  <span class="relative z-10 transition-transform group-hover:translate-x-1">
+    →
+  </span>
+
+</a>
+
+</div>
+        </div>
+
+      </div>
     </div>
   </div>
+</section>
 
-  <!-- MOBILE -->
-  <div class="block md:hidden py-16 text-center">
-    <div class="px-6">
+<!-- Prova Social -->
+<section class="py-28 bg-gradient-to-b from-white via-[#fff7f2] to-white relative overflow-hidden" id="depoimentos">
 
-      <h2 class="font-h2 text-[28px] leading-snug mb-5">
-        O mercado de E-commerce não espera.<br>
-        Sua transformação começa agora.
+  <!-- glow -->
+  <div class="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#D57241]/10 blur-[120px] rounded-full"></div>
+
+  <div class="max-w-[1200px] mx-auto px-6 relative z-10">
+
+    <div class="text-center mb-16">
+      <span class="inline-block bg-[#D57241]/10 text-[#D57241] px-4 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-4">
+        Prova Social
+      </span>
+
+      <h2 class="text-3xl md:text-5xl font-black text-[#284A78] mb-4">
+        O que dizem nossos alunos
       </h2>
 
-      <p class="text-body-md mb-8 opacity-90">
-        Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
+      <p class="text-slate-500 max-w-xl mx-auto">
+        Resultados reais de quem aplicou o método e transformou o seu e-commerce.
       </p>
+    </div>
 
-      <!-- CTA MOBILE -->
-      <a href="#oferta"
-         class="group relative w-full inline-flex items-center justify-center gap-3 
-         bg-gradient-to-r from-[#D57241] to-[#c46032] 
-         text-white px-6 py-5 rounded-xl font-bold text-base 
-         shadow-[0_12px_30px_rgba(213,114,65,0.35)] 
-         active:scale-95 transition-all duration-300">
+    <div class="grid md:grid-cols-3 gap-8">
 
-        <span class="flex items-center gap-2">
-          Começar agora
-          <span class="material-symbols-outlined">
-            arrow_forward
-          </span>
-        </span>
+      <!-- CARD -->
+      <div class="group relative p-8 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
 
-      </a>
+        <!-- hover gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-[#D57241] to-[#ff8a50] opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl"></div>
 
-      <p class="mt-10 text-xs text-white/80">
-        ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
-      </p>
+        <div class="relative z-10 flex flex-col h-full">
+
+          <!-- estrelas -->
+          <div class="flex gap-1 text-[#ffb347] mb-5">
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+          </div>
+
+          <!-- texto -->
+          <p class="text-slate-600 group-hover:text-white text-sm italic leading-relaxed flex-grow mb-6 transition">
+            "O método da Roda do E-commerce mudou minha visão. Antes eu focava só em anúncios e não via lucro. Agora minha operação é organizada."
+          </p>
+
+          <!-- autor -->
+          <div class="flex items-center gap-4 pt-6 border-t border-slate-200 group-hover:border-white/30 transition">
+            <img class="w-12 h-12 rounded-full object-cover ring-2 ring-[#D57241]/30 group-hover:ring-white/40"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa81nhFlZ7SKk0K-AF8PDf4AT-HkajPwxOvZYmNXCTu1F_knpB9gwHuRbML8IFHKAtgHP4inyGL9rpZgrD7ZMF4dWDdziAHHNNAWUEuJIH0cVZxV8OXLJgxIDP5wLvZ-lBejI5d4SHWQIN1wrXoB3_KCmJWYF-UW9HoxRCx3tncFzlZTs_kH-whOHZHUZmDHR8CvRcm92zCi6XNgImnu8m2032jHGqDerUVgxB3M9YyvI-cujaUceo5YpzsnDW64K29PBBRN4WxHsy">
+
+            <div>
+              <p class="font-bold text-[#284A78] group-hover:text-white">Mariana S.</p>
+              <p class="text-xs text-slate-500 group-hover:text-white/70">Lojista de Moda</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DUPLICA OS OUTROS CARDS -->
+      <!-- só trocar texto e imagem -->
+
+      <div class="group relative p-8 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#D57241] to-[#ff8a50] opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl"></div>
+
+        <div class="relative z-10 flex flex-col h-full">
+          <div class="flex gap-1 text-[#ffb347] mb-5">
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+          </div>
+
+          <p class="text-slate-600 group-hover:text-white text-sm italic leading-relaxed flex-grow mb-6 transition">
+            "Bruno tem uma didática incrível. O módulo de logística valeu cada centavo investido."
+          </p>
+
+          <div class="flex items-center gap-4 pt-6 border-t border-slate-200 group-hover:border-white/30">
+            <img class="w-12 h-12 rounded-full object-cover ring-2 ring-[#D57241]/30 group-hover:ring-white/40"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOttN3tHjMPTg_7v6b47mNCG6dlIkAno83D52bf6M0SFlmGKmzbS-Kv_pZT2z3cBaYfLbjBv9qGEA_3Y-h-2Bar7ZHOeSDhDPsdHIZMGFzX0FkNlZvjFkISiI8xwcWy5V8DSdpJD9oz5q-6s1Za6G6Cg8XpRZNGLWreBMsSJXNd257ZIehilaI0azRya2bfeasUH7o7kjlq9-Jeq_oKczGplk7ZfVRAwPXqL94o5IV6LUBxSoqSnIYsob_hjZTiMju3ckcG3TQn2fl">
+
+            <div>
+              <p class="font-bold text-[#284A78] group-hover:text-white">Ricardo M.</p>
+              <p class="text-xs text-slate-500 group-hover:text-white/70">Empreendedor Digital</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative p-8 rounded-2xl bg-white/80 backdrop-blur-xl border border-white/40 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-500">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#D57241] to-[#ff8a50] opacity-0 group-hover:opacity-100 transition duration-500 rounded-2xl"></div>
+
+        <div class="relative z-10 flex flex-col h-full">
+          <div class="flex gap-1 text-[#ffb347] mb-5">
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+            <span class="material-symbols-outlined">star</span>
+          </div>
+
+          <p class="text-slate-600 group-hover:text-white text-sm italic leading-relaxed flex-grow mb-6 transition">
+            "Parei de perder dinheiro com estoque parado depois que apliquei o método."
+          </p>
+
+          <div class="flex items-center gap-4 pt-6 border-t border-slate-200 group-hover:border-white/30">
+            <img class="w-12 h-12 rounded-full object-cover ring-2 ring-[#D57241]/30 group-hover:ring-white/40"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvnl_pd6s5dvVlm6UHFM1avy_dG674VX3USf5277QMziV8LaIxPRMfX4hKn7djmeaGYsXosKHrb661Z3M98xbQDomeSMUSNLAE5-b480lOkVxVGOC2a6u166oiPBuHJRUBOn_ssT3QQAlxi0bk4D3L-Cu50v1W7WiGOWeK_y_R8XQibpnSbt3Nk7r-02EABFh3M8AsTsuTX0Ulwhpu2wt8CsX9F_UZxqkJ7RrXwaEqFyrQvPF12sEFcHGHmyNvlkvBCGpoHP4xXN6M">
+
+            <div>
+              <p class="font-bold text-[#284A78] group-hover:text-white">Carla F.</p>
+              <p class="text-xs text-slate-500 group-hover:text-white/70">Dona de E-commerce</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
     </div>
   </div>
+</section>
 
+<!-- VSL / VIDEO DE VENDAS -->
+<section class="py-28 bg-[#0f172a] text-white text-center relative overflow-hidden">
+
+  <!-- glow fundo -->
+  <div class="absolute top-[-200px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#D57241]/20 blur-[180px] rounded-full"></div>
+
+  <div class="max-w-[1000px] mx-auto px-6 relative z-10">
+
+    <!-- HEADLINE -->
+    <h2 class="text-3xl md:text-5xl font-black leading-tight mb-6">
+      Assista isso antes de tomar qualquer decisão
+    </h2>
+
+    <p class="text-slate-300 text-base md:text-lg max-w-2xl mx-auto mb-12">
+      Em poucos minutos você vai entender como construir um e-commerce lucrativo, 
+      mesmo começando do zero.
+    </p>
+
+    <!-- VIDEO -->
+    <div class="relative group mb-14">
+
+      <!-- glow animado -->
+      <div class="absolute -inset-3 bg-gradient-to-r from-[#D57241] via-[#ff8a50] to-[#D57241] 
+      opacity-40 blur-2xl group-hover:opacity-80 transition duration-500"></div>
+
+      <div class="relative rounded-2xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.6)] border border-white/10">
+
+        <!-- overlay leve (efeito cinematico) -->
+        <div class="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
+
+        <iframe 
+          id="mainVideo"
+          class="w-full aspect-video"
+          src="https://www.youtube.com/embed/8r-eyP_bdlU?autoplay=1&mute=1&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&playsinline=1"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+    </div>
+
+    <!-- PROVA RÁPIDA -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10 text-sm text-slate-400">
+      <div class="flex items-center gap-2">
+        <span class="text-[#ffb347]">★★★★★</span>
+        <span>+3.200 alunos</span>
+      </div>
+      <div class="hidden sm:block w-1 h-1 bg-slate-500 rounded-full"></div>
+      <span>Método validado no Brasil</span>
+    </div>
+
+    <a href="#oferta" 
+  class="cta-button group relative w-full md:w-auto inline-flex items-center justify-center gap-3
+  
+  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+  text-white font-bold text-center
+  
+  px-5 py-3 text-sm rounded-lg
+  md:px-12 md:py-5 md:text-lg md:rounded-xl
+  
+  shadow-[0_15px_40px_rgba(213,114,65,0.45)]
+  md:shadow-[0_25px_60px_rgba(213,114,65,0.6)]
+  
+  transition-all duration-300
+  hover:scale-[1.03] md:hover:scale-105
+  active:scale-95
+  overflow-hidden
+">
+
+  <!-- BRILHO -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
+
+  <!-- TEXTO -->
+  <span class="relative z-10 leading-tight">
+    <span class="block md:hidden">
+      Começar agora
+    </span>
+    <span class="hidden md:block">
+      Quero aplicar isso agora
+    </span>
+  </span>
+
+  <!-- ÍCONE -->
+  <span class="relative z-10 transition-transform md:group-hover:translate-x-1">
+    →
+  </span>
+
+</a>
+
+    <!-- URGÊNCIA -->
+    <p class="text-xs text-slate-500 mt-6">
+      Acesso imediato após a inscrição
+    </p>
+
+  </div>
 </section>
-<!-- FAQ Section -->
-<section class="py-section-gap" id="faq">
-<div class="max-w-[800px] mx-auto px-6">
-<h2 class="font-h2 text-h2 text-on-surface text-center mb-16">Dúvidas Frequentes</h2>
-<div class="space-y-4">
-<!-- FAQ Item 1 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">Preciso de experiência prévia para começar?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Não. O curso foi desenhado para levar você desde os conceitos mais básicos até as estratégias avançadas de escala.</p>
-</div>
-</div>
-<!-- FAQ Item 2 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">Como recebo o acesso ao curso?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Imediatamente após a confirmação do pagamento, você receberá um e-mail com seus dados de acesso à plataforma exclusiva.</p>
-</div>
-</div>
-<!-- FAQ Item 3 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">O curso serve para qualquer nicho?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Sim. O método da Roda do E-commerce baseia-se em pilares universais que funcionam para moda, eletrônicos, casa, beleza e qualquer outro segmento de produtos físicos.</p>
-</div>
-</div>
-<!-- FAQ Item 4 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">Tenho suporte para tirar dúvidas?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Sim, temos uma área de membros onde você pode deixar suas perguntas abaixo de cada aula e nossa equipe técnica responde em até 24h úteis.</p>
-</div>
-</div>
-<!-- FAQ Item 5 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">Quanto tempo de acesso eu terei?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">O acesso é vitalício. Você pode assistir às aulas no seu ritmo e voltar para consultar o material sempre que precisar.</p>
-</div>
-</div>
-<!-- FAQ Item 6 -->
-<div class="border border-outline-variant rounded-xl overflow-hidden">
-<button class="w-full flex justify-between items-center p-6 bg-white hover:bg-surface-container-low transition-colors text-left" onclick="this.nextElementSibling.classList.toggle('hidden')">
-<span class="font-bold text-on-surface">E se eu não gostar do curso?</span>
-<span class="material-symbols-outlined">expand_more</span>
-</button>
-<div class="p-6 bg-surface-container-lowest border-t border-outline-variant hidden">
-<p class="text-on-surface-variant">Você tem uma garantia de 7 dias. Se por qualquer motivo sentir que o curso não é para você, devolvemos 100% do seu dinheiro, sem perguntas.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer class="bg-primary py-12 px-6 w-full border-t border-white/10">
-  <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+
+<!-- OFERTA -->
+<section class="py-28 bg-gradient-to-b from-[#fff7f2] via-white to-white relative overflow-hidden" id="oferta">
+
+  <!-- glow -->
+  <div class="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#D57241]/10 blur-[140px] rounded-full"></div>
+
+  <div class="max-w-[900px] mx-auto px-6 text-center relative z-10">
+
+    <!-- BADGE URGÊNCIA -->
+    <div class="inline-block bg-[#D57241] text-white px-5 py-2 rounded-full text-xs font-bold tracking-widest uppercase mb-6 shadow-lg animate-pulse">
+      50% OFF HOJE
+    </div>
+
+    <!-- CARD -->
+    <div class="relative bg-white rounded-[2.5rem] shadow-[0_40px_120px_rgba(0,0,0,0.15)] border border-white/50 overflow-hidden">
+
+      <!-- faixa destaque -->
+      <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-[#D57241] via-[#ff8a50] to-[#D57241]"></div>
+
+      <!-- HEADER -->
+      <div class="p-10 pb-6">
+
+        <h2 class="text-3xl md:text-5xl font-black text-[#284A78] mb-3">
+          Introdução ao E-commerce
+        </h2>
+
+        <p class="text-xs tracking-[0.3em] text-[#D57241] font-bold uppercase">
+          Método validado Bruno Bastelli
+        </p>
+
+      </div>
+
+      <!-- PREÇO -->
+      <div class="px-10 pb-6">
+
+        <p class="text-slate-400 line-through text-lg mb-2">
+          De R$ 997,00
+        </p>
+
+        <div class="flex justify-center items-end gap-2 mb-2">
+
+          <span class="text-[#D57241] font-bold text-xl md:text-2xl">
+            12x
+          </span>
+
+          <span class="text-[#D57241] font-black text-[48px] md:text-[72px] leading-none">
+            R$ 49,70
+          </span>
+
+        </div>
+
+        <p class="text-sm text-slate-500">
+          ou <strong class="text-[#D57241]">R$ 497 à vista</strong>
+        </p>
+
+      </div>
+
+      <!-- BENEFÍCIOS -->
+      <div class="px-10 py-8 border-t border-slate-100">
+
+        <div class="grid gap-4 max-w-md mx-auto text-left">
+
+          <div class="flex items-center gap-3">
+            <span class="text-[#D57241] text-xl">✔</span>
+            <span>Acesso imediato à plataforma</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-[#D57241] text-xl">✔</span>
+            <span>Bônus: Masterclass Tráfego Pago</span>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <span class="text-[#D57241] text-xl">✔</span>
+            <span>7 dias de garantia incondicional</span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="px-6 md:px-10 pb-8 md:pb-10">
+
+  <a href="#"
+    class="cta-button group relative w-full inline-flex items-center justify-center gap-3
     
-    <div class="text-center md:text-left">
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-3 mb-2">
-  <img 
-    src="https://i.ibb.co/My9T7p1z/logo-b.png" 
-    alt="Bruno Bastelli"
-    class="h-10 w-auto object-contain brightness-0 invert"
-  ></div>
-      <p class="text-white/80 text-body-sm">
-        © 2024 Bruno Bastelli - Todos os direitos reservados.
+    bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+    text-white font-bold text-center
+    
+    px-5 py-3 text-sm rounded-lg
+    md:px-14 md:py-6 md:text-lg md:rounded-xl
+    
+    shadow-[0_15px_40px_rgba(213,114,65,0.45)]
+    md:shadow-[0_25px_60px_rgba(213,114,65,0.6)]
+    
+    transition-all duration-300
+    hover:scale-[1.03] md:hover:scale-105
+    active:scale-95
+    overflow-hidden
+  ">
+
+    <!-- BRILHO -->
+    <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
+
+    <!-- TEXTO -->
+    <span class="relative z-10 leading-tight">
+      <span class="block md:hidden">
+        Garantir vaga agora
+      </span>
+      <span class="hidden md:block">
+        Sim! Quero Garantir Minha Vaga
+      </span>
+    </span>
+
+    <!-- ÍCONE -->
+    <span class="relative z-10 transition-transform md:group-hover:translate-x-1">
+      →
+    </span>
+
+  </a>
+
+  <!-- TEXTO ABAIXO -->
+  <p class="text-[11px] md:text-xs text-slate-400 mt-6 md:mt-5">
+    Acesso liberado imediatamente após pagamento
+  </p>
+
+</div>
+
+      <!-- PAGAMENTO -->
+      <div class="bg-[#f9fafb] py-6 border-t border-slate-100">
+
+        <p class="text-sm text-slate-500 mb-3">
+          Cartão, Pix e Boleto
+        </p>
+
+        <div class="flex items-center justify-center gap-5 opacity-70">
+
+          <img class="h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Visa_Inc._logo_%282021%E2%80%93present%29.svg/3840px-Visa_Inc._logo_%282021%E2%80%93present%29.svg.png">
+          <img class="h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/330px-Mastercard-logo.svg.png">
+          <img class="h-4" src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg">
+          <img class="h-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Pix_%28Brazil%29_logo.svg/3840px-Pix_%28Brazil%29_logo.svg.png">
+
+        </div>
+
+        <p class="text-green-600 text-xs mt-3">
+          ✔ Pagamento 100% seguro
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA Final -->
+<section class="relative overflow-hidden bg-gradient-to-b from-[#1f3c63] via-[#284A78] to-[#1f3c63] text-white pt-20 md:pt-28 pb-16 md:pb-24">
+
+  <!-- TRANSIÇÃO TOPO (liga com seção anterior) -->
+  <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-[#1f3c63]"></div>
+
+  <!-- GLOW BACKGROUND -->
+  <div class="absolute inset-0">
+    <div class="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#D57241]/30 blur-[160px] rounded-full"></div>
+    <div class="absolute bottom-[-150px] right-[-100px] w-[500px] h-[500px] bg-[#D57241]/20 blur-[140px] rounded-full"></div>
+  </div>
+
+  <div class="relative max-w-[900px] mx-auto px-6 text-center">
+
+    <!-- MINI TAG DE CONTINUIDADE -->
+    <div class="inline-block mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-[10px] tracking-[0.25em] uppercase">
+      Sua decisão começa aqui
+    </div>
+
+    <!-- HEADLINE -->
+    <h2 class="
+      font-h2 
+      text-[28px] leading-snug 
+      md:text-[48px] md:leading-tight 
+      font-extrabold
+      mb-6">
+
+      O mercado de E-commerce<br class="hidden md:block">
+      <span class="text-[#D57241]">não espera por você.</span>
+    </h2>
+
+    <!-- SUB -->
+    <p class="
+      text-sm md:text-lg 
+      opacity-90 
+      mb-10 
+      max-w-2xl mx-auto">
+
+      Enquanto você adia, outras pessoas estão ocupando o espaço que poderia ser seu.
+      <br class="hidden md:block">
+      <span class="text-white font-semibold">A diferença é agir agora.</span>
+    </p>
+
+    <!-- BOX DE DESTAQUE -->
+    <div class="mb-10 p-4 md:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl max-w-xl mx-auto">
+      <p class="text-xs md:text-sm text-white/80">
+        🔥 Oferta com 50% OFF ativa hoje • Acesso imediato após pagamento
       </p>
     </div>
 
-    <nav class="flex gap-6">
-      <a class="text-white/80 hover:text-on-primary transition-colors font-label-caps text-label-caps" href="#">Termos de Uso</a>
-      <a class="text-white/80 hover:text-on-primary transition-colors font-label-caps text-label-caps" href="#">Políticas de Privacidade</a>
-      <a class="text-white/80 hover:text-on-primary transition-colors font-label-caps text-label-caps" href="#">Suporte</a>
-    </nav>
+    <!-- CTA -->
+    <a href="#oferta"
+      class="cta-button group relative w-full md:w-auto inline-flex items-center justify-center gap-3
+      
+      bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+      text-white font-bold text-center
+      
+      px-5 py-3 text-sm rounded-lg
+      md:px-14 md:py-6 md:text-lg md:rounded-xl
+      
+      shadow-[0_15px_40px_rgba(213,114,65,0.45)]
+      md:shadow-[0_25px_60px_rgba(213,114,65,0.6)]
+      
+      transition-all duration-300
+      hover:scale-[1.03] md:hover:scale-105
+      active:scale-95
+      overflow-hidden
+    ">
 
-    <div class="flex gap-4">
+      <!-- brilho animado -->
+      <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
 
-  <!-- Instagram -->
-  <a href="#" target="_blank" class="group w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all hover:bg-[#D57241]">
-    <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838a4 4 0 100 8 4 4 0 000-8zm6.406-1.845a1.44 1.44 0 110 2.88 1.44 1.44 0 010-2.88z"/>
-    </svg>
-  </a>
+      <!-- TEXTO -->
+      <span class="relative z-10 leading-tight">
+        <span class="block md:hidden">
+          Quero começar agora
+        </span>
+        <span class="hidden md:block">
+          Sim! Quero Garantir Minha Vaga com 50% OFF
+        </span>
+      </span>
 
-  <!-- Facebook -->
-  <a href="#" target="_blank" class="group w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all hover:bg-[#D57241]">
-    <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 12a10 10 0 10-11.563 9.875v-6.99h-2.4v-2.885h2.4V9.797c0-2.37 1.416-3.676 3.582-3.676 1.038 0 2.125.185 2.125.185v2.34h-1.197c-1.18 0-1.547.732-1.547 1.482v1.782h2.633l-.421 2.885h-2.212v6.99A10 10 0 0022 12z"/>
-    </svg>
-  </a>
+      <!-- ÍCONE -->
+      <span class="relative z-10 material-symbols-outlined transition-transform md:group-hover:translate-x-1">
+        arrow_forward
+      </span>
 
-  <!-- YouTube -->
-  <a href="#" target="_blank" class="group w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all hover:bg-[#D57241]">
-    <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M23.498 6.186a2.99 2.99 0 00-2.104-2.118C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.394.568A2.99 2.99 0 00.502 6.186 31.37 31.37 0 000 12a31.37 31.37 0 00.502 5.814 2.99 2.99 0 002.104 2.118C4.5 20.5 12 20.5 12 20.5s7.5 0 9.394-.568a2.99 2.99 0 002.104-2.118A31.37 31.37 0 0024 12a31.37 31.37 0 00-.502-5.814zM9.75 15.5v-7l6 3.5-6 3.5z"/>
-    </svg>
-  </a>
+    </a>
 
-  <!-- TikTok -->
-  <a href="#" target="_blank" class="group w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all hover:bg-[#D57241]">
-    <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.75 2h2.25a4.5 4.5 0 004.5 4.5v2.25a6.75 6.75 0 01-4.5-1.687V15a5.25 5.25 0 11-5.25-5.25c.18 0 .36.015.54.045v2.295a3 3 0 10 2.46 2.96V2z"/>
-    </svg>
-  </a>
+    <!-- PROVA / SEGURANÇA -->
+    <div class="
+      mt-10 md:mt-14 
+      text-white/80 
+      text-xs md:text-sm 
+      leading-relaxed">
 
+      <span class="block md:hidden">
+        ✔ Acesso imediato<br>
+        ✔ 7 dias de garantia<br>
+        ✔ Pagamento 100% seguro
+      </span>
+
+      <span class="hidden md:block">
+        ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento 100% seguro
+      </span>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="relative py-20 md:py-28 bg-gradient-to-b from-white to-[#f8fafc]" id="faq">
+
+  <!-- glow -->
+  <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#D57241]/10 blur-[140px] rounded-full"></div>
+
+  <div class="relative max-w-[800px] mx-auto px-6">
+
+    <!-- HEADER -->
+    <div class="text-center mb-14 md:mb-16">
+      <div class="inline-block mb-4 px-4 py-2 rounded-full bg-[#D57241]/10 text-[#D57241] text-[10px] tracking-[0.25em] uppercase font-bold">
+        FAQ
+      </div>
+
+      <h2 class="font-h2 text-[28px] md:text-[42px] text-[#284A78] font-extrabold mb-4">
+        Dúvidas Frequentes
+      </h2>
+
+      <p class="text-slate-500 text-sm md:text-base max-w-xl mx-auto">
+        Tudo que você precisa saber antes de começar sua jornada no e-commerce.
+      </p>
+    </div>
+
+    <!-- LISTA -->
+    <div class="space-y-4">
+
+      <!-- ITEM -->
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        
+        <button onclick="toggleFaq(this)"
+          class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            Preciso de experiência prévia para começar?
+          </span>
+
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+
+        </button>
+
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base leading-relaxed">
+            Não. O curso foi desenhado para levar você desde os conceitos mais básicos até as estratégias avançadas de escala.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- DUPLICAR ITENS -->
+      
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            Como recebo o acesso ao curso?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Imediatamente após a confirmação do pagamento, você receberá um e-mail com seus dados de acesso.
+          </p>
+        </div>
+      </div>
+
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            O curso serve para qualquer nicho?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Sim. O método funciona para qualquer segmento de produtos físicos.
+          </p>
+        </div>
+      </div>
+
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            Tenho suporte para tirar dúvidas?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Sim. Nossa equipe responde em até 24h úteis dentro da área de membros.
+          </p>
+        </div>
+      </div>
+
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            Quanto tempo de acesso eu terei?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Acesso vitalício. Você pode assistir quando quiser.
+          </p>
+        </div>
+      </div>
+
+      <div class="group border border-slate-200 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden">
+        <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center p-5 md:p-6 text-left">
+          <span class="font-semibold text-[#284A78] text-sm md:text-base">
+            E se eu não gostar do curso?
+          </span>
+          <span class="material-symbols-outlined transition-transform duration-300 group-[.active]:rotate-180">
+            expand_more
+          </span>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-500 px-6">
+          <p class="py-4 text-slate-600 text-sm md:text-base">
+            Você tem 7 dias de garantia total. Se não gostar, devolvemos 100%.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+function toggleFaq(button) {
+  const item = button.parentElement;
+  const content = item.querySelector(".faq-content");
+
+  const isOpen = item.classList.contains("active");
+
+  document.querySelectorAll("#faq .group").forEach(el => {
+    el.classList.remove("active");
+    el.querySelector(".faq-content").style.maxHeight = null;
+  });
+
+  if (!isOpen) {
+    item.classList.add("active");
+    content.style.maxHeight = content.scrollHeight + "px";
+  }
+}
+</script>
+
+<!-- Footer -->
+<footer class="relative bg-gradient-to-br from-[#1e3a5f] via-[#284A78] to-[#1a2f4a] text-white overflow-hidden">
+
+  <!-- GLOW -->
+  <div class="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#D57241]/20 blur-[140px] rounded-full opacity-60"></div>
+
+  <div class="relative max-w-[1200px] mx-auto px-6 py-16">
+
+    <div class="grid md:grid-cols-3 gap-10 items-center">
+
+      <!-- LOGO + TEXTO -->
+      <div class="text-center md:text-left">
+
+        <img 
+          src="https://i.ibb.co/My9T7p1z/logo-b.png" 
+          alt="Bruno Bastelli"
+          class="h-12 mx-auto md:mx-0 mb-4 brightness-0 invert"
+        >
+
+        <p class="text-white/70 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+          Transformando conhecimento em negócios digitais lucrativos através de método validado.
+        </p>
+
+      </div>
+
+      <!-- LINKS -->
+      <nav class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm">
+
+        <a href="#" class="text-white/70 hover:text-white transition-colors relative group">
+          Termos de Uso
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#D57241] transition-all group-hover:w-full"></span>
+        </a>
+
+        <a href="#" class="text-white/70 hover:text-white transition-colors relative group">
+          Privacidade
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#D57241] transition-all group-hover:w-full"></span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5519971142592" class="text-white/70 hover:text-white transition-colors relative group">
+          Suporte
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#D57241] transition-all group-hover:w-full"></span>
+        </a>
+
+      </nav>
+
+      <!-- SOCIAL -->
+      <div class="flex justify-center md:justify-end gap-4">
+
+        <!-- INSTAGRAM -->
+        <a href="https://instagram.com/bastelliconsultoriaecommerce" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>
+        </a>
+
+        <!-- FACEBOOK -->
+        <a href="https://www.facebook.com/bastelliconsultoria" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg>
+        </a>
+
+        <!-- LINKEDIN -->
+        <a href="https://www.linkedin.com/company/bastelli-consultoria-em-e-commerce-e-performance" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+</svg>
+        </a>
+
+        <!-- TIKTOK -->
+        <a href="https://www.tiktok.com/@bastelliconsultoria" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+  <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+</svg>
+        </a>
+
+        <!-- YOUTUBE -->
+        <a href="https://www.youtube.com/@bastelliconsultoriaecommerce" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+  <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+</svg>
+        </a>
+
+      </div>
+
+    </div>
+
+    <!-- LINHA FINAL -->
+    <div class="mt-12 pt-6 border-t border-white/10 text-center text-xs text-white/50">
+  © <span id="year"></span> Bruno Bastelli — Todos os direitos reservados.
 </div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
   </div>
 </footer>
