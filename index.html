@@ -1119,60 +1119,81 @@ window.addEventListener("DOMContentLoaded", () => {
 </section>
 
 <!-- CTA Final -->
-<section class="relative overflow-hidden bg-primary text-on-primary py-16 md:py-24">
+<section class="relative overflow-hidden bg-gradient-to-b from-[#1f3c63] via-[#284A78] to-[#1f3c63] text-white pt-20 md:pt-28 pb-16 md:pb-24">
 
-  <!-- glow sutil -->
-  <div class="absolute inset-0 opacity-20">
-    <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#D57241] blur-[140px] rounded-full"></div>
+  <!-- TRANSIÇÃO TOPO (liga com seção anterior) -->
+  <div class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-transparent to-[#1f3c63]"></div>
+
+  <!-- GLOW BACKGROUND -->
+  <div class="absolute inset-0">
+    <div class="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-[#D57241]/30 blur-[160px] rounded-full"></div>
+    <div class="absolute bottom-[-150px] right-[-100px] w-[500px] h-[500px] bg-[#D57241]/20 blur-[140px] rounded-full"></div>
   </div>
 
   <div class="relative max-w-[900px] mx-auto px-6 text-center">
 
-    <!-- HEADLINE -->
-    <h2 class="font-h2 
-      text-[26px] leading-snug 
-      md:text-[44px] md:leading-tight 
-      mb-5 md:mb-6">
+    <!-- MINI TAG DE CONTINUIDADE -->
+    <div class="inline-block mb-6 px-4 py-2 rounded-full bg-white/10 border border-white/20 text-[10px] tracking-[0.25em] uppercase">
+      Sua decisão começa aqui
+    </div>
 
-      O mercado de E-commerce não espera.<br class="hidden md:block">
-      Sua transformação começa agora.
+    <!-- HEADLINE -->
+    <h2 class="
+      font-h2 
+      text-[28px] leading-snug 
+      md:text-[48px] md:leading-tight 
+      font-extrabold
+      mb-6">
+
+      O mercado de E-commerce<br class="hidden md:block">
+      <span class="text-[#D57241]">não espera por você.</span>
     </h2>
 
     <!-- SUB -->
     <p class="
       text-sm md:text-lg 
       opacity-90 
-      mb-8 md:mb-10 
+      mb-10 
       max-w-2xl mx-auto">
 
-      Não deixe para amanhã o negócio que pode mudar sua realidade financeira hoje.
+      Enquanto você adia, outras pessoas estão ocupando o espaço que poderia ser seu.
+      <br class="hidden md:block">
+      <span class="text-white font-semibold">A diferença é agir agora.</span>
     </p>
+
+    <!-- BOX DE DESTAQUE -->
+    <div class="mb-10 p-4 md:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl max-w-xl mx-auto">
+      <p class="text-xs md:text-sm text-white/80">
+        🔥 Oferta com 50% OFF ativa hoje • Acesso imediato após pagamento
+      </p>
+    </div>
 
     <!-- CTA -->
     <a href="#oferta"
-      class="cta-button group w-full md:w-auto inline-flex items-center justify-center gap-3
+      class="cta-button group relative w-full md:w-auto inline-flex items-center justify-center gap-3
       
-      bg-gradient-to-r from-[#D57241] to-[#c46032]
+      bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
       text-white font-bold text-center
       
-      /* MOBILE */
       px-5 py-3 text-sm rounded-lg
+      md:px-14 md:py-6 md:text-lg md:rounded-xl
       
-      /* DESKTOP */
-      md:px-12 md:py-6 md:text-lg md:rounded-xl
-      
-      shadow-[0_12px_30px_rgba(213,114,65,0.35)]
-      md:shadow-[0_20px_50px_rgba(213,114,65,0.5)]
+      shadow-[0_15px_40px_rgba(213,114,65,0.45)]
+      md:shadow-[0_25px_60px_rgba(213,114,65,0.6)]
       
       transition-all duration-300
-      hover:scale-[1.02] md:hover:scale-105
+      hover:scale-[1.03] md:hover:scale-105
       active:scale-95
+      overflow-hidden
     ">
 
+      <!-- brilho animado -->
+      <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
+
       <!-- TEXTO -->
-      <span class="leading-tight">
+      <span class="relative z-10 leading-tight">
         <span class="block md:hidden">
-          Garantir minha vaga
+          Quero começar agora
         </span>
         <span class="hidden md:block">
           Sim! Quero Garantir Minha Vaga com 50% OFF
@@ -1180,7 +1201,7 @@ window.addEventListener("DOMContentLoaded", () => {
       </span>
 
       <!-- ÍCONE -->
-      <span class="material-symbols-outlined transition-transform md:group-hover:translate-x-1">
+      <span class="relative z-10 material-symbols-outlined transition-transform md:group-hover:translate-x-1">
         arrow_forward
       </span>
 
@@ -1188,7 +1209,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
     <!-- PROVA / SEGURANÇA -->
     <div class="
-      mt-8 md:mt-12 
+      mt-10 md:mt-14 
       text-white/80 
       text-xs md:text-sm 
       leading-relaxed">
@@ -1196,11 +1217,11 @@ window.addEventListener("DOMContentLoaded", () => {
       <span class="block md:hidden">
         ✔ Acesso imediato<br>
         ✔ 7 dias de garantia<br>
-        ✔ Pagamento seguro
+        ✔ Pagamento 100% seguro
       </span>
 
       <span class="hidden md:block">
-        ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento seguro
+        ✔ Acesso imediato • ✔ 7 dias de garantia • ✔ Pagamento 100% seguro
       </span>
 
     </div>
