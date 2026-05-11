@@ -487,11 +487,22 @@ window.addEventListener("DOMContentLoaded", () => {
             <div class="absolute inset-0 bg-[#D57241]/30 rounded-full blur-3xl opacity-80"></div>
 
             <img 
-              src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png" 
-              alt="Método" 
-              class="w-full relative z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.3)] transition-transform duration-500 group-hover:scale-105"
-              style="animation: spin-slow 20s linear infinite;"
-            >
+  src="https://i.ibb.co/Ym7KGLC/Gemini-Generated-Image-gag4jlgag4jlgag4-Photoroom.png" 
+  alt="Método" 
+  class="w-full relative z-10 drop-shadow-[0_30px_60px_rgba(0,0,0,0.3)] cursor-pointer transition-transform duration-500 ease-out"
+  style="
+    animation: spin-slow 20s linear infinite;
+    transform-origin: center;
+  "
+  onmouseover="
+    this.style.animationPlayState='paused';
+    this.style.transform='scale(1.08)';
+  "
+  onmouseout="
+    this.style.animationPlayState='running';
+    this.style.transform='scale(1)';
+  "
+>
           </div>
         </div>
 
