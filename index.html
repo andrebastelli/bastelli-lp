@@ -920,29 +920,43 @@ window.addEventListener("DOMContentLoaded", () => {
         +30 módulos • Conteúdo prático • Aplicação real
       </p>
 
-      <a href="#oferta"
-        class="group relative inline-flex items-center justify-center gap-3 
-        bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
-        text-white font-bold
-        
-        px-6 py-4 text-sm rounded-lg
-        md:px-12 md:py-6 md:text-lg md:rounded-xl
-        
-        shadow-[0_20px_50px_rgba(213,114,65,0.45)]
-        transition-all duration-300
-        hover:scale-105 active:scale-95 overflow-hidden">
+                  <a href="#oferta" 
+  class="cta-button group relative w-full md:w-auto inline-flex items-center justify-center gap-3
+  
+  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+  text-white font-bold text-center
+  
+  px-5 py-3 text-sm rounded-lg
+  md:px-12 md:py-5 md:text-lg md:rounded-xl
+  
+  shadow-[0_15px_40px_rgba(213,114,65,0.45)]
+  md:shadow-[0_25px_60px_rgba(213,114,65,0.6)]
+  
+  transition-all duration-300
+  hover:scale-[1.03] md:hover:scale-105
+  active:scale-95
+  overflow-hidden
+">
 
-        <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
+  <!-- BRILHO -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
 
-        <span class="relative z-10">
-          Quero acessar todos os módulos
-        </span>
+  <!-- TEXTO -->
+  <span class="relative z-10 leading-tight">
+    <span class="block md:hidden">
+      Começar agora
+    </span>
+    <span class="hidden md:block">
+      Quero aplicar isso agora
+    </span>
+  </span>
 
-        <span class="relative z-10 transition-transform group-hover:translate-x-1">
-          →
-        </span>
+  <!-- ÍCONE -->
+  <span class="relative z-10 transition-transform md:group-hover:translate-x-1">
+    →
+  </span>
 
-      </a>
+</a>
 
     </div>
 
