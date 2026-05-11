@@ -768,10 +768,12 @@ window.addEventListener("DOMContentLoaded", () => {
 </section>
 
 <!-- Módulos do Curso -->
-<section class="py-28 bg-gradient-to-b from-white to-[#f8fafc] relative overflow-hidden" id="modulos">
+<section class="py-28 bg-[#f4f7fb] relative overflow-hidden" id="modulos">
 
-  <!-- glow decorativo -->
-  <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#D57241]/10 blur-[120px] rounded-full"></div>
+  <!-- textura + glow -->
+  <div class="absolute inset-0 opacity-[0.4] pointer-events-none 
+    bg-[radial-gradient(circle_at_20%_20%,rgba(213,114,65,0.08),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(40,74,120,0.08),transparent_40%)]">
+  </div>
 
   <div class="max-w-[1200px] mx-auto px-6 relative z-10">
 
@@ -783,12 +785,11 @@ window.addEventListener("DOMContentLoaded", () => {
       </span>
 
       <h2 class="font-display text-[34px] md:text-5xl font-black text-[#284A78] mb-6 leading-tight">
-        Uma jornada completa<br class="hidden md:block">
-        até a escala no E-commerce
+        Uma jornada completa até a escala
       </h2>
 
       <p class="text-slate-500 text-sm md:text-lg">
-        Do absoluto zero até um negócio estruturado, lucrativo e escalável.
+        Cada fase foi desenhada para te levar do zero ao domínio completo do e-commerce.
       </p>
     </div>
 
@@ -796,11 +797,19 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="grid md:grid-cols-2 gap-8">
 
       <!-- CARD -->
-      <div class="group relative p-[1px] rounded-3xl bg-gradient-to-br from-[#D57241]/40 to-transparent">
+      <div class="group relative rounded-3xl overflow-hidden">
 
-        <div class="bg-white rounded-3xl p-8 h-full transition-all duration-500 
-        group-hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)]
-        group-hover:-translate-y-2">
+        <!-- glow hover -->
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500
+          bg-gradient-to-br from-[#D57241]/20 to-transparent blur-xl"></div>
+
+        <!-- CARD CONTENT -->
+        <div class="relative bg-white/70 backdrop-blur-xl border border-white/40 
+          rounded-3xl p-8 h-full transition-all duration-500
+
+          group-hover:-translate-y-3
+          group-hover:shadow-[0_25px_80px_rgba(0,0,0,0.15)]
+          group-hover:border-[#D57241]/40">
 
           <span class="text-[#D57241] font-black text-xs tracking-widest uppercase">
             Fase 01
@@ -823,11 +832,17 @@ window.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- CARD -->
-      <div class="group relative p-[1px] rounded-3xl bg-gradient-to-br from-[#D57241]/40 to-transparent">
+      <div class="group relative rounded-3xl overflow-hidden">
 
-        <div class="bg-white rounded-3xl p-8 h-full transition-all duration-500 
-        group-hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)]
-        group-hover:-translate-y-2">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500
+          bg-gradient-to-br from-[#D57241]/20 to-transparent blur-xl"></div>
+
+        <div class="relative bg-white/70 backdrop-blur-xl border border-white/40 
+          rounded-3xl p-8 h-full transition-all duration-500
+
+          group-hover:-translate-y-3
+          group-hover:shadow-[0_25px_80px_rgba(0,0,0,0.15)]
+          group-hover:border-[#D57241]/40">
 
           <span class="text-[#D57241] font-black text-xs tracking-widest uppercase">
             Fase 02
@@ -850,11 +865,17 @@ window.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- CARD -->
-      <div class="group relative p-[1px] rounded-3xl bg-gradient-to-br from-[#D57241]/40 to-transparent">
+      <div class="group relative rounded-3xl overflow-hidden">
 
-        <div class="bg-white rounded-3xl p-8 h-full transition-all duration-500 
-        group-hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)]
-        group-hover:-translate-y-2">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500
+          bg-gradient-to-br from-[#D57241]/20 to-transparent blur-xl"></div>
+
+        <div class="relative bg-white/70 backdrop-blur-xl border border-white/40 
+          rounded-3xl p-8 h-full transition-all duration-500
+
+          group-hover:-translate-y-3
+          group-hover:shadow-[0_25px_80px_rgba(0,0,0,0.15)]
+          group-hover:border-[#D57241]/40">
 
           <span class="text-[#D57241] font-black text-xs tracking-widest uppercase">
             Fase 03
@@ -877,11 +898,17 @@ window.addEventListener("DOMContentLoaded", () => {
       </div>
 
       <!-- CARD -->
-      <div class="group relative p-[1px] rounded-3xl bg-gradient-to-br from-[#D57241]/40 to-transparent">
+      <div class="group relative rounded-3xl overflow-hidden">
 
-        <div class="bg-white rounded-3xl p-8 h-full transition-all duration-500 
-        group-hover:shadow-[0_30px_80px_rgba(0,0,0,0.12)]
-        group-hover:-translate-y-2">
+        <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500
+          bg-gradient-to-br from-[#D57241]/20 to-transparent blur-xl"></div>
+
+        <div class="relative bg-white/70 backdrop-blur-xl border border-white/40 
+          rounded-3xl p-8 h-full transition-all duration-500
+
+          group-hover:-translate-y-3
+          group-hover:shadow-[0_25px_80px_rgba(0,0,0,0.15)]
+          group-hover:border-[#D57241]/40">
 
           <span class="text-[#D57241] font-black text-xs tracking-widest uppercase">
             Fase 04
@@ -909,11 +936,12 @@ window.addEventListener("DOMContentLoaded", () => {
     <div class="text-center mt-20">
 
       <p class="text-[#284A78]/70 mb-6 text-sm md:text-base">
-        +30 módulos • Conteúdo prático • Aplicação real no mercado
+        +30 módulos • Conteúdo prático • Aplicação real
       </p>
 
       <a href="#oferta"
         class="group relative inline-flex items-center justify-center gap-3 
+        
         bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
         text-white font-bold
         
