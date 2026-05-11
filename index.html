@@ -586,28 +586,15 @@ window.addEventListener("DOMContentLoaded", () => {
   <div class="max-w-[1100px] mx-auto px-6 flex flex-col md:flex-row gap-16 items-center relative z-10">
     
     <div class="md:w-1/2 opacity-0 animate-fade-up [animation-delay:400ms]">
-      <div class="relative group rounded-2xl overflow-hidden">
-
-  <!-- BORDA NEON -->
-  <div class="absolute -inset-[2px] rounded-2xl 
-    bg-gradient-to-br from-[#D57241] via-[#ff8a50] to-[#c46032] 
-    opacity-70 blur-[6px] 
-    group-hover:opacity-100 group-hover:blur-[10px] 
-    transition-all duration-500">
-  </div>
-
-  <!-- CONTAINER -->
-  <div class="relative rounded-2xl overflow-hidden bg-[#0f172a]">
-    
-    <img 
-      alt="Bruno Bastelli Palestra" 
-      src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg"
-      class="w-full h-full object-cover grayscale group-hover:grayscale-0 
-      transition-all duration-700"
-    >
-
-    <!-- overlay sutil -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+      <div class="relative">
+        <div class="absolute -inset-4 border border-white/10 rounded-xl pointer-events-none"></div>
+        
+        <img 
+          alt="Bruno Bastelli Palestra" 
+          class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 ease-in-out border-2 border-white/20 relative z-10"
+          src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg"
+        >
+      </div>
     </div>
 
     <div class="md:w-1/2 opacity-0 animate-fade-up [animation-delay:200ms]">
