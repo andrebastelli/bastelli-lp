@@ -577,33 +577,25 @@ window.addEventListener("DOMContentLoaded", () => {
 </section>
 
 <!-- Sobre Bruno Bastelli -->
-<section class="py-24 bg-transparent relative" id="sobre">
+<section class="py-24 bg-[#284A78] text-white relative overflow-hidden opacity-0 animate-fade-up" id="sobre">
   
-  <div class="max-w-[1200px] mx-auto px-6">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#284A78] via-[#1e3a5f] to-[#152942] opacity-100"></div>
 
-    <div class="relative overflow-hidden rounded-[2.5rem]">
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-      <!-- FUNDO -->
-      <div class="absolute inset-0 bg-gradient-to-br from-[#284A78] via-[#1e3a5f] to-[#152942]"></div>
-
-      <!-- GLOW -->
-      <div class="absolute -top-24 -left-24 w-96 h-96 bg-[#D57241]/10 rounded-full blur-[100px] pointer-events-none"></div>
-
-      <!-- CONTEÚDO -->
-      <div class="relative z-10 py-20 px-6 flex flex-col md:flex-row gap-16 items-center">
-
-        <div class="md:w-1/2 opacity-0 animate-fade-up [animation-delay:400ms]">
-          <div class="relative">
-            
-            <div class="absolute -inset-4 border border-white/10 rounded-xl pointer-events-none"></div>
-
-            <img 
-              alt="Bruno Bastelli Palestra" 
-              class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 border-2 border-white/20 relative z-10"
-              src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg"
-            >
-          </div>
-        </div>
+  <div class="max-w-[1100px] mx-auto px-6 flex flex-col md:flex-row gap-16 items-center relative z-10">
+    
+    <div class="md:w-1/2 opacity-0 animate-fade-up [animation-delay:400ms]">
+      <div class="relative">
+        <div class="absolute -inset-4 border border-white/10 rounded-xl pointer-events-none"></div>
+        
+        <img 
+          alt="Bruno Bastelli Palestra" 
+          class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 ease-in-out border-2 border-white/20 relative z-10"
+          src="https://bastelliconsultoria.com.br/wp-content/uploads/2024/09/bruno.jpg"
+        >
+      </div>
+    </div>
 
     <div class="md:w-1/2 opacity-0 animate-fade-up [animation-delay:200ms]">
       <span class="text-secondary font-label-caps text-label-caps mb-3 block tracking-widest">O ESPECIALISTA</span>
