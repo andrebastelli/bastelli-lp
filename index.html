@@ -1387,58 +1387,110 @@ function toggleFaq(button) {
 </script>
 
 <!-- Footer -->
-<footer class="bg-primary py-12 px-6 w-full border-t border-white/10">
-  <div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-    
-    <div class="text-center md:text-left">
-      <div class="flex flex-col md:flex-row items-center md:items-start gap-3 mb-2">
-  <img 
-    src="https://i.ibb.co/My9T7p1z/logo-b.png" 
-    alt="Bruno Bastelli"
-    class="h-10 w-auto object-contain brightness-0 invert"
-  ></div>
-      <p class="text-white/80 text-body-sm">
-        © 2024 Bruno Bastelli - Todos os direitos reservados.
-      </p>
+<footer class="relative bg-gradient-to-br from-[#1e3a5f] via-[#284A78] to-[#1a2f4a] text-white overflow-hidden">
+
+  <!-- GLOW -->
+  <div class="absolute top-[-150px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#D57241]/20 blur-[140px] rounded-full opacity-60"></div>
+
+  <div class="relative max-w-[1200px] mx-auto px-6 py-16">
+
+    <div class="grid md:grid-cols-3 gap-10 items-center">
+
+      <!-- LOGO + TEXTO -->
+      <div class="text-center md:text-left">
+
+        <img 
+          src="https://i.ibb.co/My9T7p1z/logo-b.png" 
+          alt="Bruno Bastelli"
+          class="h-12 mx-auto md:mx-0 mb-4 brightness-0 invert"
+        >
+
+        <p class="text-white/70 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+          Transformando conhecimento em negócios digitais lucrativos através de método validado.
+        </p>
+
+      </div>
+
+      <!-- LINKS -->
+      <nav class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-sm">
+
+        <a href="#" class="text-white/70 hover:text-white transition-colors relative group">
+          Termos de Uso
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#D57241] transition-all group-hover:w-full"></span>
+        </a>
+
+        <a href="#" class="text-white/70 hover:text-white transition-colors relative group">
+          Privacidade
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#D57241] transition-all group-hover:w-full"></span>
+        </a>
+
+        <a href="#" class="text-white/70 hover:text-white transition-colors relative group">
+          Suporte
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#D57241] transition-all group-hover:w-full"></span>
+        </a>
+
+      </nav>
+
+      <!-- SOCIAL -->
+      <div class="flex justify-center md:justify-end gap-4">
+
+        <!-- ITEM -->
+        <a href="#" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919..." />
+          </svg>
+        </a>
+
+        <a href="#" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22 12a10 10 0 10-11.563 9.875..." />
+          </svg>
+        </a>
+
+        <a href="#" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a2.99 2.99 0 00-2.104..." />
+          </svg>
+        </a>
+
+        <a href="#" target="_blank"
+          class="group w-11 h-11 rounded-xl bg-white/5 border border-white/10 
+          flex items-center justify-center backdrop-blur-md
+          hover:bg-[#D57241] hover:border-[#D57241]
+          transition-all duration-300 hover:scale-110">
+
+          <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.75 2h2.25a4.5 4.5..." />
+          </svg>
+        </a>
+
+      </div>
+
     </div>
 
-    <nav class="flex gap-6">
-      <a class="text-white/80 hover:text-on-primary transition-colors font-label-caps text-label-caps" href="#">Termos de Uso</a>
-      <a class="text-white/80 hover:text-on-primary transition-colors font-label-caps text-label-caps" href="#">Políticas de Privacidade</a>
-      <a class="text-white/80 hover:text-on-primary transition-colors font-label-caps text-label-caps" href="#">Suporte</a>
-    </nav>
-
-    <div class="flex gap-4">
-
-  <!-- Instagram -->
-  <a href="#" target="_blank" class="group w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all hover:bg-[#D57241]">
-    <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838a4 4 0 100 8 4 4 0 000-8zm6.406-1.845a1.44 1.44 0 110 2.88 1.44 1.44 0 010-2.88z"/>
-    </svg>
-  </a>
-
-  <!-- Facebook -->
-  <a href="#" target="_blank" class="group w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all hover:bg-[#D57241]">
-    <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 12a10 10 0 10-11.563 9.875v-6.99h-2.4v-2.885h2.4V9.797c0-2.37 1.416-3.676 3.582-3.676 1.038 0 2.125.185 2.125.185v2.34h-1.197c-1.18 0-1.547.732-1.547 1.482v1.782h2.633l-.421 2.885h-2.212v6.99A10 10 0 0022 12z"/>
-    </svg>
-  </a>
-
-  <!-- YouTube -->
-  <a href="#" target="_blank" class="group w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all hover:bg-[#D57241]">
-    <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M23.498 6.186a2.99 2.99 0 00-2.104-2.118C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.394.568A2.99 2.99 0 00.502 6.186 31.37 31.37 0 000 12a31.37 31.37 0 00.502 5.814 2.99 2.99 0 002.104 2.118C4.5 20.5 12 20.5 12 20.5s7.5 0 9.394-.568a2.99 2.99 0 002.104-2.118A31.37 31.37 0 0024 12a31.37 31.37 0 00-.502-5.814zM9.75 15.5v-7l6 3.5-6 3.5z"/>
-    </svg>
-  </a>
-
-  <!-- TikTok -->
-  <a href="#" target="_blank" class="group w-10 h-10 rounded-full bg-white/10 flex items-center justify-center transition-all hover:bg-[#D57241]">
-    <svg class="w-5 h-5 text-white group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M12.75 2h2.25a4.5 4.5 0 004.5 4.5v2.25a6.75 6.75 0 01-4.5-1.687V15a5.25 5.25 0 11-5.25-5.25c.18 0 .36.015.54.045v2.295a3 3 0 10 2.46 2.96V2z"/>
-    </svg>
-  </a>
-
+    <!-- LINHA FINAL -->
+    <div class="mt-12 pt-6 border-t border-white/10 text-center text-xs text-white/50">
+  © <span id="year"></span> Bruno Bastelli — Todos os direitos reservados.
 </div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
   </div>
 </footer>
