@@ -303,7 +303,7 @@ window.addEventListener("DOMContentLoaded", () => {
 <body class="bg-background text-on-background font-body-md">
 
 <!-- Header -->
-<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/70 backdrop-blur-xl border-b border-white/20 shadow-sm">
+<header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-[0_5px_30px_rgba(0,0,0,0.05)]">
   <div class="flex justify-between items-center w-full px-6 py-4 max-w-[1200px] mx-auto">
     
     <div class="flex items-center gap-4">
@@ -324,8 +324,6 @@ window.addEventListener("DOMContentLoaded", () => {
       hover:shadow-[0_20px_60px_rgba(213,114,65,0.6)] overflow-hidden">
 
       <span class="relative z-10">Garantir Vaga</span>
-
-      <!-- glow -->
       <span class="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition"></span>
     </a>
 
@@ -336,8 +334,8 @@ window.addEventListener("DOMContentLoaded", () => {
 <!-- Hero -->
 <section class="relative pt-36 pb-24 md:pt-52 md:pb-36 bg-white overflow-hidden">
 
-  <!-- Glow Background -->
-  <div class="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-[#D57241]/20 blur-[120px] rounded-full"></div>
+  <!-- Glow de fundo -->
+  <div class="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-[#D57241]/10 blur-[140px] rounded-full"></div>
 
   <div class="max-w-[1200px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center relative z-10">
 
@@ -348,8 +346,8 @@ window.addEventListener("DOMContentLoaded", () => {
         Método Validado
       </div>
 
-      <h1 class="font-display text-[36px] md:text-[60px] lg:text-[72px] leading-[1.05] font-black text-[#284A78] mb-6 tracking-tight">
-        Aprenda a construir um  
+      <h1 class="font-display text-[36px] md:text-[60px] lg:text-[70px] leading-[1.05] font-black text-[#284A78] mb-6 tracking-tight">
+        Aprenda a construir um 
         <span class="text-[#D57241] relative">
           E-commerce do zero.
           <span class="absolute left-0 bottom-1 w-full h-2 bg-[#D57241]/20 -z-10 rounded"></span>
@@ -379,35 +377,28 @@ window.addEventListener("DOMContentLoaded", () => {
       </div>
 
     </div>
-
-    <!-- IMAGEM -->
-    <div class="relative opacity-0 animate-fade-up delay-200">
-
-      <!-- glow atrás da imagem -->
-      <div class="absolute inset-0 bg-[#D57241]/20 blur-3xl rounded-full scale-110"></div>
-
-      <img 
-        src="https://bastelliconsultoria.com.br/wp-content/webp-express/webp-images/uploads/2024/09/bruno.jpg.webp"
-        alt="Bruno Bastelli"
-        class="relative z-10 w-full max-w-[420px] mx-auto rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.2)]"
-      />
-
-    </div>
-
-  </div>
-</section>
-
     
+    <!-- IMAGEM -->
     <div class="relative flex justify-center opacity-0 animate-fade-up [animation-delay:200ms]">
       <div class="relative w-full max-w-[420px]">
-        <div class="absolute inset-0 bg-[#284A78] rounded-[2rem] rotate-3 translate-x-3 translate-y-3 -z-10 opacity-10"></div>
-        <img src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg" alt="Bruno" class="rounded-[2rem] shadow-2xl w-full object-cover aspect-[4/5]">
+
+        <!-- camada de profundidade -->
+        <div class="absolute inset-0 bg-[#284A78] rounded-[2rem] rotate-3 translate-x-4 translate-y-4 -z-10 opacity-10"></div>
+
+        <!-- glow -->
+        <div class="absolute inset-0 bg-[#D57241]/20 blur-3xl rounded-[2rem] scale-110"></div>
+
+        <img src="https://i.ibb.co/TMsp31W2/Gemini-Generated-Image-ag6kwgag6kwgag6k-1.jpg" alt="Bruno" class="relative z-10 rounded-[2rem] shadow-[0_30px_80px_rgba(0,0,0,0.25)] w-full object-cover aspect-[4/5]">
+
+        <!-- badge -->
         <div class="absolute -bottom-6 -right-4 bg-white p-5 rounded-2xl shadow-2xl border border-slate-100 max-w-[180px]">
           <p class="text-[#D57241] font-black text-2xl">14+ Anos</p>
           <p class="text-[10px] font-bold text-slate-500 uppercase tracking-tight">De experiência real no mercado.</p>
         </div>
+
       </div>
     </div>
+
   </div>
 </section>
 
