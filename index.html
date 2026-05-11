@@ -784,35 +784,48 @@ window.addEventListener("DOMContentLoaded", () => {
           <div class="mt-10 pt-8 border-t border-white/10">
 
   <!-- MOBILE -->
-  <a href="#oferta" 
-     class="block md:hidden w-full 
-     bg-white text-[#284A78] text-center 
-     py-3 rounded-lg 
-     font-bold text-sm 
-     uppercase tracking-wider 
-     shadow-md
-     
-     active:scale-95 active:bg-[#D57241] active:text-white
-     transition-all">
-    
-    Garantir vaga
-  </a>
+<a href="#oferta" 
+  class="group relative block md:hidden w-full text-center 
+  px-5 py-3 rounded-lg font-bold text-sm text-white 
+  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+  
+  shadow-[0_12px_30px_rgba(213,114,65,0.35)]
+  active:scale-95 transition-all duration-300 overflow-hidden">
 
-  <!-- DESKTOP -->
-  <a href="#oferta" 
-     class="hidden md:block w-full 
-     bg-white text-[#284A78] text-center 
-     py-4 rounded-xl 
-     font-black text-base 
-     uppercase tracking-widest 
-     
-     hover:bg-[#D57241] hover:text-white 
-     hover:scale-[1.02] hover:shadow-xl
-     
-     transition-all duration-300">
-    
+  <!-- glow -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 group-active:opacity-100 blur-xl transition"></span>
+
+  <span class="relative z-10 flex items-center justify-center gap-2">
+    Garantir vaga
+    <span class="transition-transform group-active:translate-x-1">→</span>
+  </span>
+
+</a>
+
+<!-- DESKTOP -->
+<a href="#oferta" 
+  class="group relative hidden md:inline-flex w-full items-center justify-center gap-3 
+  px-10 py-5 rounded-xl font-black text-base text-white
+  
+  bg-gradient-to-r from-[#D57241] via-[#e07b47] to-[#c46032]
+  
+  shadow-[0_20px_50px_rgba(213,114,65,0.45)]
+  
+  transition-all duration-300 overflow-hidden
+  hover:scale-[1.03] hover:shadow-[0_25px_60px_rgba(213,114,65,0.6)]">
+
+  <!-- brilho animado -->
+  <span class="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 blur-xl transition"></span>
+
+  <span class="relative z-10">
     Quero Garantir Minha Vaga
-  </a>
+  </span>
+
+  <span class="relative z-10 transition-transform group-hover:translate-x-1">
+    →
+  </span>
+
+</a>
 
 </div>
         </div>
